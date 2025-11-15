@@ -110,6 +110,8 @@ section {
 	z-index: 2;
 }
 
+
+
 .title_paralax {
 	display: inline-block;
 	will-change: transform;
@@ -203,6 +205,8 @@ section {
 	height: 100%;
 	object-fit: cover;
 }
+
+
 
 /* benefits ********/
 .benefits__list {
@@ -526,25 +530,37 @@ section {
 .footer__meta a:hover {
   color: #ffd54a;
 }
+/* **********************************************************/
+/* HERO TITLE – TABLET & MOBILE POSITION */
+@media (max-width: 768px) {
+  .header {
+    min-height: 100vh;
+  }
 
-/* MOBILE TYPE TWEAKS ONLY */
+  .header .title {
+    position: absolute;
+    top: 38vh !important;      /* tweak this value to move up/down */
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    z-index: 5;
+    text-align: center;
+    width: 90%;
+  }
+}
+
+/* MOBILE – GLOBAL TYPE, TITLES & LAYOUT (<= 600px) */
 @media (max-width: 600px) {
 
   /* main body text */
   .about__p,
   .benefits__p,
-  .contact__text,
-  .contact__details {
+  .contact__intro {
     font-size: 13px;
     line-height: 1.5;
   }
 
-  /* headings */
+  /* hero + header text sizes */
   .title {
-    font-size: 30px;
-  }
-
-  .section-title {
     font-size: 30px;
   }
 
@@ -566,53 +582,32 @@ section {
     font-size: 20px;
     letter-spacing: 3px;
   }
-}
-/* FINAL MOBILE FIXES FOR ABOUT + BENEFITS */
-@media (max-width: 600px) {
 
-  /* 1) Simplify headings – hide the yellow square on small screens
-        just for ABOUT + BENEFITS so they read cleanly */
-  .about .section-title__square,
-  .benefits .section-title__square {
-    display: none;
-  }
-
-  /* Make the ABOUT / BENEFITS titles a bit smaller too */
-  .about .section-title,
-  .benefits .section-title {
+  /* UNIFIED SECTION TITLES + YELLOW SQUARE (ABOUT, BENEFITS, PORTFOLIO, SERVICES, CONTACT) */
+  .section-title {
+    position: relative;
+    display: inline-block;
     font-size: 26px;
-    margin-bottom: 24px;
+    line-height: 1.1;
+    text-align: left;
+    margin-bottom: 72px;      /* extra space so the square sits between title and text */
   }
 
-  /* 2) Force benefits to be a single column */
-  .benefits__list {
-    gap: 20px;
+  .section-title__square {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ffd54a;
+    top: 5%;               /* < 100% = overlaps, > 100% = underneath */
+    left: 80%;
+    transform: translateX(-50%);
+    z-index: -1;
   }
-
-  .benefits__item {
-    width: 100% !important;
-  }
-
-  .benefits__num {
-    font-size: 24px;
-    display: block;
-    margin-bottom: 6px;
-  }
-
-  .benefits__p {
-    font-size: 13px;
-    line-height: 1.5;
-  }
-}
-/* ABOUT mobile gap fix */
-@media (max-width: 600px) {
-
-  /* less space above ABOUT */
+  /* ABOUT – spacing & layout */
   .about {
     padding-top: 40px;
   }
 
-  /* stop GSAP pushing the image down / scaling it on small screens */
   .about__img {
     height: 40vh;
     margin-bottom: 20px;
@@ -622,76 +617,52 @@ section {
   .about__img img {
     transform: none !important;
   }
-}
-
-/* ABOUT text alignment – mobile */
-@media (max-width: 600px) {
 
   .about__txt {
     width: 100%;
-    padding-left: 18px;
-    padding-right: 18px;  /* keeps the text nicely inside the screen */
-  }
-
-  .about .section-title {
-    text-align: left;
-    margin-bottom: 14px;  /* bring the paragraph a bit closer */
+    padding: 0 18px;       /* keeps the text nicely inside the screen */
   }
 
   .about__p {
-    font-size: 13px;
-    line-height: 1.5;
     text-align: left;
   }
-}
-/* BENEFITS number alignment – mobile */
-@media (max-width: 600px) {
+
+  /* BENEFITS – single column, left aligned */
+  .benefits {
+    padding-bottom: 20px;
+  }
+
+  .benefits__list {
+    gap: 20px;
+  }
 
   .benefits__item {
     width: 100% !important;
-    text-align: left;          /* everything left aligned */
-    padding: 0 18px;           /* match ABOUT padding */
+    text-align: left;
+    padding: 0 18px;       /* match ABOUT padding */
   }
 
   .benefits__num {
     display: block;
-    text-align: left;          /* stop it centering */
-    font-size: 24px;
+    text-align: left;
     margin-bottom: 6px;
   }
 
-  .benefits__p {
-    font-size: 13px;
-    line-height: 1.5;
-  }
-}
-
-/* MOBILE – BENEFITS → PORTFOLIO + PORTFOLIO LAYOUT */
-@media (max-width: 600px) {
-
-  /* tighten the end of BENEFITS */
-  .benefits {
-    padding-bottom: 20px;           /* was 50px via section{} */
-  }
-
-  /* PORTFOLIO section spacing */
+  /* PORTFOLIO / WORK – full-height panels, clean join from BENEFITS */
   .work {
-    padding-top: 20px;              /* overrides 150px */
+    padding-top: 60px;     /* reduced from big desktop spacing */
   }
 
   .work .section-title {
-    margin-bottom: 6px;             /* almost no gap under PORTFOLIO */
     padding: 0 18px;
-    text-align: left;
   }
 
-  /* full-screen portfolio panels */
   .work__wrapp {
     display: flex;
     flex-direction: column;
     padding: 0;
     row-gap: 0;
-    margin-top: 0;
+    margin-top: 20px;
   }
 
   .work__item {
@@ -713,64 +684,45 @@ section {
     object-position: center;
   }
 
-  /* /001, /002, /003, /004 labels */
   .work__item-num {
     font-size: 22px;
     left: 18px;
     bottom: 32px;
     top: auto;
-    transform: none !important;     /* so GSAP can't push it off-screen */
+    transform: none !important;  /* GSAP can't push it off-screen */
   }
 }
 
-
-/* MOBILE – FINAL PORTFOLIO JOIN FIX */
+/* SERVICES – mobile: arrow on the side, not over the text */
 @media (max-width: 600px) {
 
-  /* tighten Benefits -> Portfolio join */
-  .benefits {
-    padding-bottom: 20px;
+  .serv {
+    padding-top: 40px;
   }
 
-  .work {
-    padding-top: 80px;
+  .serv .content {
+    padding: 0 18px;
   }
 
-  /* PORTFOLIO heading sits right on top of the image */
-.work .section-title {
-    margin-bottom: 90px;   /* space under PORTFOLIO so you see the square */
-    padding: 0 30px;
-    text-align: left;
-  }
-
-  .work__wrapp {
-    margin-top: 30px;         /* no negative pull, image starts after title */
-  }
-
-  .work__item {
+  .serv__item {
     position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    padding: 28px 0;
   }
 
-  .work__item-img {
-    width: 100%;
-    height: 100%;
+  /* arrow stays on the right side, smaller, still vertically centered */
+  .serv__item-arrow {
+    width: 40px;
+    height: 40px;
+    right: -100px;                 /* distance from right edge */
+    top: 50%;
+    transform: translateY(-50%); /* keep it centered vertically */
   }
 
-  .work__item-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .work__item-num {
-    font-size: 22px;
-    left: 18px;
-    bottom: 32px;
-    top: auto;
-    transform: none !important;
+  /* leave a clear lane for the arrow to move in */
+  .serv__item-txt {
+    font-size: 18px;
+    padding-right: 100px;         /* space so text never goes under arrow */
+    line-height: 1.3;
+    text-align: left;
   }
 }
