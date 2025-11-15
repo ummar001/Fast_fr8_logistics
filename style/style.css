@@ -159,7 +159,7 @@ section {
 	display: inline-block;
 	width: 130px;
 	height: 130px;
-	border: 1px solid #4b4b4b;
+	border: 2px solid #ffd54a;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -320,4 +320,457 @@ section {
 
 .footer__div span {
 	display: inline-block;
+}
+
+/* ==== FAST FR8 image tuning ==== */
+
+/* Hero image: keep the van more to the right side */
+.header__img img {
+	object-fit: cover;
+	object-position: 70% center; /* move focus to the right */
+}
+
+/* About image: keep van roughly centered */
+.about__img img {
+	object-fit: cover;
+	object-position: center center;
+}
+
+/* Portfolio images: keep vehicles centered vertically */
+.work__item-img img {
+	object-fit: cover;
+	object-position: center center;
+}
+
+
+@media (max-width: 768px) {
+	.header {
+		padding: 0 20px;
+	}
+
+	.header__img {
+		width: 100%;
+		right: 0;
+	}
+
+	.content {
+		padding: 0 20px;
+	}
+
+	.about__wrapp {
+		flex-direction: column;
+	}
+
+	.about__img,
+	.about__txt,
+	.work__item {
+		width: 100%;
+		height: auto;
+	}
+
+	.about__img {
+		height: 60vh;
+	}
+}
+
+/* CONTACT SECTION */
+
+.contact {
+  padding: 140px 0;
+  background-color: #050505;
+}
+
+.contact .content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.contact__intro {
+  margin-top: 20px;
+  max-width: 620px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #bfbfbf;
+}
+
+/* animated CONTACT US inside contact section */
+.contact__letters {
+  margin: 30px 0 10px;
+}
+
+.contact__form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact__row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact__field {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact__field--full {
+  width: 100%;
+}
+
+.contact__field label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9a9a9a;
+}
+
+.contact__field input,
+.contact__field select,
+.contact__field textarea {
+  padding: 10px 12px;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #f5f5f5;
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.contact__field input::placeholder,
+.contact__field textarea::placeholder {
+  color: #666;
+}
+
+.contact__field input:focus,
+.contact__field select:focus,
+.contact__field textarea:focus {
+  border-color: #ffd54a; /* yellow accent */
+  background-color: #151515;
+}
+
+.contact__btn {
+  align-self: flex-start;
+  margin-top: 10px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 999px;
+  background-color: #ffd54a;
+  color: #050505;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.contact__btn:hover {
+  background-color: #ffeb8a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transform: translateY(-1px);
+}
+
+.contact__btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* basic mobile adjustment */
+@media (max-width: 768px) {
+  .contact {
+    padding: 90px 0;
+  }
+
+  .contact__row {
+    flex-direction: column;
+  }
+}
+
+/* keep existing footer look, just allow extra content */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative; /* so the meta bar can sit at the bottom */
+}
+
+/* existing .footer__div stays as-is */
+
+/* small meta bar at bottom of footer */
+.footer__meta {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 12px;
+  color: #9e9e9e;
+  line-height: 1.4;
+  text-transform: none;
+}
+
+.footer__meta a {
+  color: #9e9e9e;
+  text-decoration: none;
+}
+
+.footer__meta a:hover {
+  color: #ffd54a;
+}
+
+/* MOBILE TYPE TWEAKS ONLY */
+@media (max-width: 600px) {
+
+  /* main body text */
+  .about__p,
+  .benefits__p,
+  .contact__text,
+  .contact__details {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* headings */
+  .title {
+    font-size: 30px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .header__marq-txt {
+    font-size: 16px;
+  }
+
+  /* numbers + big labels */
+  .benefits__num {
+    font-size: 26px;
+  }
+
+  .serv__item-txt {
+    font-size: 20px;
+  }
+
+  /* footer CONTACT US */
+  .footer__div {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+}
+/* FINAL MOBILE FIXES FOR ABOUT + BENEFITS */
+@media (max-width: 600px) {
+
+  /* 1) Simplify headings – hide the yellow square on small screens
+        just for ABOUT + BENEFITS so they read cleanly */
+  .about .section-title__square,
+  .benefits .section-title__square {
+    display: none;
+  }
+
+  /* Make the ABOUT / BENEFITS titles a bit smaller too */
+  .about .section-title,
+  .benefits .section-title {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+
+  /* 2) Force benefits to be a single column */
+  .benefits__list {
+    gap: 20px;
+  }
+
+  .benefits__item {
+    width: 100% !important;
+  }
+
+  .benefits__num {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .benefits__p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+/* ABOUT mobile gap fix */
+@media (max-width: 600px) {
+
+  /* less space above ABOUT */
+  .about {
+    padding-top: 40px;
+  }
+
+  /* stop GSAP pushing the image down / scaling it on small screens */
+  .about__img {
+    height: 40vh;
+    margin-bottom: 20px;
+    transform: none !important;
+  }
+
+  .about__img img {
+    transform: none !important;
+  }
+}
+
+/* ABOUT text alignment – mobile */
+@media (max-width: 600px) {
+
+  .about__txt {
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;  /* keeps the text nicely inside the screen */
+  }
+
+  .about .section-title {
+    text-align: left;
+    margin-bottom: 14px;  /* bring the paragraph a bit closer */
+  }
+
+  .about__p {
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: left;
+  }
+}
+/* BENEFITS number alignment – mobile */
+@media (max-width: 600px) {
+
+  .benefits__item {
+    width: 100% !important;
+    text-align: left;          /* everything left aligned */
+    padding: 0 18px;           /* match ABOUT padding */
+  }
+
+  .benefits__num {
+    display: block;
+    text-align: left;          /* stop it centering */
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .benefits__p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+/* MOBILE – BENEFITS → PORTFOLIO + PORTFOLIO LAYOUT */
+@media (max-width: 600px) {
+
+  /* tighten the end of BENEFITS */
+  .benefits {
+    padding-bottom: 20px;           /* was 50px via section{} */
+  }
+
+  /* PORTFOLIO section spacing */
+  .work {
+    padding-top: 20px;              /* overrides 150px */
+  }
+
+  .work .section-title {
+    margin-bottom: 6px;             /* almost no gap under PORTFOLIO */
+    padding: 0 18px;
+    text-align: left;
+  }
+
+  /* full-screen portfolio panels */
+  .work__wrapp {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    row-gap: 0;
+    margin-top: 0;
+  }
+
+  .work__item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .work__item-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .work__item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* /001, /002, /003, /004 labels */
+  .work__item-num {
+    font-size: 22px;
+    left: 18px;
+    bottom: 32px;
+    top: auto;
+    transform: none !important;     /* so GSAP can't push it off-screen */
+  }
+}
+
+
+/* MOBILE – FINAL PORTFOLIO JOIN FIX */
+@media (max-width: 600px) {
+
+  /* tighten Benefits -> Portfolio join */
+  .benefits {
+    padding-bottom: 20px;
+  }
+
+  .work {
+    padding-top: 80px;
+  }
+
+  /* PORTFOLIO heading sits right on top of the image */
+.work .section-title {
+    margin-bottom: 90px;   /* space under PORTFOLIO so you see the square */
+    padding: 0 30px;
+    text-align: left;
+  }
+
+  .work__wrapp {
+    margin-top: 30px;         /* no negative pull, image starts after title */
+  }
+
+  .work__item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .work__item-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .work__item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .work__item-num {
+    font-size: 22px;
+    left: 18px;
+    bottom: 32px;
+    top: auto;
+    transform: none !important;
+  }
 }

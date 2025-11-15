@@ -124,25 +124,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 	//portfolio
-	function portfolio() {
-		gsap.from('.work__item, .work__item-num', {
-			y: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
-			scrollTrigger: {
-				trigger: '.work',
-				start: 'top bottom',
-				scrub: 1.9
-			}
-		})
-		gsap.from('.work__item-img img', {
-			scale: 1.6,
-			scrollTrigger: {
-				trigger: '.work__wrapp',
-				start: 'top bottom',
-				scrub: 1.9
-			}
-		})
-	}
-	portfolio();
+	//portfolio
+//portfolio
+//portfolio
+function portfolio() {
+  // Parallax only the images inside each work item
+  const imgs = gsap.utils.toArray('.work__item-img img');
+
+  imgs.forEach((img) => {
+    gsap.fromTo(
+      img,
+      {
+        scale: 1.2,   // start slightly zoomed
+        yPercent: 5   // small vertical offset
+      },
+      {
+        scale: 1,     // zoom back to normal
+        yPercent: 0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: img.closest('.work__item'),
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.5
+        }
+      }
+    );
+  });
+}
+portfolio();
+
+
 
 
 	//serv

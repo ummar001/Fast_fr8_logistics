@@ -22,7 +22,9 @@
 
     <!-- div .header -->
     <header class="header">
-      <h1 class="title" data-splitting><span class="title_paralax">FAST FR8 </span><span class="stroke"> LOGISTICS</span></h1>
+      <h1 class="title" data-splitting>
+        <span class="title_paralax">FAST FR8 </span><span class="stroke"> LOGISTICS</span>
+      </h1>
       <div class="header__img">
         <img src="img/Hero3.jpg" alt="Fast Fr8 Logistics hero vehicle">
       </div>
@@ -166,59 +168,138 @@
             <span class="section-title__square"></span>
           </h2>
 
-          <div class="serv__list">
-            <div class="serv__item">
-              <span class="serv__item-arrow" data-speed="500">
-                <img src="img/arrow.svg" alt="">
-              </span>
-              <div class="serv__item-txt">
-                <span class="serv__item-text">/ Breakdown Recovery</span>
-              </div>
+        <div class="serv__list">
+          <div class="serv__item">
+            <span class="serv__item-arrow" data-speed="500">
+              <img src="img/arrow.svg" alt="">
+            </span>
+            <div class="serv__item-txt">
+              <span class="serv__item-text">/ Breakdown Recovery</span>
             </div>
-            <div class="serv__item">
-              <span class="serv__item-arrow" data-speed="400">
-                <img src="img/arrow.svg" alt="">
-              </span>
-              <div class="serv__item-txt">
-                <span class="serv__item-text">/ Vehicle Transport</span>
-              </div>
+          </div>
+          <div class="serv__item">
+            <span class="serv__item-arrow" data-speed="400">
+              <img src="img/arrow.svg" alt="">
+            </span>
+            <div class="serv__item-txt">
+              <span class="serv__item-text">/ Vehicle Transport</span>
             </div>
-            <div class="serv__item">
-              <span class="serv__item-arrow" data-speed="800">
-                <img src="img/arrow.svg" alt="">
-              </span>
-              <div class="serv__item-txt">
-                <span class="serv__item-text">/ Courier Services</span>
-              </div>
+          </div>
+          <div class="serv__item">
+            <span class="serv__item-arrow" data-speed="800">
+              <img src="img/arrow.svg" alt="">
+            </span>
+            <div class="serv__item-txt">
+              <span class="serv__item-text">/ Courier Services</span>
             </div>
-            <div class="serv__item">
-              <span class="serv__item-arrow" data-speed="600">
-                <img src="img/arrow.svg" alt="">
-              </span>
-              <div class="serv__item-txt">
-                <span class="serv__item-text">/ Integrated Logistics</span>
-              </div>
+          </div>
+          <div class="serv__item">
+            <span class="serv__item-arrow" data-speed="600">
+              <img src="img/arrow.svg" alt="">
+            </span>
+            <div class="serv__item-txt">
+              <span class="serv__item-text">/ Integrated Logistics</span>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- div .contact -->
+      <section class="contact" id="contact">
+        <div class="content">
+          <h2 class="section-title">conta<span class="stroke">ct</span>
+            <span class="section-title__square"></span>
+          </h2>
+
+          <!-- animated CONTACT US above the form -->
+          <div class="contact__letters footer__div">
+            <span data-speed="-300">c</span>
+            <span data-speed="120">o</span>
+            <span data-speed="260">n</span>
+            <span data-speed="-220">t</span>
+            <span data-speed="340">a</span>
+            <span data-speed="-180">c</span>
+            <span data-speed="210">t</span>
+            <span data-speed="-260">&nbsp;</span>
+            <span data-speed="180">u</span>
+            <span data-speed="-140">s</span>
+          </div>
+
+          <p class="contact__intro">
+            Send us a request and we’ll get back to you with options, pricing and next steps.
+          </p>
+
+          <form class="contact__form" action="#" method="POST">
+            <div class="contact__row">
+              <div class="contact__field">
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="contact__field">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+
+            <div class="contact__row">
+              <div class="contact__field">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+              <div class="contact__field">
+                <label for="service">Service</label>
+                <select id="service" name="service">
+                  <option value="">Select a service</option>
+                  <option value="recovery">Breakdown Recovery</option>
+                  <option value="transport">Vehicle Transport</option>
+                  <option value="courier">Courier Services</option>
+                  <option value="logistics">Integrated Logistics</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="contact__field contact__field--full">
+              <label for="message">Request / Message*</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="contact__btn">
+              Send Request
+            </button>
+          </form>
+        </div>
+      </section>
+
     </main>
 
     <!-- div .footer -->
     <footer class="footer">
-  <div class="footer__div">
-    <span data-speed="-300">c</span>
-    <span data-speed="120">o</span>
-    <span data-speed="260">n</span>
-    <span data-speed="-220">t</span>
-    <span data-speed="340">a</span>
-    <span data-speed="-180">c</span>
-    <span data-speed="210">t</span>
-    <span data-speed="-260"> </span>
-    <span data-speed="180">u</span>
-    <span data-speed="-140">s</span>
+      <div class="footer__div">
+        <span data-speed="-300">c</span>
+        <span data-speed="120">o</span>
+        <span data-speed="260">n</span>
+        <span data-speed="-220">t</span>
+        <span data-speed="340">a</span>
+        <span data-speed="-180">c</span>
+        <span data-speed="210">t</span>
+        <span data-speed="-260"> </span>
+        <span data-speed="180">u</span>
+        <span data-speed="-140">s</span>
+      </div>
+
+	  <div class="footer__meta">
+    <p>© 2025 FAST FR8 Logistics Ltd. All rights reserved.</p>
+    <p>
+      24/7 Recovery: <a href="tel:07123XXXXXX">07724 528966</a> ·
+      Email: <a href="mailto:info@fastfr8.co.uk">info@fastfr8.co.uk</a>
+    </p>
   </div>
-</footer>
+
+
+
+
+
+    </footer>
 
   </div>
   <!-- /div .wrapp END -->
