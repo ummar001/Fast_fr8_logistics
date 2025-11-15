@@ -581,6 +581,8 @@ section {
   .footer__div {
     font-size: 20px;
     letter-spacing: 3px;
+    white-space: nowrap;   /* keep "CONTACT US" on one line */
+    text-align: center;    /* optional: centre it */
   }
 
   /* UNIFIED SECTION TITLES + YELLOW SQUARE (ABOUT, BENEFITS, PORTFOLIO, SERVICES, CONTACT) */
