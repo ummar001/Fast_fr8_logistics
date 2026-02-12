@@ -1,4 +1,1 @@
-# Paralax-effect-with-gsap-scrolltrigger
-Paralax effect with gsap scrolltrigger
-
-DEMO - https://dmitrinaumov.github.io/Paralax-effect-with-gsap-scrolltrigger/ \
+https://ummar001.github.io/Fast_fr8_logistics/
