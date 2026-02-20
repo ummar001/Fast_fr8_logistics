@@ -12,11 +12,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style/normalize.css" />
   <link rel="stylesheet" href="style/style.css" />
 </head>
 
-<body>
+<body class="page-home">
+
+  <nav class="site-nav" aria-label="Primary">
+    <!-- On index.html use href="index.html".
+       On /services/*.html use href="../index.html" -->
+    <a class="site-nav__brand" href="index.html">FAST FR8</a>
+
+    <button class="site-nav__toggle" type="button" aria-controls="siteNavMenu" aria-expanded="false">
+      <span class="site-nav__burger" aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <div class="site-nav__menu" id="siteNavMenu">
+      <a href="#about">About</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#services">Services</a>
+      <a href="#contact-form">Contact</a>
+    </div>
+  </nav>
+
+
+
   <!-- div .wrapp -->
   <div id="luxy" class="wrapp">
 
@@ -60,7 +84,7 @@
     <main class="main">
 
       <!-- div .about -->
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__wrapp">
           <div class="about__img">
             <img src="img/Picture2_2.jpg" alt="Fast Fr8 Logistics vehicle" />
@@ -87,7 +111,7 @@
       </section>
 
       <!-- div .benefits -->
-      <section class="benefits">
+      <section class="benefits" id="benefits">
         <div class="content">
           <h2 class="section-title">benef<span class="stroke">its</span>
             <span class="section-title__square"></span>
@@ -134,7 +158,7 @@
       </section>
 
       <!-- div .work -->
-      <section class="work">
+      <section class="work" id="portfolio">
         <div class="content">
           <h2 class="section-title">portfo<span class="stroke">lio</span>
             <span class="section-title__square"></span>
@@ -173,35 +197,53 @@
       </section>
 
       <!-- div .serv -->
-      <section class="serv">
+      <!-- div .serv -->
+      <section class="serv" id="services">
         <div class="content">
           <h2 class="section-title">servic<span class="stroke">es</span>
             <span class="section-title__square"></span>
           </h2>
-
           <div class="serv__list">
-            <div class="serv__item">
-              <span class="serv__item-arrow" data-speed="500"><img src="img/arrow.svg" alt="" /></span>
-              <div class="serv__item-txt"><span class="serv__item-text">/ Breakdown Recovery</span></div>
-            </div>
+            <a class="serv__link" href="services/breakdown-recovery.html">
+              <div class="serv__item">
+                <span class="serv__item-arrow" data-speed="500"><img src="img/arrow.svg" alt="" /></span>
+                <div class="serv__item-txt">
+                  <span class="serv__item-text"><span class="serv__slash">/</span> Breakdown Recovery</span>
+                </div>
+              </div>
+            </a>
 
-            <div class="serv__item">
-              <span class="serv__item-arrow" data-speed="400"><img src="img/arrow.svg" alt="" /></span>
-              <div class="serv__item-txt"><span class="serv__item-text">/ Vehicle Transport</span></div>
-            </div>
+            <a class="serv__link" href="services/vehicle-transport.html">
+              <div class="serv__item">
+                <span class="serv__item-arrow" data-speed="400"><img src="img/arrow.svg" alt="" /></span>
+                <div class="serv__item-txt">
+                  <span class="serv__item-text"><span class="serv__slash">/</span> Vehicle Transport</span>
+                </div>
+              </div>
+            </a>
 
-            <div class="serv__item">
-              <span class="serv__item-arrow" data-speed="800"><img src="img/arrow.svg" alt="" /></span>
-              <div class="serv__item-txt"><span class="serv__item-text">/ Courier Services</span></div>
-            </div>
+            <a class="serv__link" href="services/courier-services.html">
+              <div class="serv__item">
+                <span class="serv__item-arrow" data-speed="800"><img src="img/arrow.svg" alt="" /></span>
+                <div class="serv__item-txt">
+                  <span class="serv__item-text"><span class="serv__slash">/</span> Courier Services</span>
+                </div>
+              </div>
+            </a>
 
-            <div class="serv__item">
-              <span class="serv__item-arrow" data-speed="600"><img src="img/arrow.svg" alt="" /></span>
-              <div class="serv__item-txt"><span class="serv__item-text">/ Integrated Logistics</span></div>
-            </div>
+            <a class="serv__link" href="services/integrated-logistics.html">
+              <div class="serv__item">
+                <span class="serv__item-arrow" data-speed="600"><img src="img/arrow.svg" alt="" /></span>
+                <div class="serv__item-txt">
+                  <span class="serv__item-text"><span class="serv__slash">/</span> Integrated Logistics</span>
+                </div>
+              </div>
+            </a>
           </div>
-        </div> <!-- IMPORTANT: closes .content -->
+
+        </div>
       </section>
+
 
       <!-- div .contact -->
       <section class="contact" id="contact">
@@ -298,8 +340,15 @@
           24/7 Recovery: <a href="tel:07724528966">07724 528966</a>
           Email: <a href="mailto:info@fastfr8.co.uk">info@fastfr8.co.uk</a>
         </p>
+
+        <p class="footer__links">
+          <a href="legal/privacy.html">Privacy</a> ·
+          <a href="legal/cookies.html">Cookies</a> ·
+          <a href="legal/terms.html">Terms</a>
+        </p>
       </div>
     </footer>
+
 
   </div>
   <!-- /div .wrapp END -->
@@ -309,6 +358,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
   <script src="js/luxy.js"></script>
   <script src="js/js.js"></script>
+
+
 </body>
 
 </html>
