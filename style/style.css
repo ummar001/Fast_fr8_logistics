@@ -71,7 +71,7 @@ section {
 	display: flex;
 	width: 100%;
 	height: auto;
-	padding: 8px 70px;
+	padding: 8px 5px;
 }
 
 .header__marq-txt {
@@ -115,6 +115,19 @@ section {
 .title_paralax {
 	display: inline-block;
 	will-change: transform;
+}
+
+/* Promote frequently-animated elements to their own layer for smoother frames */
+.header__img,
+.header__marq-wrapp,
+.header__marq-star img,
+.header__marq,
+.header__cta,
+.about__img img,
+.work__item-img img {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .title .stroke {
@@ -774,12 +787,72 @@ html { scroll-behavior: smooth; } /* makes anchor jumps smooth */  /* [web:188] 
 .btn-cta:hover{ filter: brightness(1.05); }
 .btn-cta:active{ transform: translateY(1px); }
 
+
 @media (max-width: 600px){
-  .header__cta{
-    left: 18px;
-    bottom: 70px;
-    gap: 10px;
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .btn-cta{ padding: 12px 14px; font-size: 13px; }
+
+  .header__cta{
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    transform: none;
+
+    margin: 50px auto 0;
+    transform: translateY(10px);
+
+    width: min(360px, calc(100% - 32px));
+
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  .btn-cta{
+    flex: 1;
+    padding: 12px 14px;
+    font-size: 13px;
+    justify-content: center;
+  }
 }
 
+.header { position: relative; }
+
+
+.btn-cta:focus-visible{
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+/* Content font (leave headings/buttons as Syne) */
+.about__p,
+.benefits__p,
+.serv__item-text,
+.contact__intro,
+.contact__form,
+.contact__form input,
+.contact__form select,
+.contact__form textarea,
+.contact__form label,
+.footer__meta {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .about__p, .benefits__p, .serv__item-text, .contact__intro, .footer__meta {
+    font-size: 18px;
+  }
+}
+
+/* Keep Services lines in the old font */
+.serv__item-text {
+  font-family: "Syne", sans-serif;
+  font-weight: 800; /* matches your current bold look */
+}
