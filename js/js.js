@@ -7,6 +7,20 @@ document.addEventListener("DOMContentLoaded", function () {
 	Splitting();
 	luxy.init();
 	gsap.registerPlugin(ScrollTrigger);
+	const cta = document.querySelector(".header__cta");
+
+if (cta) {
+  ScrollTrigger.create({
+    trigger: ".header",
+    start: "top top",
+    end: "bottom top",
+    onEnter: () => cta.classList.add("is-active"),
+    onEnterBack: () => cta.classList.add("is-active"),
+    onLeave: () => cta.classList.remove("is-active"),
+    onLeaveBack: () => cta.classList.remove("is-active"),
+  });
+}
+
 
 	const gTl = gsap.timeline();
 	gTl.from(".title .char", 1, { opacity: 0, yPercent: 130, stagger: 0.06, ease: "back.out" });
