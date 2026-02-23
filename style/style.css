@@ -1206,3 +1206,133 @@ html { scroll-behavior: smooth; } /* makes anchor jumps smooth */  /* [web:188] 
   color: #ffd54a;
   -webkit-text-stroke: 0;
 }
+
+/* ============================
+   THANKS PAGE
+   ============================ */
+.thanks-main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--second-color, #0a0a0a);
+}
+
+.thanks-card {
+  max-width: 600px;
+  width: 100%;
+}
+
+.thanks-title {
+  font-size: clamp(32px, 8vw, 60px);
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.thanks-title .stroke {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.thanks-message {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #bfbfbf;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.thanks-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.thanks-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #ffd54a;
+  color: #0a0a0a;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: .08em;
+  font-size: 14px;
+  font-family: 'Syne', sans-serif;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  transition: all 0.15s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.thanks-btn:hover {
+  background: #ffeb8a;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.4);
+}
+
+.thanks-btn--ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.25);
+  box-shadow: none;
+}
+
+.thanks-btn--ghost:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.5);
+  transform: translateY(-2px);
+}
+
+.urgent-note {
+  margin-top: 40px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #9e9e9e;
+}
+
+.urgent-note a {
+  color: #ffd54a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.urgent-note a:hover {
+  text-decoration: underline;
+}
+
+/* Hide header CTA on thanks page (if needed) */
+.page-home .header__cta {
+  display: none;
+}
+
+.thanks-accent {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.thanks-accent .section-title__square {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #ffd54a;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* Ensure logo stays white on thanks page */
+.site-nav__brand {
+  color: #fff !important;  /* you can remove !important if the rule already exists and is specific enough */
+}
