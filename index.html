@@ -273,7 +273,7 @@
             Send us a request and we’ll get back to you with options, pricing and next steps.
           </p>
 
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks/">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks">
             <input type="hidden" name="form-name" value="contact" />
             <p hidden>
               <label>Don’t fill this out: <input name="bot-field" /></label>
@@ -283,19 +283,16 @@
                 <label for="name">Name*</label>
                 <input type="text" id="name" name="name" required />
               </div>
-
               <div class="contact__field">
                 <label for="email">Email*</label>
                 <input type="email" id="email" name="email" required />
               </div>
             </div>
-
             <div class="contact__row">
               <div class="contact__field">
                 <label for="phone">Phone</label>
                 <input type="tel" id="phone" name="phone" />
               </div>
-
               <div class="contact__field">
                 <label for="service">Service</label>
                 <select id="service" name="service">
@@ -307,12 +304,10 @@
                 </select>
               </div>
             </div>
-
             <div class="contact__field contact__field--full">
               <label for="message">Request / Message*</label>
               <textarea id="message" name="message" rows="4" required></textarea>
             </div>
-
             <button type="submit" class="contact__btn">Send Request</button>
           </form>
         </div>
