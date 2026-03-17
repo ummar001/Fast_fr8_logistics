@@ -1310,10 +1310,7 @@ html { scroll-behavior: smooth; } /* makes anchor jumps smooth */  /* [web:188] 
   text-decoration: underline;
 }
 
-/* Hide header CTA on thanks page (if needed) */
-.page-home .header__cta {
-  display: none;
-}
+
 
 .thanks-accent {
   position: relative;
@@ -1336,3 +1333,5 @@ html { scroll-behavior: smooth; } /* makes anchor jumps smooth */  /* [web:188] 
 .site-nav__brand {
   color: #fff !important;  /* you can remove !important if the rule already exists and is specific enough */
 }
+
+
