@@ -1,32 +1,423 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Breakdown Recovery | FAST FR8 LOGISTICS</title>
-  <meta name="description" content="Breakdown recovery for cars, vans and light commercial vehicles. Fast dispatch, safe loading, and clear communication." />
+  <title>24/7 Breakdown Recovery Oldham & Greater Manchester | FAST FR8</title>
+  <meta name="description" content="Fast 24/7 breakdown recovery in Oldham & Greater Manchester. Cars, vans & light commercials. Instant quote — call 07724 528966 now." />
   <meta name="trustpilot-one-time-domain-verification-id" content="968f5d1b-315e-42c4-a2c0-2f7e11689217"/>
   <link rel="icon" href="../img/icon.jpg" type="image/jpeg" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="../style/normalize.css" />
   <link rel="stylesheet" href="../style/style.css" />
+
+  <style>
+    /* ─── RESET GLOBAL CONFLICTS ─── */
+    .page-service .header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 110px 24px 52px;
+      min-height: 90vh;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .page-service .title {
+      mix-blend-mode: normal !important;
+      font-size: clamp(30px, 9vw, 68px);
+      line-height: 1.05;
+      text-shadow: 0 2px 30px rgba(0,0,0,0.95);
+      position: relative;
+      z-index: 3;
+      word-break: keep-all;
+      hyphens: none;
+      max-width: 360px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* ─── HERO BUTTONS — CENTERED, EQUAL ─── */
+    .page-service .header__cta {
+      position: relative !important;
+      bottom: auto !important;
+      left: auto !important;
+      top: auto !important;
+      right: auto !important;
+      margin: 28px auto 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      max-width: 300px;
+      z-index: 3;
+    }
+
+    .page-service .header__cta .btn-cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 16px 24px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      border-radius: 6px;
+    }
+
+    /* ─── HERO OVERLAY & IMAGE ─── */
+    .svc-hero-img {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+    .svc-hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .svc-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.58);
+      z-index: 2;
+    }
+    .svc-hero-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      margin: 10px 0 0;
+      position: relative;
+      z-index: 3;
+      text-align: center;
+    }
+
+    /* ─── URGENT CALLOUTS ─── */
+    .svc-urgent {
+      background: #0d0d0d;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    .svc-urgent-block {
+      padding: 28px 24px;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .svc-urgent-block:last-child { border-bottom: none; }
+    .svc-urgent-label {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #ffd54a;
+      margin-bottom: 8px;
+    }
+    .svc-urgent-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    .svc-urgent-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #9e9e9e;
+      line-height: 1.65;
+    }
+
+    /* ─── TRUST STRIP ─── */
+    .svc-trust {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: #111;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    .svc-trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.55);
+      padding: 15px 14px;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .svc-trust-badge:nth-child(odd) { border-right: 1px solid #1a1a1a; }
+
+    /* ─── STATS BAR ─── */
+    .svc-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: #0a0a0a;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    .svc-stat {
+      text-align: center;
+      padding: 24px 12px;
+      border-right: 1px solid #1a1a1a;
+    }
+    .svc-stat:last-child { border-right: none; }
+    .svc-stat-num {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      color: #ffd54a;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .svc-stat-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      line-height: 1.4;
+    }
+
+    /* ─── CONTENT SECTIONS ─── */
+    .svc-section {
+      padding: 52px 24px 0;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .svc-section h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(22px, 6vw, 34px);
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+    .svc-section h2 .stroke {
+      color: transparent;
+      -webkit-text-stroke: 1px #fff;
+    }
+    .svc-lead {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #bfbfbf;
+      line-height: 1.7;
+    }
+
+    /* ─── WHY CHOOSE US CARDS ─── */
+    .svc-why {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 4px;
+    }
+    .svc-why-card {
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .svc-why-icon {
+      min-width: 36px;
+      height: 36px;
+      background: rgba(255,213,74,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .svc-why-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 5px;
+    }
+    .svc-why-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #6b6b6b;
+      line-height: 1.6;
+    }
+
+    /* ─── STEPS ─── */
+    .svc-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .svc-step {
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .svc-step-num {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 26px;
+      color: #ffd54a;
+      line-height: 1;
+      min-width: 32px;
+    }
+    .svc-step-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .svc-step-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #6b6b6b;
+      line-height: 1.6;
+    }
+
+    /* ─── CHECKLIST ─── */
+    .svc-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .svc-checklist li {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #bfbfbf;
+      line-height: 1.5;
+      padding-left: 28px;
+      position: relative;
+    }
+    .svc-checklist li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #ffd54a;
+      font-weight: 700;
+    }
+
+    /* ─── WHAT WE HANDLE ─── */
+    .svc-handles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .svc-handle {
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-radius: 6px;
+      padding: 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #bfbfbf;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .svc-handle-icon { font-size: 20px; margin-bottom: 6px; display: block; }
+
+    /* ─── BOTTOM CTA ─── */
+    .svc-cta {
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-radius: 12px;
+      padding: 36px 24px;
+      text-align: center;
+      margin: 48px 24px 80px;
+    }
+    .svc-cta-heading {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .svc-cta p {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #9e9e9e;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .svc-cta-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .svc-cta-btns .btn-cta {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 16px 24px;
+      font-size: 15px;
+    }
+
+    /* ─── DESKTOP OVERRIDES ─── */
+    @media (min-width: 600px) {
+      .page-service .header__cta {
+        flex-direction: row;
+        max-width: none;
+        justify-content: center;
+      }
+      .page-service .header__cta .btn-cta {
+        width: auto;
+        min-width: 180px;
+      }
+      .svc-trust {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 18px 40px;
+      }
+      .svc-trust-badge {
+        border: none !important;
+        padding: 0;
+      }
+      .svc-why { grid-template-columns: repeat(2, 1fr); }
+      .svc-steps { grid-template-columns: repeat(2, 1fr); }
+      .svc-cta-btns { flex-direction: row; justify-content: center; }
+      .svc-cta-btns .btn-cta { width: auto; min-width: 200px; }
+      .svc-cta { margin: 48px auto 80px; max-width: 760px; }
+      .svc-urgent { display: grid; grid-template-columns: 1fr 1fr; }
+      .svc-urgent-block { border-bottom: none; border-right: 1px solid #1a1a1a; }
+      .svc-urgent-block:last-child { border-right: none; }
+    }
+  </style>
 </head>
 
 <body class="page-service">
+
   <nav class="site-nav" aria-label="Primary">
     <a class="site-nav__brand" href="../index.html">FAST FR8</a>
-
     <button class="site-nav__toggle" type="button" aria-controls="siteNavMenu" aria-expanded="false">
       <span class="site-nav__burger" aria-hidden="true"></span>
       <span class="sr-only">Menu</span>
     </button>
-
     <div class="site-nav__menu" id="siteNavMenu">
       <a href="../index.html#about">About</a>
       <a href="../index.html#benefits">Benefits</a>
@@ -37,105 +428,248 @@
   </nav>
 
   <div id="luxy" class="wrapp">
-    <header class="header" style="height:auto; min-height:60vh;">
-      <h1 class="title" data-splitting>
-        Breakdown <span class="stroke">Recovery</span>
+
+    <!-- ═══ HERO ═══ -->
+    <header class="header">
+      <div class="svc-hero-img">
+        <img src="../img/Picture4.jpg" alt="Fast FR8 breakdown recovery vehicle" />
+      </div>
+      <div class="svc-hero-overlay"></div>
+      
+      <h1 class="title" data-splitting
+        style="font-size: clamp(20px, 7vw, 64px); mix-blend-mode: normal; text-shadow: 0 2px 30px rgba(0,0,0,0.95);">
+        24/7<br>Breakdown<br><span class="stroke">Recovery</span>
       </h1>
 
-      <div class="header__cta">
-        <a class="btn-cta" href="https://wa.me/447724528966" target="_blank" rel="noopener">
-          WHATSAPP
-        </a>
-        <a class="btn-cta btn-cta--ghost" href="tel:07724528966">Call</a>
-      </div>
+      <p class="svc-hero-sub">All major A-roads in Greater Manchester and surrounding areas. — rapid dispatch, any time</p>
 
-      <div class="header__img" style="right:0; width:100%; height:60vh; position:absolute; top:0;">
-        <img src="../img/Picture4.jpg" alt="Breakdown recovery vehicle" />
+      <div class="header__cta">
+        <a class="btn-cta" href="tel:07724528966">📞 Call Now</a>
+        <a class="btn-cta btn-cta--ghost" href="https://wa.me/447724528966?text=Hi%20Fast%20Fr8%2C%20I%20need%20breakdown%20recovery" target="_blank" rel="noopener">💬 WhatsApp</a>
       </div>
+      <div style="position:relative; z-index:3; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:24px; max-width:320px;">
+  <span style="font-family:Inter,sans-serif; font-size:11px; font-weight:700; color:rgba(255,255,255,0.55); background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.1); border-radius:20px; padding:6px 14px; text-transform:uppercase; letter-spacing:0.08em;">
+    ⚡ 30 Min Response
+  </span>
+  <span style="font-family:Inter,sans-serif; font-size:11px; font-weight:700; color:rgba(255,255,255,0.55); background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.1); border-radius:20px; padding:6px 14px; text-transform:uppercase; letter-spacing:0.08em;">
+    🛡️ Fully Insured
+  </span>
+  <span style="font-family:Inter,sans-serif; font-size:11px; font-weight:700; color:rgba(255,255,255,0.55); background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.1); border-radius:20px; padding:6px 14px; text-transform:uppercase; letter-spacing:0.08em;">
+    ✓ No Hidden Fees
+  </span>
+</div>
+
+
+
     </header>
 
+    <!-- ═══ URGENT CALLOUTS ═══ -->
+    <div class="svc-urgent">
+      <div class="svc-urgent-block">
+        <div class="svc-urgent-label">🚨 Broken Down?</div>
+        <div class="svc-urgent-title">Get an Instant Quote</div>
+        <div class="svc-urgent-body">Call or WhatsApp us with your location, destination postcode and vehicle details for a price and ETA within minutes.</div>
+      </div>
+      <div class="svc-urgent-block">
+        <div class="svc-urgent-label">💥 Accident Damaged?</div>
+        <div class="svc-urgent-title">We Handle Insurance Too</div>
+        <div class="svc-urgent-body">Not at fault? We collect and store your vehicle and can deal directly with your insurer. Contact us for details.</div>
+      </div>
+    </div>
+
+    <!-- ═══ TRUST STRIP ═══ -->
+    <div class="svc-trust">
+      <div class="svc-trust-badge">
+        <svg width="15" height="15" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        24/7 Available
+      </div>
+      <div class="svc-trust-badge">
+        <svg width="15" height="15" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l7 4v5c0 5-3.5 8.5-7 10C8.5 19.5 5 16 5 11V6l7-4z"/></svg>
+        Fully Insured
+      </div>
+      <div class="svc-trust-badge">
+        <svg width="15" height="15" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Fast Response
+      </div>
+      <div class="svc-trust-badge">
+        <svg width="15" height="15" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        No Hidden Fees
+      </div>
+      <div class="svc-trust-badge">
+        <svg width="15" height="15" fill="#ffd54a" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        5 Star Reviews
+      </div>
+      <div class="svc-trust-badge">
+        <svg width="15" height="15" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2C8.13 2 5 5.13 5 10c0 5.25 7 12 7 12s7-6.75 7-12c0-4.87-3.13-7-7-8z"/></svg>
+        Nationwide Cover
+      </div>
+    </div>
+
+    <!-- ═══ STATS BAR ═══ -->
+    <div class="svc-stats">
+      <div class="svc-stat">
+        <div class="svc-stat-num">30m</div>
+        <div class="svc-stat-label">Avg. Response Time</div>
+      </div>
+      <div class="svc-stat">
+        <div class="svc-stat-num">24/7</div>
+        <div class="svc-stat-label">Always Available</div>
+      </div>
+      <div class="svc-stat">
+        <div class="svc-stat-num">100%</div>
+        <div class="svc-stat-label">Insured Recovery</div>
+      </div>
+    </div>
+
     <main class="main">
-      <section class="about">
-        <div class="content">
+      <div class="content">
 
-          <div class="service-block">
-            <h2 class="section-title">Breakdown <span class="stroke">Recovery</span>
-              <span class="section-title__square"></span>
-            </h2>
+        <!-- ═══ INTRO ═══ -->
+        <div class="svc-section">
+          <h2>Breakdown <span class="stroke">Recovery</span></h2>
+          <p class="svc-lead">
+            Broken down on the M60, M62, or a side street in Oldham? Fast FR8 dispatches quickly,
+            loads safely, and gets you to your chosen destination without the stress.
+            Cars, vans and light commercials — any time, day or night.
+          </p>
+        </div>
 
-            <p class="service-subtitle">
-              Fast, professional recovery when your vehicle can’t continue safely.
-            </p>
-
-            <p class="about__p">
-              When your vehicle is immobile, unsafe to drive, or you’ve had an incident on the road, we get you and your vehicle
-              out of trouble quickly and professionally. Clear comms, safe loading, and a smooth handover — no stress.
-            </p>
-          </div>
-
-          <div class="service-block">
-            <div class="work__item-img" style="height:60vh;">
-              <img src="../img/Picture6.jpg" alt="Recovery loading and transport" />
+        <!-- ═══ WHY CHOOSE US ═══ -->
+        <div class="svc-section">
+          <h2>Why <span class="stroke">Choose Us</span></h2>
+          <div class="svc-why">
+            <div class="svc-why-card">
+              <div class="svc-why-icon">
+                <svg width="18" height="18" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2C8.13 2 5 5.13 5 10c0 5.25 7 12 7 12s7-6.75 7-12c0-4.87-3.13-7-7-8z"/></svg>
+              </div>
+              <div>
+                <div class="svc-why-title">Instant Quote</div>
+                <div class="svc-why-body">Send your location and destination postcode for a price and ETA within minutes.</div>
+              </div>
+            </div>
+            <div class="svc-why-card">
+              <div class="svc-why-icon">
+                <svg width="18" height="18" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div>
+                <div class="svc-why-title">Arrival from 30 Mins</div>
+                <div class="svc-why-body">We aim to reach you within 30 minutes depending on location and traffic.</div>
+              </div>
+            </div>
+            <div class="svc-why-card">
+              <div class="svc-why-icon">
+                <svg width="18" height="18" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l7 4v5c0 5-3.5 8.5-7 10C8.5 19.5 5 16 5 11V6l7-4z"/></svg>
+              </div>
+              <div>
+                <div class="svc-why-title">Fully Insured</div>
+                <div class="svc-why-body">Your vehicle is protected throughout the entire recovery and transport.</div>
+              </div>
+            </div>
+            <div class="svc-why-card">
+              <div class="svc-why-icon">
+                <svg width="18" height="18" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <div class="svc-why-title">Recovery You Can Trust</div>
+                <div class="svc-why-body">Drop-off at your garage, home, depot or any UK destination. Safe handover guaranteed.</div>
+              </div>
             </div>
           </div>
-
-          <div class="service-block">
-            <h2 class="section-title">How it <span class="stroke">works</span>
-              <span class="section-title__square"></span>
-            </h2>
-
-            <ul class="service-list">
-              <li>Share your location + vehicle details.</li>
-              <li>We dispatch the right recovery method (flatbed / tow / winch as needed).</li>
-              <li>Pickup and transport to your chosen destination (garage, yard, home, depot).</li>
-            </ul>
-          </div>
-
-          <div class="service-block">
-            <h2 class="section-title">What we <span class="stroke">handle</span>
-              <span class="section-title__square"></span>
-            </h2>
-
-            <ul class="service-list">
-              <li>Non-starts, battery/alternator issues, flats, overheating, warning lights.</li>
-              <li>Accident recovery and roadside recovery where safe/accessible.</li>
-              <li>Cars, vans, and light commercial vehicles (tell us what you drive and we’ll confirm).</li>
-            </ul>
-          </div>
-
-          <div class="service-block">
-            <p class="about__p">
-              <a class="btn-cta" href="../index.html#contact-form">Request recovery</a>
-              <a class="btn-cta btn-cta--ghost" href="tel:07724528966">Call now</a>
-            </p>
-
-            <p class="about__p"><a href="../index.html">← Back to home</a></p>
-          </div>
-
         </div>
-      </section>
+
+        <!-- ═══ HOW IT WORKS ═══ -->
+        <div class="svc-section">
+          <h2>How It <span class="stroke">Works</span></h2>
+          <div class="svc-steps">
+            <div class="svc-step">
+              <div class="svc-step-num">01</div>
+              <div>
+                <div class="svc-step-title">Get a Quote</div>
+                <div class="svc-step-body">Send your location, destination postcode, vehicle details and cause of breakdown.</div>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step-num">02</div>
+              <div>
+                <div class="svc-step-title">Fast Dispatch</div>
+                <div class="svc-step-body">We aim to reach you within 30–60 minutes depending on location and traffic.</div>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step-num">03</div>
+              <div>
+                <div class="svc-step-title">Safe Recovery</div>
+                <div class="svc-step-body">Flatbed, tow or winch — we use the right method for your vehicle.</div>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step-num">04</div>
+              <div>
+                <div class="svc-step-title">Drop-Off</div>
+                <div class="svc-step-body">To your garage, home, depot or any UK destination.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ WHAT WE HANDLE ═══ -->
+        <div class="svc-section">
+          <h2>What We <span class="stroke">Handle</span></h2>
+          <div class="svc-handles">
+            <div class="svc-handle"><span class="svc-handle-icon">🔋</span>Battery / Alternator Failure</div>
+            <div class="svc-handle"><span class="svc-handle-icon">🚗</span>Non-Starts</div>
+            <div class="svc-handle"><span class="svc-handle-icon">💥</span>Accident Recovery</div>
+            <div class="svc-handle"><span class="svc-handle-icon">🔥</span>Overheating</div>
+            <div class="svc-handle"><span class="svc-handle-icon">🛞</span>Flat Tyres</div>
+            <div class="svc-handle"><span class="svc-handle-icon">🛻</span>Vans up to 3.5t</div>
+            <div class="svc-handle"><span class="svc-handle-icon">🛣️</span>Motorway Recovery</div>
+            <div class="svc-handle"><span class="svc-handle-icon">🌍</span>Nationwide Transport</div>
+          </div>
+        </div>
+
+        <!-- ═══ ABOUT / TRUST NARRATIVE ═══ -->
+        <div class="svc-section">
+          <h2>Fast, Friendly &amp; <span class="stroke">Professional</span></h2>
+          <p class="svc-lead">
+            Fast FR8 provides emergency breakdown recovery, accident recovery, and vehicle transport
+            across Greater Manchester and the North West. We're fast, friendly, and fully insured —
+            because when you're stuck, you need more than a tow. You need peace of mind.
+          </p>
+        </div>
+
+        <!-- ═══ BOTTOM CTA ═══ -->
+        <div class="svc-cta">
+          <div class="svc-cta-heading">Stranded Right Now?</div>
+          <p>Don't wait — call or WhatsApp for an immediate response. We cover all of Greater Manchester 24/7.</p>
+          <div class="svc-cta-btns">
+            <a class="btn-cta" href="tel:07724528966">📞 Call </a>
+            <a class="btn-cta btn-cta--ghost" href="https://wa.me/447724528966?text=Hi%20Fast%20Fr8%2C%20I%20need%20breakdown%20recovery" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+          </div>
+          <p style="margin-top:16px;font-size:12px;color:#444;">
+            <a href="../index.html#contact-form" style="color:#555;text-decoration:none;">Or use our contact form →</a>
+          </p>
+        </div>
+
+      </div>
     </main>
 
     <footer class="footer">
-      <div class="footer__div">
-        <span data-speed="-300">c</span>
-        <span data-speed="120">o</span>
-        <span data-speed="260">n</span>
-        <span data-speed="-220">t</span>
-        <span data-speed="340">a</span>
-        <span data-speed="-180">c</span>
-        <span data-speed="210">t</span>
-        <span data-speed="-260"> </span>
-        <span data-speed="180">u</span>
-        <span data-speed="-140">s</span>
-      </div>
-
+      <!-- Animated CONTACT US -->
+  <div class="footer__div">
+    <span data-speed="-300">c</span>
+    <span data-speed="120">o</span>
+    <span data-speed="260">n</span>
+    <span data-speed="-220">t</span>
+    <span data-speed="340">a</span>
+    <span data-speed="-180">c</span>
+    <span data-speed="210">t</span>
+    <span data-speed="-260"> </span>
+    <span data-speed="180">u</span>
+    <span data-speed="-140">s</span>
+  </div>
       <div class="footer__meta">
         <p>© <script>document.write(new Date().getFullYear())</script> FAST FR8 Logistics Ltd. All rights reserved.</p>
-        <p>
-          24/7 Recovery: <a href="tel:07724528966">07724 528966</a>
-          Email: <a href="mailto:info@fastfr8.co.uk">info@fastfr8.co.uk</a>
-        </p>
+        <p>24/7 Recovery: <a href="tel:07724528966">07724 528966</a> &nbsp; Email: <a href="mailto:info@fastfr8.co.uk">info@fastfr8.co.uk</a></p>
         <p class="footer__links">
           <a href="../legal/privacy.html">Privacy</a> ·
           <a href="../legal/cookies.html">Cookies</a> ·
@@ -143,6 +677,7 @@
         </p>
       </div>
     </footer>
+
   </div>
 
   <script src="../js/splitting.min.js"></script>
@@ -150,6 +685,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
   <script src="../js/luxy.js"></script>
   <script src="../js/js.js"></script>
+
+  <a class="whatsapp-float" href="https://wa.me/447724528966?text=Hi%20Fast%20Fr8%2C%20I%20need%20breakdown%20recovery"
+    target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/>
+    </svg>
+  </a>
+
 </body>
 </html>
-```
