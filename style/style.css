@@ -320,26 +320,127 @@ section {
 	text-transform: uppercase;
 }
 
-/* footer ********/
+/* ── FOOTER ── */
 .footer {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 40px;
+  background: var(--second-color);
 }
 
+/* FIX: CONTACT US text visible */
 .footer__div {
-	font-size: 70px;
-	letter-spacing: 15px;
-	color: var(--pr-color);
-	text-transform: uppercase;
+  font-size: 70px;
+  letter-spacing: 15px;
+  color: var(--pr-color);   /* white */
+  text-transform: uppercase;
+  text-align: center;
+  padding: 80px 20px 60px;
+  width: 100%;
 }
 
 .footer__div span {
-	display: inline-block;
+  display: inline-block;
+  color: #fff;              /* force white, no blend issues */
 }
 
-.footer__links{
+/* Areas block */
+.footer__areas {
+  width: 100%;
+  padding: 50px 70px 40px;
+  border-top: 1px solid #1e1e1e;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.footer__areas-title {
+  text-align: center;
+  color: #9e9e9e;
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 30px;
+}
+
+.footer__areas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 16px;
+}
+
+.footer__areas-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__areas-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #4b4b4b;
+  line-height: 1.9;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.footer__areas-list li:hover {
+  color: #ffd54a;
+}
+
+.footer__areas-divider {
+  border: none;
+  border-top: 1px solid #1e1e1e;
+  margin: 30px 0 24px;
+}
+
+.footer__areas-motorways {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #4b4b4b;
+  margin-bottom: 10px;
+}
+
+.footer__areas-cta-text {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #9e9e9e;
+  margin-bottom: 20px;
+}
+
+.footer__areas-btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* FIX: meta no longer absolute, just sits below areas */
+.footer__meta {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: #9e9e9e;
+  line-height: 1.8;
+  text-transform: none;
+  padding: 0 20px;
+}
+
+.footer__meta a {
+  color: #9e9e9e;
+  text-decoration: none;
+}
+
+.footer__meta a:hover {
+  color: #ffd54a;
+}
+
+.footer__links {
   margin-top: 10px;
   font-size: 12px;
   color: #9e9e9e;
@@ -347,13 +448,41 @@ section {
   letter-spacing: 0.5px;
 }
 
-.footer__links a{
+.footer__links a {
   color: #9e9e9e;
   text-decoration: none;
 }
 
-.footer__links a:hover{
+.footer__links a:hover {
   color: #ffd54a;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer__div {
+    font-size: 28px;
+    letter-spacing: 6px;
+    padding: 60px 20px 40px;
+  }
+
+  .footer__areas {
+    padding: 40px 20px 30px;
+  }
+
+  .footer__areas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__div {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+
+  .footer__areas-list li {
+    font-size: 10px;
+  }
 }
 
 
@@ -529,38 +658,8 @@ section {
   }
 }
 
-/* keep existing footer look, just allow extra content */
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  position: relative; /* so the meta bar can sit at the bottom */
-}
 
-/* existing .footer__div stays as-is */
 
-/* small meta bar at bottom of footer */
-.footer__meta {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  font-size: 12px;
-  color: #9e9e9e;
-  line-height: 1.4;
-  text-transform: none;
-}
-
-.footer__meta a {
-  color: #9e9e9e;
-  text-decoration: none;
-}
-
-.footer__meta a:hover {
-  color: #ffd54a;
-}
 /* **********************************************************/
 /* HERO TITLE – TABLET & MOBILE POSITION */
 @media (max-width: 768px) {
@@ -1361,4 +1460,89 @@ html { scroll-behavior: smooth; } /* makes anchor jumps smooth */  /* [web:188] 
 .whatsapp-float:hover {
   transform: scale(1.1);
   box-shadow: 0 10px 32px rgba(0,0,0,0.45);
+}
+
+/* ── Footer area buttons ── */
+.footer__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  color: #9e9e9e;
+  border: 1px solid #2f2f2f;
+  transition: all 0.2s ease;
+}
+
+.footer__btn:hover {
+  border-color: #ffd54a;
+  color: #ffd54a;
+}
+
+/* WhatsApp ghost variant – subtle green tint */
+.footer__btn--ghost {
+  border-color: #1a3a28;
+  color: #4b7a5e;
+}
+
+.footer__btn--ghost:hover {
+  border-color: #25D366;
+  color: #25D366;
+}
+
+/* ── Footer marquee ── */
+.footer__marq {
+  width: 100%;
+  background: #111;
+  overflow: hidden;
+  border-top: 1px solid #1e1e1e;
+  border-bottom: 1px solid #1e1e1e;
+  padding: 10px 0;
+}
+
+.footer__marq-wrapp {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 6px 5px;
+  animation: marq-scroll 15s linear infinite;
+}
+
+.footer__marq-txt {
+  position: relative;
+  flex: 0 0 auto;
+  display: inline-block;
+  padding-right: 55px;
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #4b4b4b;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.footer__marq-star {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.footer__marq-star img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes marq-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
