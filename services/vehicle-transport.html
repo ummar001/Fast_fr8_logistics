@@ -2,6 +2,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) - Fast FR8 GA4 + Conversion Tracking -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H5VG2E6DVD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H5VG2E6DVD');
+
+  // Track phone number clicks
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'phone_click', {
+          event_category: 'Contact',
+          event_label: 'Call Button'
+        });
+      });
+    });
+
+    // Track WhatsApp clicks
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'whatsapp_click', {
+          event_category: 'Contact',
+          event_label: 'WhatsApp Button'
+        });
+      });
+    });
+
+    // Track form submissions
+    document.querySelectorAll('form').forEach(function(form) {
+      form.addEventListener('submit', function() {
+        gtag('event', 'form_submit', {
+          event_category: 'Contact',
+          event_label: 'Contact Form'
+        });
+      });
+    });
+  });
+</script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vehicle Transport | FAST FR8 LOGISTICS</title>
