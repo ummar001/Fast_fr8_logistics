@@ -415,7 +415,10 @@
           </p>
 
           <form action="https://formsubmit.co/info@fastfr8.co.uk" method="POST">
-            <!-- FormSubmit settings -->
+            <!-- Redirect to your own thank you page -->
+            <input type="hidden" name="_next" value="https://www.fastfr8.co.uk/thanks">
+
+            <!-- FormSubmit settings (for the email you receive in Zoho) -->
             <input type="hidden" name="_subject" value="New enquiry from Fast FR8 website">
             <input type="hidden" name="_template" value="table">
 
@@ -454,6 +457,7 @@
 
             <button type="submit" class="contact__btn">Send Request</button>
           </form>
+
 
         </div>
       </section>
