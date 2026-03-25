@@ -2,82 +2,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) - Fast FR8 GA4 + Conversion Tracking -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H5VG2E6DVD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-H5VG2E6DVD');
-
-  // Track phone number clicks
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
-      el.addEventListener('click', function() {
-        gtag('event', 'phone_click', {
-          event_category: 'Contact',
-          event_label: 'Call Button'
-        });
-      });
-    });
-
-    // Track WhatsApp clicks
-    document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
-      el.addEventListener('click', function() {
-        gtag('event', 'whatsapp_click', {
-          event_category: 'Contact',
-          event_label: 'WhatsApp Button'
-        });
-      });
-    });
-
-    // Track form submissions
-    document.querySelectorAll('form').forEach(function(form) {
-      form.addEventListener('submit', function() {
-        gtag('event', 'form_submit', {
-          event_category: 'Contact',
-          event_label: 'Contact Form'
-        });
-      });
-    });
-  });
-</script>
-
-<!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w00dnl8ekd");
-  </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Integrated Logistics | FAST FR8 LOGISTICS</title>
-  <meta name="description" content="Integrated logistics support: planning, coordination, and transport solutions that keep operations moving and reduce stress." />
+
+  <title>Integrated Logistics Services | Fast FR8 Logistics Ltd – UK</title>
+  <meta name="description" content="Fast FR8 Logistics provides integrated logistics solutions across the UK — route planning, multi-stop delivery coordination, asset moves, and 24/7 recovery support." />
+  <link rel="canonical" href="https://fastfr8.co.uk/services/integrated-logistics.html" />
+
+  <meta property="og:title" content="Integrated Logistics | Fast FR8 Logistics Ltd" />
+  <meta property="og:description" content="Planning, coordination and transport support that keeps your operation moving. 24/7 availability across the UK." />
+  <meta property="og:url" content="https://fastfr8.co.uk/services/integrated-logistics.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://fastfr8.co.uk/img/Picture4.jpg" />
+  <meta property="og:site_name" content="Fast FR8 Logistics Ltd" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Integrated Logistics | Fast FR8 Logistics Ltd" />
+  <meta name="twitter:description" content="Route planning, delivery coordination, asset moves and 24/7 recovery support across the UK." />
+  <meta name="twitter:image" content="https://fastfr8.co.uk/img/Picture4.jpg" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Service","name":"Integrated Logistics","provider":{"@type":"LocalBusiness","name":"Fast FR8 Logistics Ltd","url":"https://fastfr8.co.uk","telephone":"07724528966","email":"info@fastfr8.co.uk","address":{"@type":"PostalAddress","addressCountry":"GB"}},"description":"Integrated logistics solutions including route planning, delivery coordination, asset moves, multi-stop workflows, and 24/7 recovery fallback support across the UK.","areaServed":"United Kingdom","serviceType":"Integrated Logistics"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fastfr8.co.uk"},{"@type":"ListItem","position":2,"name":"Services","item":"https://fastfr8.co.uk/index.html#services"},{"@type":"ListItem","position":3,"name":"Integrated Logistics","item":"https://fastfr8.co.uk/services/integrated-logistics.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you cover the whole of the UK?","acceptedAnswer":{"@type":"Answer","text":"Yes — Fast FR8 operates UK-wide."}},{"@type":"Question","name":"How quickly can you respond to urgent jobs?","acceptedAnswer":{"@type":"Answer","text":"Same-day response, often dispatching within hours. Call 07724 528966."}},{"@type":"Question","name":"Can you handle multi-stop deliveries?","acceptedAnswer":{"@type":"Answer","text":"Yes — multi-stop routing is a core part of what we do."}},{"@type":"Question","name":"What if something goes wrong mid-job?","acceptedAnswer":{"@type":"Answer","text":"Every job includes recovery fallback planning. Our 24/7 line means you're never left stranded."}}]}
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5VG2E6DVD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H5VG2E6DVD');
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="tel:"]').forEach(el => el.addEventListener('click', () => gtag('event','phone_click',{event_category:'Contact',event_label:'Call Button'})));
+      document.querySelectorAll('a[href*="wa.me"]').forEach(el => el.addEventListener('click', () => gtag('event','whatsapp_click',{event_category:'Contact',event_label:'WhatsApp Button'})));
+      document.querySelectorAll('form').forEach(form => form.addEventListener('submit', () => gtag('event','form_submit',{event_category:'Contact',event_label:'Contact Form'})));
+    });
+  </script>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w00dnl8ekd");
+  </script>
 
   <link rel="icon" href="../img/icon.jpg" type="image/jpeg" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style/normalize.css" />
   <link rel="stylesheet" href="../style/style.css" />
+
+  <style>
+    /* ══════════════════════════════════════════
+       SERVICE HERO — fully standalone, inherits
+       NOTHING from .header homepage grid layout
+    ══════════════════════════════════════════ */
+    .svc-hero {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 7rem 1.5rem 3rem;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .svc-hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .svc-hero__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    .svc-hero__bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,.92) 0%,
+        rgba(0,0,0,.55) 50%,
+        rgba(0,0,0,.2) 100%
+      );
+    }
+    .svc-hero__content {
+      position: relative;
+      z-index: 10;
+      max-width: 680px;
+    }
+    .svc-hero__breadcrumb {
+      font-family: 'Inter', sans-serif;
+      font-size: .75rem;
+      color: rgba(255,255,255,.38);
+      margin-bottom: 1.5rem;
+    }
+    .svc-hero__breadcrumb a {
+      color: rgba(255,255,255,.38);
+      text-decoration: none;
+    }
+    .svc-hero__breadcrumb a:hover { color: #ffc800; }
+    .svc-hero__breadcrumb span { margin: 0 .4rem; }
+
+    .svc-hero__title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.8rem, 10vw, 6rem);
+      line-height: 1.0;
+      color: #fff;
+      margin: 0 0 1rem;
+      letter-spacing: -.01em;
+    }
+    .svc-hero__title .stroke {
+      -webkit-text-stroke: 2px #fff;
+      color: transparent;
+    }
+    .svc-hero__sub {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(.9rem, 2.5vw, 1.05rem);
+      color: rgba(255,255,255,.68);
+      line-height: 1.7;
+      margin: 0 0 1.5rem;
+      max-width: 480px;
+    }
+    .svc-hero__badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-bottom: 2rem;
+    }
+    .svc-hero__badge {
+      background: rgba(255,200,0,.1);
+      border: 1px solid rgba(255,200,0,.4);
+      color: #ffc800;
+      padding: .3rem .85rem;
+      border-radius: 2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .svc-hero__cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .85rem;
+    }
+
+    /* ══════════════════════════════════════════
+       CONTENT SECTIONS
+    ══════════════════════════════════════════ */
+    .trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem 2rem;
+      align-items: center;
+      padding: 1.5rem 0;
+      border-top: 1px solid rgba(255,255,255,.07);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      margin: 0 0 2.5rem;
+    }
+    .trust-strip__item {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      font-family: 'Inter', sans-serif;
+      font-size: .83rem;
+      color: rgba(255,255,255,.6);
+    }
+
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.2rem;
+      margin: 1.75rem 0 3rem;
+    }
+    .service-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px;
+      padding: 1.5rem 1.3rem;
+      transition: border-color .3s, transform .3s;
+    }
+    .service-card:hover { border-color: rgba(255,200,0,.45); transform: translateY(-4px); }
+    .service-card__icon { font-size: 1.8rem; margin-bottom: .6rem; display: block; }
+    .service-card__title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: .95rem;
+      color: #fff;
+      margin: 0 0 .4rem;
+    }
+    .service-card__desc {
+      font-family: 'Inter', sans-serif;
+      font-size: .82rem;
+      color: rgba(255,255,255,.56);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1.2rem;
+      margin: 1.5rem 0 3rem;
+    }
+    .process-step {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 12px;
+      padding: 1.4rem 1.2rem;
+    }
+    .process-step__num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: rgba(255,200,0,.18);
+      line-height: 1;
+      margin-bottom: .5rem;
+    }
+    .process-step__title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      color: #fff;
+      margin-bottom: .3rem;
+    }
+    .process-step__desc {
+      font-family: 'Inter', sans-serif;
+      font-size: .82rem;
+      color: rgba(255,255,255,.54);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .faq-list { margin: 1.5rem 0 2.5rem; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,.08); }
+    .faq-item summary {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: .92rem;
+      color: #fff;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 0;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      color: #ffc800;
+      font-size: 1.4rem;
+      font-weight: 300;
+      flex-shrink: 0;
+      margin-left: 1rem;
+      transition: transform .25s;
+    }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p {
+      font-family: 'Inter', sans-serif;
+      font-size: .85rem;
+      color: rgba(255,255,255,.6);
+      line-height: 1.7;
+      margin: 0 0 1.1rem;
+    }
+
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(255,200,0,.11) 0%, rgba(255,200,0,.03) 100%);
+      border: 1px solid rgba(255,200,0,.22);
+      border-radius: 16px;
+      padding: 2.75rem 2rem;
+      text-align: center;
+      margin: 3rem 0 2rem;
+    }
+    .cta-banner__title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 .55rem;
+    }
+    .cta-banner__sub {
+      font-family: 'Inter', sans-serif;
+      font-size: .9rem;
+      color: rgba(255,255,255,.56);
+      margin: 0 0 1.75rem;
+    }
+    .cta-banner .btn-group {
+      display: flex;
+      gap: .85rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* back nav — no purple */
+    .back-nav {
+      margin-top: 2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: .88rem;
+    }
+    .back-nav a {
+      color: rgba(255,255,255,.45) !important;
+      text-decoration: none !important;
+      transition: color .2s;
+    }
+    .back-nav a:hover { color: #ffc800 !important; }
+    .back-nav .sep { color: rgba(255,255,255,.2); margin: 0 .5rem; }
+  </style>
 </head>
 
 <body class="page-service">
 
   <nav class="site-nav" aria-label="Primary">
     <a class="site-nav__brand" href="../index.html">FAST FR8</a>
-
     <button class="site-nav__toggle" type="button" aria-controls="siteNavMenu" aria-expanded="false">
       <span class="site-nav__burger" aria-hidden="true"></span>
       <span class="sr-only">Menu</span>
     </button>
-
     <div class="site-nav__menu" id="siteNavMenu">
       <a href="../index.html#about">About</a>
       <a href="../index.html#benefits">Benefits</a>
@@ -88,86 +338,188 @@
   </nav>
 
   <div id="luxy" class="wrapp">
-    <header class="header" style="height:auto; min-height:60vh;">
-      <h1 class="title" data-splitting>
-        Integrated <span class="stroke">Logistics</span>
-      </h1>
 
-      <div class="header__cta">
-        <a class="btn-cta" href="https://wa.me/447724528966" target="_blank" rel="noopener">
-          WHATSAPP
-        </a>
-        <a class="btn-cta btn-cta--ghost" href="tel:07724528966">Call</a>
+    <!-- ── STANDALONE HERO (no .header class) ── -->
+    <section class="svc-hero" aria-label="Integrated Logistics hero">
+      <div class="svc-hero__bg">
+        <img src="../img/Picture4.jpg" alt="Fast FR8 integrated logistics fleet" />
       </div>
+      <div class="svc-hero__content">
+        <nav class="svc-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span aria-hidden="true">›</span>
+          <a href="../index.html#services">Services</a><span aria-hidden="true">›</span>
+          <span aria-current="page">Integrated Logistics</span>
+        </nav>
 
-      <div class="header__img" style="right:0; width:100%; height:60vh; position:absolute; top:0;">
-        <img src="../img/Picture4.jpg" alt="Integrated logistics operations" />
+        <h1 class="svc-hero__title">
+          Integrated<br><span class="stroke">Logistics</span>
+        </h1>
+
+        <p class="svc-hero__sub">
+          End-to-end planning, coordination and transport support — designed to keep your operation moving without the stress.
+        </p>
+
+        <div class="svc-hero__badges" aria-label="Service highlights">
+          <span class="svc-hero__badge">✓ 24/7 Available</span>
+          <span class="svc-hero__badge">✓ UK-Wide</span>
+          <span class="svc-hero__badge">✓ Multi-Stop</span>
+          <span class="svc-hero__badge">✓ Same-Day</span>
+          <span class="svc-hero__badge">✓ Recovery Included</span>
+        </div>
+
+        <div class="svc-hero__cta">
+          <a class="btn-cta" href="https://wa.me/447724528966" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a class="btn-cta btn-cta--ghost" href="tel:07724528966">Call Now</a>
+        </div>
       </div>
-    </header>
+    </section>
 
-    <main class="main">
-      <section class="about">
+    <!-- ── MAIN CONTENT ── -->
+    <main class="main" id="main-content">
+      <section class="about" aria-label="Service details">
         <div class="content">
-          <h2 class="section-title">Integrated <span class="stroke">Logistics</span>
-            <span class="section-title__square"></span>
-          </h2>
 
-          <p class="about__p">
-            Planning + coordination + transport support designed to keep your operation moving.
-            We help reduce delays by getting the right vehicle, route, and timing in place.
-          </p>
-
-          <div class="work__item-img" style="height:60vh;">
-            <img src="../img/Picture6.jpg" alt="Fleet and logistics coordination" />
+          <div class="trust-strip">
+            <div class="trust-strip__item"><span aria-hidden="true">🕐</span> 24/7 Availability</div>
+            <div class="trust-strip__item"><span aria-hidden="true">🇬🇧</span> UK-Wide Coverage</div>
+            <div class="trust-strip__item"><span aria-hidden="true">📞</span> Direct Line to Driver</div>
+            <div class="trust-strip__item"><span aria-hidden="true">⚡</span> Same-Day Response</div>
+            <div class="trust-strip__item"><span aria-hidden="true">🔄</span> Recovery Fallback Included</div>
           </div>
 
-          <h2 class="section-title">What we <span class="stroke">support</span>
+          <h2 class="section-title">
+            What We <span class="stroke">Offer</span>
             <span class="section-title__square"></span>
           </h2>
 
           <p class="about__p">
-            • Route planning and delivery coordination.<br>
-            • Asset moves, urgent runs, and recovery fallback planning.<br>
-            • Single-site and multi-stop workflows (tell us what you need).
+            Integrated logistics isn't just transport — it's the full picture. We handle the planning, routing, timing, and execution so you can focus on running your business. Whether it's a single urgent run or a complex multi-stop operation, Fast FR8 coordinates every detail from first call to clean handover.
           </p>
 
-          <h2 class="section-title">How we <span class="stroke">work</span>
+          <div class="work__item-img" style="height:55vh; margin:2rem 0;">
+            <img src="../img/Picture6.jpg" alt="Fast FR8 fleet coordination on site" loading="lazy" />
+          </div>
+
+          <h2 class="section-title">
+            What We <span class="stroke">Support</span>
             <span class="section-title__square"></span>
           </h2>
 
-          <p class="about__p">
-            1) You share the job (pickup/drop-offs, timings, constraints).<br>
-            2) We propose the plan and confirm availability.<br>
-            3) Execution with updates and a clean handover.
+          <div class="service-cards">
+            <div class="service-card">
+              <span class="service-card__icon" aria-hidden="true">🗺️</span>
+              <h3 class="service-card__title">Route Planning</h3>
+              <p class="service-card__desc">Optimised routes that cut fuel costs, reduce delays, and hit your delivery windows every time.</p>
+            </div>
+            <div class="service-card">
+              <span class="service-card__icon" aria-hidden="true">📦</span>
+              <h3 class="service-card__title">Delivery Coordination</h3>
+              <p class="service-card__desc">Single-site and multi-stop delivery management — sequencing and timing handled end to end.</p>
+            </div>
+            <div class="service-card">
+              <span class="service-card__icon" aria-hidden="true">🚛</span>
+              <h3 class="service-card__title">Asset Moves</h3>
+              <p class="service-card__desc">Specialist transport for high-value or awkward loads with full care and live progress updates.</p>
+            </div>
+            <div class="service-card">
+              <span class="service-card__icon" aria-hidden="true">⚡</span>
+              <h3 class="service-card__title">Urgent Runs</h3>
+              <p class="service-card__desc">Same-day and next-day capacity for time-critical jobs when your schedule simply can't slip.</p>
+            </div>
+            <div class="service-card">
+              <span class="service-card__icon" aria-hidden="true">🔄</span>
+              <h3 class="service-card__title">Recovery Fallback</h3>
+              <p class="service-card__desc">24/7 breakdown recovery planning built into every job — because things don't always go to plan.</p>
+            </div>
+            <div class="service-card">
+              <span class="service-card__icon" aria-hidden="true">📋</span>
+              <h3 class="service-card__title">Custom Workflows</h3>
+              <p class="service-card__desc">Tell us your constraints — we build a plan around your operation, not a one-size template.</p>
+            </div>
+          </div>
+
+          <h2 class="section-title">
+            How We <span class="stroke">Work</span>
+            <span class="section-title__square"></span>
+          </h2>
+
+          <p class="about__p" style="margin-bottom:1.5rem;">
+            A simple, transparent three-step process — no surprises, no chasing, just results.
           </p>
 
-          <p class="about__p">
-            <a class="btn-cta" href="../index.html#contact-form">Request a plan</a>
-            <a class="btn-cta btn-cta--ghost" href="tel:07724528966">Call now</a>
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="process-step__num">01</div>
+              <div class="process-step__title">You Share the Job</div>
+              <p class="process-step__desc">Send us pickup/drop-offs, timings, load specs, and constraints. WhatsApp or call — whichever is easier.</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num">02</div>
+              <div class="process-step__title">We Build the Plan</div>
+              <p class="process-step__desc">We propose the route, vehicle, and timing — confirming availability before anything moves.</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num">03</div>
+              <div class="process-step__title">We Execute</div>
+              <p class="process-step__desc">Live updates throughout and a clean handover confirmation at the end. No chasing required.</p>
+            </div>
+          </div>
+
+          <h2 class="section-title">
+            Common <span class="stroke">Questions</span>
+            <span class="section-title__square"></span>
+          </h2>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Do you cover the whole of the UK?</summary>
+              <p>Yes — Fast FR8 operates UK-wide. Local run or long-haul multi-stop, we can plan and execute it.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How quickly can you respond to urgent jobs?</summary>
+              <p>Same-day response, often dispatching within hours. Call 07724 528966 directly for the fastest turnaround.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can you handle multi-stop deliveries?</summary>
+              <p>Absolutely — multi-stop routing is a core part of what we do. Share your stop list and we'll optimise it.</p>
+            </details>
+            <details class="faq-item">
+              <summary>What if something goes wrong mid-job?</summary>
+              <p>Every job includes recovery fallback planning. Our 24/7 line means you're never left stranded.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Do you give updates during the job?</summary>
+              <p>Yes — live updates via WhatsApp or call throughout, plus a clean confirmation at handover.</p>
+            </details>
+          </div>
+
+          <div class="cta-banner">
+            <h2 class="cta-banner__title">Ready to Plan Your Next Job?</h2>
+            <p class="cta-banner__sub">Get in touch — we'll turn your requirements into a confirmed logistics plan, fast.</p>
+            <div class="btn-group">
+              <a class="btn-cta" href="https://wa.me/447724528966" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+              <a class="btn-cta btn-cta--ghost" href="tel:07724528966">Call 07724 528966</a>
+              <a class="btn-cta btn-cta--ghost" href="../index.html#contact-form">Request a Plan</a>
+            </div>
+          </div>
+
+          <p class="back-nav">
+            <a href="../index.html#services">← All services</a>
+            <span class="sep" aria-hidden="true">·</span>
+            <a href="../index.html">← Back to home</a>
           </p>
 
-          <p class="about__p"><a href="../index.html">← Back to home</a></p>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-    <div class="footer__div">
-        <span data-speed="-300">c</span>
-        <span data-speed="120">o</span>
-        <span data-speed="260">n</span>
-        <span data-speed="-220">t</span>
-        <span data-speed="340">a</span>
-        <span data-speed="-180">c</span>
-        <span data-speed="210">t</span>
-        <span data-speed="-260"> </span>
-        <span data-speed="180">u</span>
-        <span data-speed="-140">s</span>
+      <div class="footer__div">
+        <span data-speed="-300">c</span><span data-speed="120">o</span><span data-speed="260">n</span><span data-speed="-220">t</span><span data-speed="340">a</span><span data-speed="-180">c</span><span data-speed="210">t</span><span data-speed="-260"> </span><span data-speed="180">u</span><span data-speed="-140">s</span>
       </div>
-
       <div class="footer__meta">
         <p>© <script>document.write(new Date().getFullYear())</script> FAST FR8 Logistics Ltd. All rights reserved.</p>
-        <p>24/7 Recovery: <a href="tel:07724528966">07724 528966</a> Email: <a href="mailto:info@fastfr8.co.uk">info@fastfr8.co.uk</a></p>
+        <p>24/7 Recovery: <a href="tel:07724528966">07724 528966</a> &nbsp;|&nbsp; Email: <a href="mailto:info@fastfr8.co.uk">info@fastfr8.co.uk</a></p>
         <p class="footer__links">
           <a href="../legal/privacy.html">Privacy</a> ·
           <a href="../legal/cookies.html">Cookies</a> ·
@@ -175,6 +527,7 @@
         </p>
       </div>
     </footer>
+
   </div>
 
   <script src="../js/splitting.min.js"></script>
