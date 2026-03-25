@@ -727,107 +727,58 @@
           </div>
         </div>
 
-        <!-- ═══ WHAT WE HANDLE ═══ -->
-        <div class="s" style="padding-top:44px;">
-          <h2>What We <span class="sk">Handle</span></h2>
-          <p class="lead">Cars, vans, SUVs and more — if it's got wheels, we can recover it.</p>
-          <div class="handles">
-            <div class="handle"><span>🚗</span>Cars</div>
-            <div class="handle"><span>🚐</span>Vans &amp; LCVs</div>
-            <div class="handle"><span>⚡</span>Jump Starts</div>
-            <div class="handle"><span>⛽</span>Wrong Fuel</div>
-            <div class="handle"><span>🔧</span>Tyre Changes</div>
-            <div class="handle"><span>🚙</span>SUVs</div>
-            <div class="handle"><span>🚨</span>Accident Recovery</div>
-            <div class="handle"><span>🏭</span>Non-Runners</div>
-            <div class="handle"><span>🛣️</span>Motorway Recovery</div>
-            <div class="handle"><span>✈️</span>Airport Recovery</div>
-          </div>
-        </div>
+    <!-- ═══ FORM SUBMIT (OLDHAM) ═══ -->
+<div class="s" style="padding-top:44px;" id="quote-form">
+  <div class="form-wrap">
+    <div class="ft">Get a Quote<br><span style="color:transparent;-webkit-text-stroke:1px #fff;">In 60 Seconds</span></div>
+    <p class="fs">Fill in below — we'll WhatsApp or call you straight back with a price and ETA. No obligation.</p>
 
-        <!-- ═══ FLEET PHOTO ═══ -->
-        <div class="fleet-shot">
-          <div class="fleet-shot-img">
-            <img src="../img/fleet-sprinter-portrait.jpg"
-                 alt="Fast FR8 Mercedes Sprinter flatbed recovery truck — PF20 LHH" loading="lazy" />
-            <div class="fleet-shot-cap">Fast FR8 fleet — Mercedes Sprinter flatbeds, Oldham-based, 24/7</div>
-          </div>
-        </div>
+    <form action="https://formsubmit.co/info@fastfr8.co.uk" method="POST">
+      <!-- Redirect to your own thank you page -->
+      <input type="hidden" name="_next" value="https://www.fastfr8.co.uk/thanks">
 
-        <!-- ═══ AREAS ═══ -->
-        <div class="s" style="padding-top:44px;">
-          <h2>Areas We <span class="sk">Cover</span></h2>
-          <p class="lead">Based in Oldham — covering all of Greater Manchester and beyond.</p>
-          <div class="areas">
-            <div class="area">Oldham</div>
-            <div class="area">Manchester</div>
-            <div class="area">Rochdale</div>
-            <div class="area">Bury</div>
-            <div class="area">Bolton</div>
-            <div class="area">Stockport</div>
-            <div class="area">Tameside</div>
-            <div class="area">Salford</div>
-            <div class="area">Trafford</div>
-            <div class="area">Wigan</div>
-            <div class="area">Ashton-u-Lyne</div>
-            <div class="area">Hyde</div>
-            <div class="area">Failsworth</div>
-            <div class="area">Chadderton</div>
-            <div class="area">Shaw</div>
-            <div class="area">Royton</div>
-            <div class="area">Middleton</div>
-            <div class="area">Heywood</div>
-          </div>
-          <p style="font-family:'Inter',sans-serif;font-size:12px;color:#444;margin-top:12px;line-height:1.5;">
-            Also covering: M60, M62, M66, M67, M56 motorway corridors and surrounding areas. Not listed? Call us — we'll confirm in 30 seconds.
-          </p>
-        </div>
+      <!-- Email settings (what you see in Zoho) -->
+      <input type="hidden" name="_subject" value="New Oldham breakdown enquiry from website">
+      <input type="hidden" name="_template" value="table">
 
-        <!-- ═══ NETLIFY FORM ═══ -->
-        <div class="s" style="padding-top:44px;" id="quote-form">
-          <div class="form-wrap">
-            <div class="ft">Get a Quote<br><span style="color:transparent;-webkit-text-stroke:1px #fff;">In 60 Seconds</span></div>
-            <p class="fs">Fill in below — we'll WhatsApp or call you straight back with a price and ETA. No obligation.</p>
+      <div class="fg">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="John Smith" required />
+      </div>
+      <div class="fg">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="07700 000000" required />
+      </div>
+      <div class="fg">
+        <label for="location">Breakdown Location</label>
+        <input type="text" id="location" name="location" placeholder="Street name, town or postcode" required />
+      </div>
+      <div class="fg">
+        <label for="vehicle">Vehicle</label>
+        <input type="text" id="vehicle" name="vehicle" placeholder="e.g. Ford Focus, 2019" />
+      </div>
+      <div class="fg">
+        <label for="service">Service Needed</label>
+        <select id="service" name="service">
+          <option value="">Select...</option>
+          <option>Breakdown Recovery</option>
+          <option>Accident Recovery</option>
+          <option>Vehicle Transport</option>
+          <option>Jump Start</option>
+          <option>Wrong Fuel Recovery</option>
+          <option>Tyre Change</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label for="message">Anything else?</label>
+        <textarea id="message" name="message" placeholder="Any extra details about your situation..."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">⚡ Get My Quote Now</button>
+    </form>
+  </div>
+</div>
 
-            <form name="breakdown-recovery-247" method="POST" data-netlify="true" action="/thanks">
-              <input type="hidden" name="form-name" value="breakdown-recovery-247" />
-              <div class="fg">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="John Smith" required />
-              </div>
-              <div class="fg">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="07700 000000" required />
-              </div>
-              <div class="fg">
-                <label for="location">Breakdown Location</label>
-                <input type="text" id="location" name="location" placeholder="Street name, town or postcode" required />
-              </div>
-              <div class="fg">
-                <label for="vehicle">Vehicle</label>
-                <input type="text" id="vehicle" name="vehicle" placeholder="e.g. Ford Focus, 2019" />
-              </div>
-              <div class="fg">
-                <label for="service">Service Needed</label>
-                <select id="service" name="service">
-                  <option value="">Select...</option>
-                  <option>Breakdown Recovery</option>
-                  <option>Accident Recovery</option>
-                  <option>Vehicle Transport</option>
-                  <option>Jump Start</option>
-                  <option>Wrong Fuel Recovery</option>
-                  <option>Tyre Change</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="fg">
-                <label for="message">Anything else?</label>
-                <textarea id="message" name="message" placeholder="Any extra details about your situation..."></textarea>
-              </div>
-              <button type="submit" class="btn-submit">⚡ Get My Quote Now</button>
-            </form>
-          </div>
-        </div>
 
         <!-- ═══ FINAL CTA ═══ -->
         <div class="s" style="padding-top:44px; padding-bottom:80px;">
