@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <!-- Google tag (gtag.js) - Fast FR8 GA4 + Conversion Tracking -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H5VG2E6DVD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-H5VG2E6DVD');
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5VG2E6DVD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H5VG2E6DVD');
 
-  // Track phone number clicks
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
-      el.addEventListener('click', function() {
-        gtag('event', 'phone_click', {
-          event_category: 'Contact',
-          event_label: 'Call Button'
+    // Track phone number clicks
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          gtag('event', 'phone_click', {
+            event_category: 'Contact',
+            event_label: 'Call Button'
+          });
+        });
+      });
+
+      // Track WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          gtag('event', 'whatsapp_click', {
+            event_category: 'Contact',
+            event_label: 'WhatsApp Button'
+          });
+        });
+      });
+
+      // Track form submissions
+      document.querySelectorAll('form').forEach(function (form) {
+        form.addEventListener('submit', function () {
+          gtag('event', 'form_submit', {
+            event_category: 'Contact',
+            event_label: 'Contact Form'
+          });
         });
       });
     });
-
-    // Track WhatsApp clicks
-    document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
-      el.addEventListener('click', function() {
-        gtag('event', 'whatsapp_click', {
-          event_category: 'Contact',
-          event_label: 'WhatsApp Button'
-        });
-      });
-    });
-
-    // Track form submissions
-    document.querySelectorAll('form').forEach(function(form) {
-      form.addEventListener('submit', function() {
-        gtag('event', 'form_submit', {
-          event_category: 'Contact',
-          event_label: 'Contact Form'
-        });
-      });
-    });
-  });
-</script>
+  </script>
 
 
-<!-- Microsoft Clarity -->
+  <!-- Microsoft Clarity -->
   <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "w00dnl8ekd");
   </script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>24/7 Breakdown Recovery Oldham | Fast FR8 – Immediate Help</title>
-  <meta name="description" content="Stranded in Oldham or Greater Manchester? 24/7 breakdown recovery – fast arrival, fully insured, no hidden fees. Call 07724 528966 or WhatsApp now." />
+  <meta name="description"
+    content="Stranded in Oldham or Greater Manchester? 24/7 breakdown recovery – fast arrival, fully insured, no hidden fees. Call 07724 528966 or WhatsApp now." />
   <meta name="robots" content="index, follow" />
-  <meta name="trustpilot-one-time-domain-verification-id" content="968f5d1b-315e-42c4-a2c0-2f7e11689217"/>
+  <meta name="trustpilot-one-time-domain-verification-id" content="968f5d1b-315e-42c4-a2c0-2f7e11689217" />
   <meta property="og:url" content="https://fastfr8.co.uk/services/breakdown-recovery-oldham.html" />
 
   <link rel="icon" href="../img/icon.jpg" type="image/jpeg" />
 
   <meta property="og:title" content="24/7 Breakdown Recovery Oldham | Fast FR8" />
-  <meta property="og:description" content="Stranded in Greater Manchester? We're already patrolling. Call 07724 528966 — average arrival 30–60 minutes." />
+  <meta property="og:description"
+    content="Stranded in Greater Manchester? We're already patrolling. Call 07724 528966 — average arrival 30–60 minutes." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://fastfr8.co.uk/img/recovery-suv-daylight.jpg" />
   <meta property="og:url" content="https://fastfr8.co.uk/services/breakdown-recovery-24-7.html" />
@@ -101,386 +104,779 @@
     /* ─── HERO ─── */
     .p247 .header {
       position: relative;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       padding: 110px 24px 64px;
-      min-height: 100vh; overflow: hidden;
+      min-height: 100vh;
+      overflow: hidden;
     }
-    .hero-bg { position: absolute; inset: 0; z-index: 1; }
-    .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
     .hero-ov {
-      position: absolute; inset: 0; z-index: 2;
-      background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.78) 100%);
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.78) 100%);
     }
+
     .p247 .title {
-      position: relative; z-index: 3;
+      position: relative;
+      z-index: 3;
       mix-blend-mode: normal !important;
       font-size: clamp(22px, 8vw, 68px);
-      line-height: 1.0; text-align: center;
-      text-shadow: 0 2px 40px rgba(0,0,0,0.9);
-      max-width: 100%; margin: 0 auto;
+      line-height: 1.0;
+      text-align: center;
+      text-shadow: 0 2px 40px rgba(0, 0, 0, 0.9);
+      max-width: 100%;
+      margin: 0 auto;
     }
+
     .hero-sub {
-      position: relative; z-index: 3;
+      position: relative;
+      z-index: 3;
       font-family: 'Inter', sans-serif;
-      font-size: 15px; color: rgba(255,255,255,0.7);
-      margin: 14px auto 0; max-width: 340px; line-height: 1.65;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.7);
+      margin: 14px auto 0;
+      max-width: 340px;
+      line-height: 1.65;
       text-align: center;
     }
-    .hero-sub strong { color: #ffd54a; }
-    .hero-btns {
-      position: relative; z-index: 3;
-      margin: 28px auto 0;
-      display: flex; flex-direction: column;
-      align-items: center; gap: 12px;
-      width: 100%; max-width: 300px;
+
+    .hero-sub strong {
+      color: #ffd54a;
     }
+
+    .hero-btns {
+      position: relative;
+      z-index: 3;
+      margin: 28px auto 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      max-width: 300px;
+    }
+
     .hero-btns .btn-cta {
-      display: block; width: 100%; text-align: center;
-      box-sizing: border-box; padding: 17px 24px;
-      font-size: 15px; font-weight: 700; letter-spacing: 0.06em;
+      display: block;
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 17px 24px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
       border-radius: 6px;
     }
+
     .hero-pills {
-      position: relative; z-index: 3;
-      display: flex; flex-wrap: wrap;
-      justify-content: center; gap: 8px;
-      margin-top: 22px; max-width: 340px;
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 22px;
+      max-width: 340px;
     }
+
     .pill {
       font-family: 'Inter', sans-serif;
-      font-size: 10px; font-weight: 700;
-      color: rgba(255,255,255,0.5);
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 20px; padding: 6px 12px;
-      text-transform: uppercase; letter-spacing: 0.08em;
+      font-size: 10px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 6px 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     /* ─── URGENCY BAR ─── */
     .urgency-bar {
-      background: #ffd54a; padding: 12px 24px; text-align: center;
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: 12px; color: #000;
-      text-transform: uppercase; letter-spacing: 0.1em;
+      background: #ffd54a;
+      padding: 12px 24px;
+      text-align: center;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 12px;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
 
     /* ─── STATS ─── */
     .stats-row {
-      display: grid; grid-template-columns: repeat(3,1fr);
-      background: #0a0a0a; border-bottom: 1px solid #1a1a1a;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: #0a0a0a;
+      border-bottom: 1px solid #1a1a1a;
     }
+
     .stat {
-      text-align: center; padding: 22px 8px;
+      text-align: center;
+      padding: 22px 8px;
       border-right: 1px solid #1a1a1a;
     }
-    .stat:last-child { border-right: none; }
-    .stat-n {
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: 24px; color: #ffd54a; line-height: 1;
+
+    .stat:last-child {
+      border-right: none;
     }
+
+    .stat-n {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      color: #ffd54a;
+      line-height: 1;
+    }
+
     .stat-l {
-      font-family: 'Inter', sans-serif; font-size: 10px;
-      font-weight: 600; color: rgba(255,255,255,0.3);
-      text-transform: uppercase; letter-spacing: 0.08em;
-      line-height: 1.4; margin-top: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      line-height: 1.4;
+      margin-top: 4px;
     }
 
     /* ─── TRUST STRIP ─── */
     .trust-strip {
-      display: grid; grid-template-columns: 1fr 1fr;
-      background: #111; border-bottom: 1px solid #1a1a1a;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: #111;
+      border-bottom: 1px solid #1a1a1a;
     }
+
     .tb {
-      display: flex; align-items: center; gap: 8px;
-      padding: 14px; border-bottom: 1px solid #1a1a1a;
-      font-family: 'Inter', sans-serif; font-size: 11px;
-      font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.07em; color: rgba(255,255,255,0.5);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px;
+      border-bottom: 1px solid #1a1a1a;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: rgba(255, 255, 255, 0.5);
     }
-    .tb:nth-child(odd) { border-right: 1px solid #1a1a1a; }
-    .tb svg { flex-shrink: 0; }
+
+    .tb:nth-child(odd) {
+      border-right: 1px solid #1a1a1a;
+    }
+
+    .tb svg {
+      flex-shrink: 0;
+    }
 
     /* ─── SECTION WRAPPER ─── */
     .s {
       padding: 52px 20px 0;
-      max-width: 800px; margin: 0 auto;
+      max-width: 800px;
+      margin: 0 auto;
     }
+
     .s h2 {
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: clamp(22px, 6vw, 34px); color: #fff;
-      text-transform: uppercase; margin-bottom: 6px; line-height: 1.1;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(22px, 6vw, 34px);
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      line-height: 1.1;
     }
-    .s h2 .sk { color: transparent; -webkit-text-stroke: 1px #fff; }
+
+    .s h2 .sk {
+      color: transparent;
+      -webkit-text-stroke: 1px #fff;
+    }
+
     .s .lead {
-      font-family: 'Inter', sans-serif; font-size: 14px;
-      color: #666; margin-bottom: 24px; line-height: 1.65;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 24px;
+      line-height: 1.65;
     }
 
     /* ─── WHY CARDS ─── */
     .why-grid {
-      display: grid; grid-template-columns: 1fr; gap: 10px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
     }
+
     .why-card {
-      background: #111; border: 1px solid #1a1a1a;
-      border-radius: 8px; padding: 18px 18px 18px 16px;
-      display: flex; gap: 14px; align-items: flex-start;
+      background: #111;
+      border: 1px solid #1a1a1a;
+      border-radius: 8px;
+      padding: 18px 18px 18px 16px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
     }
+
     .why-icon {
-      min-width: 34px; height: 34px;
-      background: rgba(255,213,74,0.08);
-      border-radius: 50%; display: flex;
-      align-items: center; justify-content: center; flex-shrink: 0;
+      min-width: 34px;
+      height: 34px;
+      background: rgba(255, 213, 74, 0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
+
     .why-title {
-      font-family: 'Inter', sans-serif; font-weight: 700;
-      font-size: 12px; color: #fff; text-transform: uppercase;
-      letter-spacing: 0.06em; margin-bottom: 4px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
     }
+
     .why-body {
-      font-family: 'Inter', sans-serif; font-size: 13px;
-      color: #5a5a5a; line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #5a5a5a;
+      line-height: 1.6;
     }
 
     /* ─── PHOTO PROOF STRIP ─── */
     .proof-strip {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
-      padding: 0 20px; max-width: 800px; margin: 32px auto 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding: 0 20px;
+      max-width: 800px;
+      margin: 32px auto 0;
     }
+
     .proof-card {
-      position: relative; border-radius: 6px; overflow: hidden;
-      background: #111; border: 1px solid #1a1a1a;
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #111;
+      border: 1px solid #1a1a1a;
       aspect-ratio: 4/3;
     }
-    .proof-card.tall { aspect-ratio: 3/4; }
-    .proof-card.wide { grid-column: span 2; aspect-ratio: 16/9; }
+
+    .proof-card.tall {
+      aspect-ratio: 3/4;
+    }
+
+    .proof-card.wide {
+      grid-column: span 2;
+      aspect-ratio: 16/9;
+    }
+
     .proof-card img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
       transition: transform 0.4s ease;
     }
-    .proof-card:hover img { transform: scale(1.04); }
+
+    .proof-card:hover img {
+      transform: scale(1.04);
+    }
+
     .proof-cap {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent 100%);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
       padding: 26px 12px 10px;
-      font-family: 'Inter', sans-serif; font-size: 10px;
-      font-weight: 700; color: rgba(255,255,255,0.6);
-      text-transform: uppercase; letter-spacing: 0.08em;
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
+
     .proof-badge {
-      position: absolute; top: 8px; left: 8px;
-      background: #ffd54a; color: #000; border-radius: 4px;
-      padding: 3px 7px; font-family: 'Inter', sans-serif;
-      font-size: 9px; font-weight: 800;
-      text-transform: uppercase; letter-spacing: 0.1em;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: #ffd54a;
+      color: #000;
+      border-radius: 4px;
+      padding: 3px 7px;
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
+
     .proof-label {
-      padding: 0 20px; max-width: 800px; margin: 10px auto 0;
-      font-family: 'Inter', sans-serif; font-size: 12px;
-      color: #444; text-align: center; line-height: 1.5;
+      padding: 0 20px;
+      max-width: 800px;
+      margin: 10px auto 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #444;
+      text-align: center;
+      line-height: 1.5;
     }
 
     /* ─── NIGHT BAND ─── */
     .night-band {
-      position: relative; margin-top: 52px;
-      min-height: 220px; overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      margin-top: 52px;
+      min-height: 220px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .night-band-bg { position: absolute; inset: 0; }
-    .night-band-bg img { width: 100%; height: 100%; object-fit: cover; }
+
+    .night-band-bg {
+      position: absolute;
+      inset: 0;
+    }
+
+    .night-band-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .night-band-ov {
-      position: absolute; inset: 0;
-      background: rgba(0,0,0,0.75);
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
     }
+
     .night-band-content {
-      position: relative; z-index: 2;
-      text-align: center; padding: 36px 24px;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 36px 24px;
     }
+
     .night-band-tag {
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: 10px; text-transform: uppercase;
-      letter-spacing: 0.14em; color: #ffd54a; margin-bottom: 8px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #ffd54a;
+      margin-bottom: 8px;
     }
+
     .night-band-title {
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: clamp(20px, 5.5vw, 30px); color: #fff;
-      text-transform: uppercase; line-height: 1.1; margin-bottom: 18px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(20px, 5.5vw, 30px);
+      color: #fff;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 18px;
     }
+
     .night-band-btns {
-      display: flex; flex-direction: column;
-      align-items: center; gap: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
+
     .night-band-btns .btn-cta {
-      width: 100%; max-width: 280px; text-align: center;
-      box-sizing: border-box; padding: 15px 24px; font-size: 14px;
+      width: 100%;
+      max-width: 280px;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      font-size: 14px;
     }
 
     /* ─── STEPS ─── */
-    .steps { display: grid; grid-template-columns: 1fr; gap: 10px; }
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
     .step {
-      background: #111; border: 1px solid #1a1a1a;
-      border-radius: 8px; padding: 18px;
-      display: flex; gap: 14px; align-items: flex-start;
+      background: #111;
+      border: 1px solid #1a1a1a;
+      border-radius: 8px;
+      padding: 18px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
     }
+
     .step-n {
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: 28px; color: #ffd54a; line-height: 1; min-width: 30px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      color: #ffd54a;
+      line-height: 1;
+      min-width: 30px;
     }
+
     .step-title {
-      font-family: 'Inter', sans-serif; font-weight: 700;
-      font-size: 12px; color: #fff; text-transform: uppercase;
-      letter-spacing: 0.06em; margin-bottom: 4px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
     }
+
     .step-body {
-      font-family: 'Inter', sans-serif; font-size: 13px;
-      color: #5a5a5a; line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #5a5a5a;
+      line-height: 1.6;
     }
 
     /* ─── HANDLES ─── */
     .handles {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
     }
+
     .handle {
-      background: #111; border: 1px solid #1a1a1a;
-      border-radius: 6px; padding: 14px 10px;
-      font-family: 'Inter', sans-serif; font-size: 12px;
-      color: #bbb; text-align: center; line-height: 1.5;
+      background: #111;
+      border: 1px solid #1a1a1a;
+      border-radius: 6px;
+      padding: 14px 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #bbb;
+      text-align: center;
+      line-height: 1.5;
     }
-    .handle span { display: block; font-size: 20px; margin-bottom: 6px; }
+
+    .handle span {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
 
     /* ─── FLEET SHOT ─── */
     .fleet-shot {
-      padding: 0 20px; max-width: 800px;
+      padding: 0 20px;
+      max-width: 800px;
       margin: 24px auto 0;
     }
+
     .fleet-shot-img {
-      border-radius: 8px; overflow: hidden;
-      border: 1px solid #1a1a1a; position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #1a1a1a;
+      position: relative;
     }
+
     .fleet-shot-img img {
-      width: 100%; display: block; object-fit: cover;
+      width: 100%;
+      display: block;
+      object-fit: cover;
       aspect-ratio: 16/9;
     }
+
     .fleet-shot-cap {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent 100%);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
       padding: 30px 16px 12px;
-      font-family: 'Inter', sans-serif; font-size: 11px;
-      font-weight: 700; color: rgba(255,255,255,0.6);
-      text-transform: uppercase; letter-spacing: 0.08em;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     /* ─── AREAS ─── */
     .areas {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
     }
+
     .area {
-      background: #111; border: 1px solid #1a1a1a;
-      border-radius: 4px; padding: 10px 12px;
-      font-family: 'Inter', sans-serif; font-size: 12px;
-      color: #888; display: flex; align-items: center; gap: 6px;
+      background: #111;
+      border: 1px solid #1a1a1a;
+      border-radius: 4px;
+      padding: 10px 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #888;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
-    .area::before { content: '📍'; font-size: 11px; }
+
+    .area::before {
+      content: '📍';
+      font-size: 11px;
+    }
 
     /* ─── NETLIFY FORM ─── */
     .form-wrap {
-      background: #111; border: 1px solid #1a1a1a;
-      border-radius: 12px; padding: 28px 20px;
+      background: #111;
+      border: 1px solid #1a1a1a;
+      border-radius: 12px;
+      padding: 28px 20px;
     }
+
     .form-wrap .ft {
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: clamp(18px, 5vw, 24px); color: #fff;
-      text-transform: uppercase; margin-bottom: 4px; line-height: 1.1;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(18px, 5vw, 24px);
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      line-height: 1.1;
     }
+
     .form-wrap .fs {
-      font-family: 'Inter', sans-serif; font-size: 13px;
-      color: #555; margin-bottom: 22px; line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 22px;
+      line-height: 1.6;
     }
-    .fg { margin-bottom: 12px; }
+
+    .fg {
+      margin-bottom: 12px;
+    }
+
     .fg label {
-      display: block; font-family: 'Inter', sans-serif;
-      font-size: 10px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.08em; color: rgba(255,255,255,0.35);
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.35);
       margin-bottom: 5px;
     }
-    .fg input, .fg select, .fg textarea {
-      width: 100%; box-sizing: border-box;
-      background: #0d0d0d; border: 1px solid #1a1a1a;
-      border-radius: 6px; padding: 12px 14px;
-      font-family: 'Inter', sans-serif; font-size: 14px;
-      color: #fff; outline: none; transition: border-color 0.2s;
+
+    .fg input,
+    .fg select,
+    .fg textarea {
+      width: 100%;
+      box-sizing: border-box;
+      background: #0d0d0d;
+      border: 1px solid #1a1a1a;
+      border-radius: 6px;
+      padding: 12px 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #fff;
+      outline: none;
+      transition: border-color 0.2s;
     }
-    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: #ffd54a; }
-    .fg select option { background: #111; }
-    .fg textarea { resize: vertical; min-height: 80px; }
+
+    .fg input:focus,
+    .fg select:focus,
+    .fg textarea:focus {
+      border-color: #ffd54a;
+    }
+
+    .fg select option {
+      background: #111;
+    }
+
+    .fg textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
     .btn-submit {
-      width: 100%; background: #ffd54a; color: #000;
-      border: none; border-radius: 6px; padding: 16px 24px;
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: 15px; text-transform: uppercase;
-      letter-spacing: 0.08em; cursor: pointer; margin-top: 6px;
+      width: 100%;
+      background: #ffd54a;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 16px 24px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      margin-top: 6px;
     }
-    .btn-submit:hover { background: #f0c830; }
+
+    .btn-submit:hover {
+      background: #f0c830;
+    }
 
     /* ─── FINAL CTA ─── */
     .final-cta {
-      background: #111; border: 1px solid #1a1a1a;
-      border-radius: 12px; padding: 36px 20px;
+      background: #111;
+      border: 1px solid #1a1a1a;
+      border-radius: 12px;
+      padding: 36px 20px;
       text-align: center;
     }
+
     .final-cta h3 {
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: clamp(20px, 5.5vw, 28px); color: #fff;
-      text-transform: uppercase; margin-bottom: 8px; line-height: 1.1;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(20px, 5.5vw, 28px);
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      line-height: 1.1;
     }
+
     .final-cta p {
-      font-family: 'Inter', sans-serif; font-size: 13px;
-      color: #666; margin-bottom: 24px; line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 24px;
+      line-height: 1.6;
     }
+
     .final-btns {
-      display: flex; flex-direction: column;
-      align-items: center; gap: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
     }
+
     .final-btns .btn-cta {
-      width: 100%; max-width: 300px; text-align: center;
-      box-sizing: border-box; padding: 16px 24px; font-size: 15px;
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 16px 24px;
+      font-size: 15px;
     }
+
     .final-note {
-      margin-top: 16px; font-family: 'Inter', sans-serif;
-      font-size: 11px; color: #3a3a3a;
+      margin-top: 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: #3a3a3a;
     }
-    .final-note a { color: #444; text-decoration: none; }
+
+    .final-note a {
+      color: #444;
+      text-decoration: none;
+    }
 
     /* ─── FOOTER AREAS GRID ─── */
     .footer-areas {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 4px; margin-bottom: 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      margin-bottom: 16px;
     }
+
     .footer-area {
-      font-family: 'Inter', sans-serif; font-size: 11px;
-      color: #444; padding: 4px 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: #444;
+      padding: 4px 0;
     }
 
     /* ─── DESKTOP ─── */
     @media (min-width: 600px) {
-      .hero-btns { flex-direction: row; max-width: none; justify-content: center; }
-      .hero-btns .btn-cta { width: auto; min-width: 180px; }
-      .trust-strip {
-        display: flex; flex-wrap: wrap;
-        justify-content: center; gap: 20px; padding: 16px 40px;
+      .hero-btns {
+        flex-direction: row;
+        max-width: none;
+        justify-content: center;
       }
-      .tb { border: none !important; padding: 0; }
-      .why-grid { grid-template-columns: 1fr 1fr; }
-      .proof-strip { grid-template-columns: repeat(3, 1fr); }
-      .proof-card.wide { grid-column: span 3; }
-      .steps { grid-template-columns: 1fr 1fr; }
-      .handles { grid-template-columns: repeat(3, 1fr); }
-      .areas { grid-template-columns: repeat(3, 1fr); }
-      .night-band-btns { flex-direction: row; justify-content: center; }
-      .night-band-btns .btn-cta { width: auto; min-width: 200px; }
-      .final-btns { flex-direction: row; justify-content: center; }
-      .final-btns .btn-cta { width: auto; min-width: 200px; }
+
+      .hero-btns .btn-cta {
+        width: auto;
+        min-width: 180px;
+      }
+
+      .trust-strip {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 16px 40px;
+      }
+
+      .tb {
+        border: none !important;
+        padding: 0;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .proof-strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .proof-card.wide {
+        grid-column: span 3;
+      }
+
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .handles {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .areas {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .night-band-btns {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .night-band-btns .btn-cta {
+        width: auto;
+        min-width: 200px;
+      }
+
+      .final-btns {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .final-btns .btn-cta {
+        width: auto;
+        min-width: 200px;
+      }
     }
   </style>
 </head>
@@ -509,11 +905,11 @@
     <header class="header">
       <div class="hero-bg">
         <img src="../img/recovery-audi-full.jpg"
-             alt="Fast FR8 24/7 breakdown recovery Greater Manchester — flatbed recovery truck" loading="eager" />
+          alt="Fast FR8 24/7 breakdown recovery Greater Manchester — flatbed recovery truck" loading="eager" />
       </div>
       <div class="hero-ov"></div>
 
-        <h1 class="title" data-splitting
+      <h1 class="title" data-splitting
         style="font-size: clamp(20px, 7vw, 64px); mix-blend-mode: normal; text-shadow: 0 2px 30px rgba(0,0,0,0.95);">
         24/7<br>Breakdown<br><span class="stroke">Recovery</span>
       </h1>
@@ -527,8 +923,8 @@
       <div class="hero-btns">
         <a class="btn-cta" href="tel:07724528966">📞 Call Now</a>
         <a class="btn-cta btn-cta--ghost"
-           href="https://wa.me/447724528966?text=Hi%20Fast%20FR8%2C%20I%27m%20broken%20down%20and%20need%20urgent%20recovery.%20My%20location%20is%3A"
-           target="_blank" rel="noopener">💬 WhatsApp</a>
+          href="https://wa.me/447724528966?text=Hi%20Fast%20FR8%2C%20I%27m%20broken%20down%20and%20need%20urgent%20recovery.%20My%20location%20is%3A"
+          target="_blank" rel="noopener">💬 WhatsApp</a>
       </div>
 
       <div class="hero-pills">
@@ -563,27 +959,41 @@
     <!-- TRUST STRIP -->
     <div class="trust-strip">
       <div class="tb">
-        <svg width="14" height="14" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l7 4v5c0 5-3.5 8.5-7 10C8.5 19.5 5 16 5 11V6l7-4z"/></svg>
+        <svg width="14" height="14" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 2l7 4v5c0 5-3.5 8.5-7 10C8.5 19.5 5 16 5 11V6l7-4z" />
+        </svg>
         Fully Insured
       </div>
       <div class="tb">
-        <svg width="14" height="14" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <svg width="14" height="14" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 6 12 12 16 14" />
+        </svg>
         24/7 Available
       </div>
       <div class="tb">
-        <svg width="14" height="14" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <svg width="14" height="14" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+        </svg>
         Fast Response
       </div>
       <div class="tb">
-        <svg width="14" height="14" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        <svg width="14" height="14" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24">
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
         No Hidden Fees
       </div>
       <div class="tb">
-        <svg width="14" height="14" fill="#ffd54a" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg width="14" height="14" fill="#ffd54a" viewBox="0 0 24 24">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
         5-Star Reviews
       </div>
       <div class="tb">
-        <svg width="14" height="14" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2C8.13 2 5 5.13 5 10c0 5.25 7 12 7 12s7-6.75 7-12c0-4.87-3.13-7-7-8z"/></svg>
+        <svg width="14" height="14" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="10" r="3" />
+          <path d="M12 2C8.13 2 5 5.13 5 10c0 5.25 7 12 7 12s7-6.75 7-12c0-4.87-3.13-7-7-8z" />
+        </svg>
         Local &amp; Trusted
       </div>
     </div>
@@ -598,38 +1008,51 @@
           <div class="why-grid">
             <div class="why-card">
               <div class="why-icon">
-                <svg width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <svg width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
               </div>
               <div>
                 <div class="why-title">Instant Dispatch</div>
-                <div class="why-body">Call or WhatsApp — your job is dispatched to the nearest available driver immediately. No queues.</div>
+                <div class="why-body">Call or WhatsApp — your job is dispatched to the nearest available driver
+                  immediately. No queues.</div>
               </div>
             </div>
             <div class="why-card">
               <div class="why-icon">
-                <svg width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l7 4v5c0 5-3.5 8.5-7 10C8.5 19.5 5 16 5 11V6l7-4z"/></svg>
+                <svg width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M12 2l7 4v5c0 5-3.5 8.5-7 10C8.5 19.5 5 16 5 11V6l7-4z" />
+                </svg>
               </div>
               <div>
                 <div class="why-title">Fully Insured</div>
-                <div class="why-body">Your vehicle is protected throughout. Fully insured recovery — cars, vans, SUVs up to 3.5t.</div>
+                <div class="why-body">Your vehicle is protected throughout. Fully insured recovery — cars, vans, SUVs up
+                  to 3.5t.</div>
               </div>
             </div>
             <div class="why-card">
               <div class="why-icon">
-                <svg width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
               </div>
               <div>
                 <div class="why-title">No Hidden Fees</div>
-                <div class="why-body">Honest, upfront pricing. The price we quote is the price you pay — no nasty surprises on arrival.</div>
+                <div class="why-body">Honest, upfront pricing. The price we quote is the price you pay — no nasty
+                  surprises on arrival.</div>
               </div>
             </div>
             <div class="why-card">
               <div class="why-icon">
-                <svg width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <svg width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
               </div>
               <div>
                 <div class="why-title">True 24/7</div>
-                <div class="why-body">3am on Christmas Day or rush hour Monday — it makes no difference. We are always operational.</div>
+                <div class="why-body">3am on Christmas Day or rush hour Monday — it makes no difference. We are always
+                  operational.</div>
               </div>
             </div>
           </div>
@@ -639,54 +1062,51 @@
         <div class="proof-strip" style="margin-top:48px;">
           <div class="proof-card wide">
             <img src="../img/recovery-suv-daylight.jpg"
-                 alt="Fast FR8 flatbed recovery truck with SUV loaded Greater Manchester" loading="lazy" />
+              alt="Fast FR8 flatbed recovery truck with SUV loaded Greater Manchester" loading="lazy" />
             <div class="proof-cap">Recent job — SUV recovery, Greater Manchester</div>
             <div class="proof-badge">✓ Completed</div>
           </div>
           <div class="proof-card">
-            <img src="../img/recovery-mini-blue.jpg"
-                 alt="MINI Countryman breakdown recovery Oldham" loading="lazy" />
+            <img src="../img/recovery-mini-blue.jpg" alt="MINI Countryman breakdown recovery Oldham" loading="lazy" />
             <div class="proof-cap">MINI — Oldham</div>
           </div>
           <div class="proof-card">
-            <img src="../img/recovery-corsa-red.jpg"
-                 alt="Vauxhall Corsa recovery flatbed" loading="lazy" />
+            <img src="../img/recovery-corsa-red.jpg" alt="Vauxhall Corsa recovery flatbed" loading="lazy" />
             <div class="proof-cap">Corsa — flatbed loaded</div>
           </div>
           <div class="proof-card">
-            <img src="../img/recovery-lexus-saloon.jpg"
-                 alt="Lexus saloon recovery Manchester city" loading="lazy" />
+            <img src="../img/recovery-lexus-saloon.jpg" alt="Lexus saloon recovery Manchester city" loading="lazy" />
             <div class="proof-cap">Lexus — Manchester</div>
           </div>
           <div class="proof-card">
-            <img src="../img/recovery-astra-grey.jpg"
-                 alt="Vauxhall Astra recovery Oldham" loading="lazy" />
+            <img src="../img/recovery-astra-grey.jpg" alt="Vauxhall Astra recovery Oldham" loading="lazy" />
             <div class="proof-cap">Astra — Oldham</div>
           </div>
           <div class="proof-card">
-            <img src="../img/recovery-van-commercial.jpg"
-                 alt="Commercial van recovery Greater Manchester" loading="lazy" />
+            <img src="../img/recovery-van-commercial.jpg" alt="Commercial van recovery Greater Manchester"
+              loading="lazy" />
             <div class="proof-cap">Van — commercial job</div>
             <div class="proof-badge">Vans</div>
           </div>
         </div>
-        <p class="proof-label">Real jobs — real vehicles. Every recovery fully insured. <a href="our-fleet.html" style="color:#ffd54a;text-decoration:none;">See full gallery →</a></p>
+        <p class="proof-label">Real jobs — real vehicles. Every recovery fully insured. <a href="our-fleet.html"
+            style="color:#ffd54a;text-decoration:none;">See full gallery →</a></p>
 
         <!-- ═══ NIGHT RECOVERY BAND ═══ -->
         <div class="night-band">
           <div class="night-band-bg">
-            <img src="../img/recovery-suv-night.jpg"
-                 alt="Fast FR8 night recovery — available 24/7" loading="lazy" />
+            <img src="../img/recovery-suv-night.jpg" alt="Fast FR8 night recovery — available 24/7" loading="lazy" />
           </div>
           <div class="night-band-ov"></div>
           <div class="night-band-content">
             <div class="night-band-tag">🌙 3am? No Problem</div>
-            <div class="night-band-title">We Never Close.<br><span style="color:transparent;-webkit-text-stroke:1px #fff;">Help Is On The Way.</span></div>
+            <div class="night-band-title">We Never Close.<br><span
+                style="color:transparent;-webkit-text-stroke:1px #fff;">Help Is On The Way.</span></div>
             <div class="night-band-btns">
               <a class="btn-cta" href="tel:07724528966">📞 Call Now</a>
               <a class="btn-cta btn-cta--ghost"
-                 href="https://wa.me/447724528966?text=Hi%20Fast%20FR8%2C%20I%27m%20broken%20down%20and%20need%20urgent%20recovery.%20My%20location%20is%3A"
-                 target="_blank" rel="noopener">💬 WhatsApp</a>
+                href="https://wa.me/447724528966?text=Hi%20Fast%20FR8%2C%20I%27m%20broken%20down%20and%20need%20urgent%20recovery.%20My%20location%20is%3A"
+                target="_blank" rel="noopener">💬 WhatsApp</a>
             </div>
           </div>
         </div>
@@ -700,96 +1120,114 @@
               <div class="step-n">1</div>
               <div>
                 <div class="step-title">Call or WhatsApp</div>
-                <div class="step-body">Contact us directly — no call centre, straight to the driver. Tell us your location and vehicle.</div>
+                <div class="step-body">Contact us directly — no call centre, straight to the driver. Tell us your
+                  location and vehicle.</div>
               </div>
             </div>
             <div class="step">
               <div class="step-n">2</div>
               <div>
                 <div class="step-title">Instant Dispatch</div>
-                <div class="step-body">We confirm your ETA immediately. Average arrival across Greater Manchester is 30–60 minutes.</div>
+                <div class="step-body">We confirm your ETA immediately. Average arrival across Greater Manchester is
+                  30–60 minutes.</div>
               </div>
             </div>
             <div class="step">
               <div class="step-n">3</div>
               <div>
                 <div class="step-title">Safe Recovery</div>
-                <div class="step-body">Your vehicle is professionally loaded onto our flatbed, fully strapped and insured throughout.</div>
+                <div class="step-body">Your vehicle is professionally loaded onto our flatbed, fully strapped and
+                  insured throughout.</div>
               </div>
             </div>
             <div class="step">
               <div class="step-n">4</div>
               <div>
                 <div class="step-title">Delivered</div>
-                <div class="step-body">We transport to your garage, home or preferred destination. Job done — you're back on your way.</div>
+                <div class="step-body">We transport to your garage, home or preferred destination. Job done — you're
+                  back on your way.</div>
               </div>
             </div>
           </div>
         </div>
 
-    <!-- ═══ FORM SUBMIT (OLDHAM) ═══ -->
-<div class="s" style="padding-top:44px;" id="quote-form">
-  <div class="form-wrap">
-    <div class="ft">Get a Quote<br><span style="color:transparent;-webkit-text-stroke:1px #fff;">In 60 Seconds</span></div>
-    <p class="fs">Fill in below — we'll WhatsApp or call you straight back with a price and ETA. No obligation.</p>
+        <!-- ═══ FORM SUBMIT (OLDHAM) ═══ -->
+        <div class="s" style="padding-top:44px;" id="quote-form">
+          <div class="form-wrap">
+            <div class="ft">Get a Quote<br><span style="color:transparent;-webkit-text-stroke:1px #fff;">In 60
+                Seconds</span></div>
+            <p class="fs">Fill in below — we'll WhatsApp or call you straight back with a price and ETA. No obligation.
+            </p>
 
-    <form action="https://formsubmit.co/info@fastfr8.co.uk" method="POST">
-      <!-- Redirect to your own thank you page -->
-      <input type="hidden" name="_next" value="https://www.fastfr8.co.uk/thanks">
+            <form action="https://formsubmit.co/info@fastfr8.co.uk" method="POST">
+              <input type="hidden" name="_next" value="https://www.fastfr8.co.uk/thanks">
+              <input type="hidden" name="_subject" value="New Oldham breakdown enquiry from website">
+              <input type="hidden" name="_template" value="table">
 
-      <!-- Email settings (what you see in Zoho) -->
-      <input type="hidden" name="_subject" value="New Oldham breakdown enquiry from website">
-      <input type="hidden" name="_template" value="table">
+              <div class="fg">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Smith" required />
+              </div>
 
-      <div class="fg">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" placeholder="John Smith" required />
-      </div>
-      <div class="fg">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="07700 000000" required />
-      </div>
-      <div class="fg">
-        <label for="location">Breakdown Location</label>
-        <input type="text" id="location" name="location" placeholder="Street name, town or postcode" required />
-      </div>
-      <div class="fg">
-        <label for="vehicle">Vehicle</label>
-        <input type="text" id="vehicle" name="vehicle" placeholder="e.g. Ford Focus, 2019" />
-      </div>
-      <div class="fg">
-        <label for="service">Service Needed</label>
-        <select id="service" name="service">
-          <option value="">Select...</option>
-          <option>Breakdown Recovery</option>
-          <option>Accident Recovery</option>
-          <option>Vehicle Transport</option>
-          <option>Jump Start</option>
-          <option>Wrong Fuel Recovery</option>
-          <option>Tyre Change</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="fg">
-        <label for="message">Anything else?</label>
-        <textarea id="message" name="message" placeholder="Any extra details about your situation..."></textarea>
-      </div>
-      <button type="submit" class="btn-submit">⚡ Get My Quote Now</button>
-    </form>
-  </div>
-</div>
+              <div class="fg">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="07700 000000" required />
+              </div>
+
+              <div class="fg">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@email.com" />
+              </div>
+
+              <div class="fg">
+                <label for="location">Breakdown Location</label>
+                <input type="text" id="location" name="location" placeholder="Street name, town or postcode" required />
+              </div>
+
+              <div class="fg">
+                <label for="vehicle">Vehicle</label>
+                <input type="text" id="vehicle" name="vehicle" placeholder="e.g. Ford Focus, 2019" />
+              </div>
+
+              <div class="fg">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service">
+                  <option value="">Select...</option>
+                  <option>Breakdown Recovery</option>
+                  <option>Accident Recovery</option>
+                  <option>Vehicle Transport</option>
+                  <option>Jump Start</option>
+                  <option>Wrong Fuel Recovery</option>
+                  <option>Tyre Change</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="fg">
+                <label for="message">Anything else?</label>
+                <textarea id="message" name="message"
+                  placeholder="Any extra details about your situation..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">⚡ Get My Quote Now</button>
+            </form>
+
+          </div>
+        </div>
 
 
         <!-- ═══ FINAL CTA ═══ -->
         <div class="s" style="padding-top:44px; padding-bottom:80px;">
           <div class="final-cta">
-            <h3>Still Stranded?<br><span style="color:transparent;-webkit-text-stroke:1px #fff;">Call Us Right Now</span></h3>
-            <p>We're already patrolling Greater Manchester. One call and we're on our way — average arrival 30–60 minutes, fully insured, no hidden fees.</p>
+            <h3>Still Stranded?<br><span style="color:transparent;-webkit-text-stroke:1px #fff;">Call Us Right
+                Now</span></h3>
+            <p>We're already patrolling Greater Manchester. One call and we're on our way — average arrival 30–60
+              minutes, fully insured, no hidden fees.</p>
             <div class="final-btns">
               <a class="btn-cta" href="tel:07724528966">📞 Call 07724 528966</a>
               <a class="btn-cta btn-cta--ghost"
-                 href="https://wa.me/447724528966?text=Hi%20Fast%20FR8%2C%20I%27m%20broken%20down%20and%20need%20urgent%20recovery.%20My%20location%20is%3A"
-                 target="_blank" rel="noopener">💬 WhatsApp Now</a>
+                href="https://wa.me/447724528966?text=Hi%20Fast%20FR8%2C%20I%27m%20broken%20down%20and%20need%20urgent%20recovery.%20My%20location%20is%3A"
+                target="_blank" rel="noopener">💬 WhatsApp Now</a>
             </div>
             <p class="final-note">
               <a href="../index.html">← Back to main site</a> &nbsp;·&nbsp;
@@ -804,18 +1242,18 @@
     <!-- FOOTER -->
     <footer class="footer">
       <!-- Animated CONTACT US -->
-  <div class="footer__div">
-    <span data-speed="-300">c</span>
-    <span data-speed="120">o</span>
-    <span data-speed="260">n</span>
-    <span data-speed="-220">t</span>
-    <span data-speed="340">a</span>
-    <span data-speed="-180">c</span>
-    <span data-speed="210">t</span>
-    <span data-speed="-260"> </span>
-    <span data-speed="180">u</span>
-    <span data-speed="-140">s</span>
-  </div>
+      <div class="footer__div">
+        <span data-speed="-300">c</span>
+        <span data-speed="120">o</span>
+        <span data-speed="260">n</span>
+        <span data-speed="-220">t</span>
+        <span data-speed="340">a</span>
+        <span data-speed="-180">c</span>
+        <span data-speed="210">t</span>
+        <span data-speed="-260"> </span>
+        <span data-speed="180">u</span>
+        <span data-speed="-140">s</span>
+      </div>
       <div class="footer__meta">
         <div class="footer-areas">
           <span class="footer-area">Oldham</span>
@@ -831,7 +1269,9 @@
           <span class="footer-area">M60 · M62 · M66</span>
           <span class="footer-area">Greater Manchester</span>
         </div>
-        <p>© <script>document.write(new Date().getFullYear())</script> FAST FR8 Logistics Ltd. All rights reserved.</p>
+        <p>©
+          <script>document.write(new Date().getFullYear())</script> FAST FR8 Logistics Ltd. All rights reserved.
+        </p>
         <p>
           24/7 Recovery: <a href="tel:07724528966">07724 528966</a> &nbsp;·&nbsp;
           <a href="mailto:info@fastfr8.co.uk">info@fastfr8.co.uk</a>
@@ -848,13 +1288,13 @@
 
   <!-- FLOATING WHATSAPP -->
   <a href="https://wa.me/447724528966?text=Hi%20Fast%20FR8%2C%20I%27m%20broken%20down%20and%20need%20urgent%20recovery.%20My%20location%20is%3A"
-     target="_blank" rel="noopener" aria-label="WhatsApp 24/7"
-     style="position:fixed;bottom:24px;right:20px;z-index:9999;background:#25D366;color:#fff;
+    target="_blank" rel="noopener" aria-label="WhatsApp 24/7" style="position:fixed;bottom:24px;right:20px;z-index:9999;background:#25D366;color:#fff;
             border-radius:50px;padding:12px 18px 12px 14px;display:flex;align-items:center;
             gap:8px;font-family:Inter,sans-serif;font-size:12px;font-weight:700;
             text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.35);">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-      <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/>
+      <path
+        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z" />
     </svg>
     WhatsApp 24/7
   </a>
@@ -865,4 +1305,5 @@
   <script src="../js/luxy.js"></script>
   <script src="../js/js.js"></script>
 </body>
+
 </html>

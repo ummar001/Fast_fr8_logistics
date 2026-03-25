@@ -887,52 +887,71 @@
         </div>
 
         <!-- ═══ QUOTE FORM ═══ -->
-        <div class="svc-form-wrap" id="quote-form">
-          <div class="svc-form-title">Get An Instant<br><span style="-webkit-text-stroke:1px #fff; color:transparent;">Quote</span></div>
-          <div class="svc-form-sub">Fill in your details and we'll get back to you with a price and ETA within minutes.</div>
+<div class="svc-form-wrap" id="quote-form">
+  <div class="svc-form-title">Get An Instant<br><span style="-webkit-text-stroke:1px #fff; color:transparent;">Quote</span></div>
+  <div class="svc-form-sub">Fill in your details and we'll get back to you with a price and ETA within minutes.</div>
 
-          <form name="breakdown-quote" method="POST" data-netlify="true" action="/thanks">
-            <input type="hidden" name="form-name" value="breakdown-quote" />
-            <div class="form-group">
-              <label for="bq-name">Your Name</label>
-              <input type="text" id="bq-name" name="name" placeholder="John Smith" required />
-            </div>
-            <div class="form-group">
-              <label for="bq-phone">Phone Number</label>
-              <input type="tel" id="bq-phone" name="phone" placeholder="07700 000000" required />
-            </div>
-            <div class="form-group">
-              <label for="bq-location">Your Current Location</label>
-              <input type="text" id="bq-location" name="location" placeholder="e.g. Oldham, OL1 — or road name" required />
-            </div>
-            <div class="form-group">
-              <label for="bq-destination">Destination Postcode</label>
-              <input type="text" id="bq-destination" name="destination" placeholder="e.g. M1 1AE" />
-            </div>
-            <div class="form-group">
-              <label for="bq-vehicle">Vehicle (Make / Model / Reg)</label>
-              <input type="text" id="bq-vehicle" name="vehicle" placeholder="e.g. Ford Transit, VN70 XYZ" />
-            </div>
-            <div class="form-group">
-              <label for="bq-issue">What's the Problem?</label>
-              <select id="bq-issue" name="issue">
-                <option value="">Select...</option>
-                <option>Non-start / Battery</option>
-                <option>Breakdown / Engine</option>
-                <option>Accident Recovery</option>
-                <option>Flat Tyre</option>
-                <option>Wrong Fuel</option>
-                <option>Overheating</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="bq-message">Anything Else?</label>
-              <textarea id="bq-message" name="message" placeholder="Any extra details..."></textarea>
-            </div>
-            <button type="submit" class="btn-submit">⚡ Send My Quote Request</button>
-          </form>
-        </div>
+  <form action="https://formsubmit.co/info@fastfr8.co.uk" method="POST">
+    <!-- Redirect to your own thank you page -->
+    <input type="hidden" name="_next" value="https://www.fastfr8.co.uk/thanks">
+
+    <!-- Email settings (what you see in Zoho) -->
+    <input type="hidden" name="_subject" value="New 24/7 breakdown quote enquiry from website">
+    <input type="hidden" name="_template" value="table">
+
+    <div class="form-group">
+      <label for="bq-name">Your Name</label>
+      <input type="text" id="bq-name" name="name" placeholder="John Smith" required />
+    </div>
+
+    <div class="form-group">
+      <label for="bq-phone">Phone Number</label>
+      <input type="tel" id="bq-phone" name="phone" placeholder="07700 000000" required />
+    </div>
+
+    <div class="form-group">
+      <label for="bq-email">Email</label>
+      <input type="email" id="bq-email" name="email" placeholder="you@email.com" />
+    </div>
+
+    <div class="form-group">
+      <label for="bq-location">Your Current Location</label>
+      <input type="text" id="bq-location" name="location" placeholder="e.g. Oldham, OL1 — or road name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="bq-destination">Destination Postcode</label>
+      <input type="text" id="bq-destination" name="destination" placeholder="e.g. M1 1AE" />
+    </div>
+
+    <div class="form-group">
+      <label for="bq-vehicle">Vehicle (Make / Model / Reg)</label>
+      <input type="text" id="bq-vehicle" name="vehicle" placeholder="e.g. Ford Transit, VN70 XYZ" />
+    </div>
+
+    <div class="form-group">
+      <label for="bq-issue">What's the Problem?</label>
+      <select id="bq-issue" name="issue">
+        <option value="">Select...</option>
+        <option>Non-start / Battery</option>
+        <option>Breakdown / Engine</option>
+        <option>Accident Recovery</option>
+        <option>Flat Tyre</option>
+        <option>Wrong Fuel</option>
+        <option>Overheating</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="bq-message">Anything Else?</label>
+      <textarea id="bq-message" name="message" placeholder="Any extra details..."></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">⚡ Send My Quote Request</button>
+  </form>
+</div>
+
 
         <!-- ═══ FINAL CTA ═══ -->
         <div class="svc-final-cta">
