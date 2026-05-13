@@ -1,49 +1,48 @@
-<!-- /services/vehicle-transport.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) - Fast FR8 GA4 + Conversion Tracking -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H5VG2E6DVD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-H5VG2E6DVD');
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5VG2E6DVD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H5VG2E6DVD');
 
-  // Track phone number clicks
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
-      el.addEventListener('click', function() {
-        gtag('event', 'phone_click', {
-          event_category: 'Contact',
-          event_label: 'Call Button'
+    // Track phone number clicks
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          gtag('event', 'phone_click', {
+            event_category: 'Contact',
+            event_label: 'Call Button'
+          });
+        });
+      });
+
+      // Track WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          gtag('event', 'whatsapp_click', {
+            event_category: 'Contact',
+            event_label: 'WhatsApp Button'
+          });
+        });
+      });
+
+      // Track form submissions
+      document.querySelectorAll('form').forEach(function(form) {
+        form.addEventListener('submit', function() {
+          gtag('event', 'form_submit', {
+            event_category: 'Contact',
+            event_label: 'Contact Form'
+          });
         });
       });
     });
+  </script>
 
-    // Track WhatsApp clicks
-    document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
-      el.addEventListener('click', function() {
-        gtag('event', 'whatsapp_click', {
-          event_category: 'Contact',
-          event_label: 'WhatsApp Button'
-        });
-      });
-    });
-
-    // Track form submissions
-    document.querySelectorAll('form').forEach(function(form) {
-      form.addEventListener('submit', function() {
-        gtag('event', 'form_submit', {
-          event_category: 'Contact',
-          event_label: 'Contact Form'
-        });
-      });
-    });
-  });
-</script>
-
-<!-- Microsoft Clarity -->
+  <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -62,10 +61,554 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../style/normalize.css" />
   <link rel="stylesheet" href="../style/style.css" />
+
+  <!-- INLINE CSS FOR ENHANCED CONVERSION SECTIONS (no overlap) -->
+  <style>
+    /* Ensure header contains absolute image */
+    .header {
+      position: relative;
+      overflow: hidden;
+    }
+    .header__img {
+      z-index: 1;
+    }
+    .title, .header__cta {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Trust badges, stats, trust strip container */
+    .trust-stats-container-vehicle-transport {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* STATS ROW */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: #0a0a0a;
+      border-bottom: 1px solid #1a1a1a;
+      margin: 15px auto 0;
+      max-width: 800px;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      
+    }
+    .stat {
+      text-align: center;
+      padding: 24px 12px;
+      border-right: px solid #1a1a1a;
+    }
+    .stat:last-child { border-right: none; }
+    .stat-n {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      color: #FFD700;
+      line-height: 1;
+    }
+    .stat-l {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 6px;
+    }
+
+    /* TRUST STRIP (ICON ROW) */
+    .trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      background: #111;
+      padding: 20px 24px;
+      border-bottom: 1px solid #1a1a1a;
+      margin: 20px auto 0;
+      max-width: 800px;
+      border-radius: 12px;
+    }
+    .tb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: rgba(255,255,255,0.6);
+    }
+    .tb svg {
+      flex-shrink: 0;
+    }
+
+    /* TRUST BADGES */
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 20px auto;
+      justify-content: center;
+      align-items: center;
+      max-width: 1000px;
+    }
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,215,0,0.6);
+      background: rgba(255,215,0,0.06);
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      backdrop-filter: blur(4px);
+      white-space: nowrap;
+    }
+    .trust-badge svg {
+      width: 18px;
+      height: 18px;
+      fill: #FFD700;
+    }
+
+    /* QUOTE SECTION */
+    .quote-promo-section {
+      background: linear-gradient(145deg, #080808 0%, #000000 100%);
+      padding: 32px 28px 38px;
+      margin: 32px 0 40px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 215, 0, 0.4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    }
+    .quote-title {
+      color: #FFD700;
+      font-family: 'Syne', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+    .quote-sub {
+      font-size: 15px;
+      color: #ccc;
+      margin-bottom: 24px;
+      max-width: 600px;
+    }
+    .vt-form-shell {
+      max-width: 500px;
+      width: 100%;
+      background: #0a0a0a;
+      padding: 24px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.6);
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #FFD700;
+      letter-spacing: 0.3px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid #2a2a2a;
+      background: #111;
+      color: #fff;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      transition: 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #FFD700;
+      outline: none;
+      background: #1a1a1a;
+    }
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 48px;
+      border: none;
+      cursor: pointer;
+      background: #FFD700;
+      color: #000;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 8px;
+      transition: all 0.2s ease;
+    }
+    .btn-submit:hover {
+      background: #ffec66;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    /* HOW IT WORKS STEPS */
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 32px 0 20px;
+    }
+    .step {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .step-n {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 32px;
+      color: #FFD700;
+      line-height: 1;
+      min-width: 40px;
+    }
+    .step-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+    .step-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #aaa;
+      line-height: 1.5;
+    }
+
+    /* PHOTO PROOF GRID */
+    .proof-strip {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 32px 0 20px;
+    }
+    .proof-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #111;
+      border: 1px solid #222;
+      aspect-ratio: 4/3;
+    }
+    .proof-card.wide {
+      grid-column: span 1;
+      aspect-ratio: 16/9;
+    }
+    .proof-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .proof-card:hover img {
+      transform: scale(1.03);
+    }
+    .proof-cap {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+      padding: 24px 12px 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .proof-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #FFD700;
+      color: #000;
+      border-radius: 20px;
+      padding: 4px 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    /* 24/7 AVAILABILITY BAND */
+    .availability-band {
+      position: relative;
+      margin: 48px 0 24px;
+      min-height: 240px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 24px;
+    }
+    .avail-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .avail-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .avail-ov {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .avail-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 48px 24px;
+    }
+    .avail-tag {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #FFD700;
+      margin-bottom: 12px;
+    }
+    .avail-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(22px, 6vw, 34px);
+      color: #fff;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+    .avail-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .avail-btns .btn-cta {
+      width: 100%;
+      max-width: 280px;
+      text-align: center;
+    }
+
+    /* existing styles from original style.css (kept) */
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(26px, 4.5vw, 34px);
+      text-transform: uppercase;
+      margin: 48px 0 16px 0;
+      display: inline-block;
+      letter-spacing: -0.01em;
+    }
+    .section-title .stroke {
+      color: transparent;
+      -webkit-text-stroke: 1px #fff;
+    }
+    .section-title__square {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-left: 8px;
+      background: #FFD700;
+    }
+    .work__item-img {
+      margin: 48px 0 20px;
+      height: auto;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+    .work__item-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .areas-footer {
+      background: #0f0f0f;
+      padding: 50px 24px;
+      margin-top: 60px;
+      border-top: 1px solid rgba(255, 215, 0, 0.2);
+    }
+    .areas-footer h3 {
+      color: #FFD700;
+      font-family: 'Syne', sans-serif;
+      font-size: 26px;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .areas-grid a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-left: 3px solid #FFD700;
+      transition: all 0.2s;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .areas-grid a:hover {
+      color: #FFD700;
+      padding-left: 20px;
+    }
+    .footer {
+      padding: 48px 20px 32px;
+      background: #000;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .footer__meta {
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+    }
+    .footer__meta a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+    .footer__links a {
+      color: #777;
+      margin: 0 6px;
+      text-decoration: none;
+    }
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 28px;
+      right: 28px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 32px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      background-color: #128C7E;
+      transform: scale(1.08);
+    }
+    .whatsapp-float svg {
+      width: 34px;
+      height: 34px;
+      fill: white;
+    }
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 32px;
+      border-radius: 48px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+      background: #FFD700;
+      color: #000;
+    }
+    .btn-cta:hover {
+      background: #ffea80;
+      transform: translateY(-2px);
+      box-shadow: 0 18px 32px rgba(0, 0, 0, 0.6);
+    }
+    .btn-cta--ghost {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255, 255, 255, 0.85);
+      box-shadow: none;
+    }
+    .btn-cta--ghost:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+      border-color: #FFD700;
+    }
+    @media (min-width: 640px) {
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .proof-strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .proof-card.wide {
+        grid-column: span 3;
+      }
+      .avail-btns {
+        flex-direction: row;
+        justify-content: center;
+      }
+      .avail-btns .btn-cta {
+        width: auto;
+        min-width: 220px;
+      }
+    }
+    @media (max-width: 768px) {
+      .trust-badge {
+        white-space: normal;
+        text-align: center;
+      }
+      .btn-cta {
+        width: 100%;
+        text-align: center;
+      }
+      .quote-promo-section {
+        padding: 24px 16px;
+      }
+    }
+  </style>
 </head>
 
 <body class="page-service">
@@ -86,6 +629,17 @@
       <a href="../index.html#contact-form">Contact</a>
     </div>
   </nav>
+
+  <!-- Floating WhatsApp Button (conversion) -->
+  <a href="https://wa.me/447724528966?text=Hi%2C%20I%20need%20a%20vehicle%20transport%20quote" 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener"
+     aria-label="WhatsApp FAST FR8 for vehicle transport quote">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <path d="M27.281 4.65C24.681 2.031 21.181 0.5 17.481 0.5C10.131 0.5 4.131 6.5 4.131 13.85C4.131 16.05 4.681 18.2 5.731 20.1L4.031 27.5L11.631 25.85C13.431 26.8 15.431 27.3 17.481 27.3C24.831 27.3 30.831 21.3 30.831 13.95C30.831 10.25 29.331 6.75 27.281 4.65ZM17.481 25.1C15.631 25.1 13.831 24.6 12.231 23.7L11.831 23.45L7.681 24.5L8.731 20.45L8.481 20.05C7.431 18.4 6.881 16.5 6.881 14.55C6.881 8.45 11.681 3.65 17.781 3.65C20.731 3.65 23.531 4.8 25.631 6.9C27.731 9 28.881 11.8 28.881 14.75C28.881 20.85 23.581 25.1 17.481 25.1ZM23.581 17.3C23.231 17.15 21.431 16.25 21.131 16.15C20.831 16.05 20.631 16 20.431 16.35C20.231 16.7 19.531 17.55 19.381 17.75C19.231 17.95 19.031 17.95 18.681 17.8C18.331 17.65 17.131 17.25 15.681 15.95C14.531 14.95 13.781 13.7 13.631 13.35C13.481 13 13.631 12.85 13.781 12.7C13.931 12.55 14.081 12.3 14.231 12.15C14.381 12 14.431 11.9 14.531 11.7C14.631 11.5 14.581 11.35 14.531 11.2C14.481 11.05 13.731 9.25 13.431 8.55C13.131 7.85 12.831 7.95 12.631 7.95H12.031C11.831 7.95 11.531 8 11.231 8.35C10.931 8.7 10.031 9.6 10.031 11.4C10.031 13.2 11.281 14.95 11.431 15.15C11.581 15.35 13.731 18.6 17.031 20.2C20.331 21.8 20.331 21.3 21.031 21.25C21.731 21.2 23.231 20.35 23.531 19.45C23.831 18.55 23.831 17.8 23.731 17.65C23.631 17.5 23.431 17.45 23.081 17.3H23.581Z"/>
+    </svg>
+  </a>
 
   <div id="luxy" class="wrapp">
     <header class="header" style="height:auto; min-height:60vh;">
@@ -108,70 +662,136 @@
     <main class="main">
       <section class="about">
         <div class="content">
-          <h2 class="section-title">Vehicle <span class="stroke">Transport</span>
-            <span class="section-title__square"></span>
-          </h2>
 
-          <p class="about__p">
-            Safe, reliable vehicle transport for individuals and businesses. Whether it’s a single vehicle or a small fleet move,
-            we plan the route, confirm timings, and keep communication clear from pickup to delivery.
-          </p>
+          <!-- CENTERED CONTAINER FOR TRUST BADGES, STATS ROW & TRUST STRIP -->
+          <div class="trust-stats-container-vehicle-transport">
+            <!-- Trust badges -->
+            <div class="trust-badges">
+              <div class="trust-badge"><svg viewBox="0 0 24 24"><path d="M12 2L3 7v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7l-9-5z"/></svg> Fully Insured</div>
+              <div class="trust-badge"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> Trade Approved</div>
+              <div class="trust-badge"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg> 24/7 Available</div>
+            </div>
 
-          <div class="work__item-img" style="height:60vh;">
-            <img src="../img/Picture6.jpg" alt="Loaded vehicle ready for transport" />
+            <!-- STATS ROW -->
+            <div class="stats-row" >
+              <div class="stat"><div class="stat-n">15min</div><div class="stat-l">Quote Time</div></div>
+              <div class="stat"><div class="stat-n">24/7</div><div class="stat-l">Booking</div></div>
+              <div class="stat"><div class="stat-n" >100%</div><div class="stat-l">Insured</div></div>
+            </div>
+
+            <!-- TRUST STRIP (icon row) -->
+            <div class="trust-strip">
+              <div class="tb"><svg width="16" height="16" fill="none" stroke="#FFD700" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l7 4v5c0 5-3.5 8.5-7 10C8.5 19.5 5 16 5 11V6l7-4z"/></svg> Fully Insured</div>
+              <div class="tb"><svg width="16" height="16" fill="none" stroke="#FFD700" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Same‑day Moves</div>
+              <div class="tb"><svg width="16" height="16" fill="none" stroke="#FFD700" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> No Hidden Fees</div>
+              <div class="tb"><svg width="16" height="16" fill="#FFD700" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 5‑Star Service</div>
+            </div>
           </div>
 
-          <h2 class="section-title">How it <span class="stroke">works</span>
-            <span class="section-title__square"></span>
-          </h2>
+          <!-- QUOTE FORM SECTION -->
+          <div class="quote-promo-section" id="quote-form">
+            <div class="quote-title">⚡ Get Your Transport Quote in 15 Minutes</div>
+            <div class="quote-sub">Fill in the quick form below or call/WhatsApp – our Oldham team will call you back within 15 minutes (8am–8pm).</div>
+            <div class="vt-form-shell">
+              <form name="vehicle-transport-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks">
+                <input type="hidden" name="form-name" value="vehicle-transport-quote" />
+                <p style="display:none;"><label>Don't fill this out: <input name="bot-field" /></label></p>
+                <div class="form-group"><label for="vt-name">Your Name *</label><input type="text" id="vt-name" name="name" placeholder="John Smith" required /></div>
+                <div class="form-group"><label for="vt-phone">Phone Number *</label><input type="tel" id="vt-phone" name="phone" placeholder="07700 000000" required /></div>
+                <div class="form-group"><label for="vt-email">Email (optional)</label><input type="email" id="vt-email" name="email" placeholder="you@email.com" /></div>
+                <div class="form-group"><label for="vt-pickup">Pickup postcode / town *</label><input type="text" id="vt-pickup" name="pickup" placeholder="e.g. OL8 2SZ or Manchester" required /></div>
+                <div class="form-group"><label for="vt-dropoff">Delivery postcode / town *</label><input type="text" id="vt-dropoff" name="dropoff" placeholder="e.g. M1 1AE or Leeds" required /></div>
+                <div class="form-group"><label for="vt-vehicle">Vehicle (Make / Model / Reg)</label><input type="text" id="vt-vehicle" name="vehicle" placeholder="e.g. BMW 3 Series, YT20 ABC" /></div>
+                <div class="form-group"><label for="vt-type">What type of move?</label><select id="vt-type" name="move_type"><option value="">Select...</option><option>Private sale / purchase</option><option>Dealer / trader stock move</option><option>Auction collection</option><option>Garage / workshop move</option><option>Relocation / storage</option><option>Non-runner / recovery</option><option>Other</option></select></div>
+                <div class="form-group"><label for="vt-message">Anything else?</label><textarea id="vt-message" name="message" placeholder="Running / non-runner, urgent timing, access restrictions, etc."></textarea></div>
+                <button type="submit" class="btn-submit">⚡ GET MY TRANSPORT QUOTE</button>
+                <p style="font-size:11px; margin-top:10px; color:#aaa; text-align:center;">We’ll call or WhatsApp you back – usually within minutes.</p>
+              </form>
+            </div>
+          </div>
 
-          <p class="about__p">
-            1) Tell us pickup/drop-off postcodes + vehicle details.<br>
-            2) We confirm availability, method, and timing.<br>
-            3) Pickup, secure loading, transit, and handover with confirmation.
+          <!-- HOW IT WORKS -->
+          <h2 class="section-title">How It <span class="stroke">Works</span><span class="section-title__square"></span></h2>
+          <div class="steps">
+            <div class="step"><div class="step-n">1</div><div><div class="step-title">Call, WhatsApp or Form</div><div class="step-body">Contact us with your pickup & delivery details – we respond instantly.</div></div></div>
+            <div class="step"><div class="step-n">2</div><div><div class="step-title">Instant Quote & ETA</div><div class="step-body">We give you a fixed price and arrange a time slot that works for you.</div></div></div>
+            <div class="step"><div class="step-n">3</div><div><div class="step-title">Collection & Photo Proof</div><div class="step-body">We arrive, load carefully, and send you a photo on WhatsApp at pickup.</div></div></div>
+            <div class="step"><div class="step-n">4</div><div><div class="step-title">Safe Delivery</div><div class="step-body">Vehicle delivered to your destination with another photo and peace of mind.</div></div></div>
+          </div>
+
+          <!-- PHOTO PROOF GALLERY -->
+          <h2 class="section-title">Recent <span class="stroke">Transports</span><span class="section-title__square"></span></h2>
+          <div class="proof-strip">
+            <div class="proof-card wide"><img src="../img/Picture6.jpg" alt="Car on flatbed" loading="lazy" /><div class="proof-cap">Car transport – Oldham to Manchester</div><div class="proof-badge">✓ Completed</div></div>
+            <div class="proof-card"><img src="../img/recovery-mini-blue.jpg" alt="Mini transport" loading="lazy" /><div class="proof-cap">MINI – Rochdale delivery</div></div>
+            <div class="proof-card"><img src="../img/recovery-corsa-red.jpg" alt="Vauxhall Corsa" loading="lazy" /><div class="proof-cap">Corsa – Stockport</div></div>
+            <div class="proof-card"><img src="../img/recovery-lexus-saloon.jpg" alt="Lexus saloon" loading="lazy" /><div class="proof-cap">Lexus – Salford</div></div>
+            <div class="proof-card"><img src="../img/recovery-astra-grey.jpg" alt="Astra" loading="lazy" /><div class="proof-cap">Astra – Oldham</div></div>
+            <div class="proof-card"><img src="../img/recovery-van-commercial.jpg" alt="Van transport" loading="lazy" /><div class="proof-cap">Van – Bury</div><div class="proof-badge">Vans</div></div>
+          </div>
+
+          <!-- 24/7 AVAILABILITY BAND -->
+          <div class="availability-band">
+            <div class="avail-bg"><img src="../img/recovery-suv-night.jpg" alt="Night transport" loading="lazy" /></div>
+            <div class="avail-ov"></div>
+            <div class="avail-content">
+              <div class="avail-tag">🌙 ANYTIME, ANYWHERE</div>
+              <div class="avail-title">Need Transport at Night?<br><span style="color:transparent;-webkit-text-stroke:1px #fff;">We're Always Ready.</span></div>
+              <div class="avail-btns"><a class="btn-cta" href="tel:07724528966">📞 Call Now</a><a class="btn-cta btn-cta--ghost" href="https://wa.me/447724528966?text=Hi%20Fast%20FR8%2C%20I%20need%20vehicle%20transport%20urgently." target="_blank">💬 WhatsApp</a></div>
+            </div>
+          </div>
+
+          <!-- MAIN CONTENT: Car & van transport -->
+          <h2 class="section-title">Car & van <span class="stroke">transport</span><span class="section-title__square"></span></h2>
+          <p class="about__p">Need a car or van moved without adding miles or stress? We provide insured single‑vehicle transport from Oldham across Greater Manchester and the North West, with live updates from collection to delivery.</p>
+          <p class="about__p"><strong>📍 Based in Oldham</strong> – regular daily runs across Manchester, Rochdale, Bury, Bolton, Stockport, Ashton, Tameside and the M60/M62 corridor. <strong>Same-day and next-day moves available.</strong></p>
+          <p class="about__p">Call <a href="tel:07724528966" style="color:#FFD700;">07724 528966</a> or WhatsApp for an instant quote.</p>
+
+          <div class="work__item-img"><img src="../img/Picture6.jpg" alt="FAST FR8 vehicle transport" loading="lazy" /></div>
+
+          <h2 class="section-title">Who we <span class="stroke">work with</span><span class="section-title__square"></span></h2>
+          <p class="about__p">✅ <strong>Main dealers & independent garages</strong> moving stock between sites or delivering to customers<br>✅ <strong>Auction buyers</strong> (BCA, Manheim, SYNETIQ) needing reliable collection and delivery<br>✅ <strong>Private buyers & sellers</strong> who don't want to drive uninsured, un‑taxed or long‑distance<br>✅ <strong>Bodyshops & repair centres</strong> moving non‑runners or customers' cars between sites<br>✅ <strong>Fleet operators & lease companies</strong> repatriating vehicles or moving between depots<br>✅ <strong>Insurance companies</strong> needing salvage collection or total loss recovery</p>
+          <p class="about__p" style="background:rgba(255,215,0,0.08); padding:18px; border-left:4px solid #FFD700; border-radius:12px;"><strong>💼 Trade accounts available</strong> – bulk discounts for regular dealers, garages and fleet operators. Email <a href="mailto:info@fastfr8.co.uk" style="color:#FFD700;">info@fastfr8.co.uk</a> for commercial rates.</p>
+
+          <h2 class="section-title">Why use <span class="stroke">FAST FR8</span> for transport?<span class="section-title__square"></span></h2>
+          <p class="about__p">🔧 <strong>Based in Oldham</strong> – daily runs across Manchester, Rochdale, Ashton, Tameside, Stockport, Bolton, Bury and wider M60/M62 corridor<br><br>🚛 <strong>Single‑vehicle moves only</strong> – your car or van isn't stacked with unknown vehicles<br><br>📸 <strong>Photo proof at both ends</strong> – we send you pictures on WhatsApp at collection and delivery<br><br>🔒 <strong>Fully insured & legal</strong> – goods in transit insurance, trade plates, operator's license<br><br>📞 <strong>Direct driver contact</strong> – speak to the actual driver on <a href="tel:07724528966" style="color:#FFD700;">07724 528966</a><br><br>⚡ <strong>Same-day available</strong> – collect same day if you call before 12pm<br><br>💷 <strong>Clear pricing upfront</strong> – no hidden fees.</p>
+
+          <h2 class="section-title">Typical <span class="stroke">pricing</span><span class="section-title__square"></span></h2>
+          <p class="about__p">Local Greater Manchester moves (within 25 miles): <strong>from £75</strong><br>Manchester to Liverpool / Leeds / Sheffield: <strong>from £120</strong><br>Longer distances quoted individually.<br><br><strong>Trade discounts available</strong> for regular dealers and garages.</p>
+
+          <h2 class="section-title">Need urgent <span class="stroke">recovery</span> instead?<span class="section-title__square"></span></h2>
+          <p class="about__p">If the vehicle has broken down and you need it recovered <strong>right now</strong>, use our 24/7 breakdown service instead.</p>
+          <p class="about__p" style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+            <a class="btn-cta" href="tel:07724528966" style="background:#FFD700; color:#000; padding:12px 22px; font-size:13px; box-shadow:0 8px 20px rgba(0,0,0,0.45);">📞 Call 07724 528966</a>
+            <a class="btn-cta btn-cta--ghost" href="./breakdown-recovery-24-7.html" style="padding:12px 22px; font-size:13px;">24/7 breakdown recovery →</a>
           </p>
-
-          <h2 class="section-title">Typical <span class="stroke">moves</span>
-            <span class="section-title__square"></span>
-          </h2>
-
-          <p class="about__p">
-            • Dealer-to-dealer, private sales, depot transfers, auction collections, relocation moves.<br>
-            • Cars, vans, and light commercial vehicles (we’ll confirm suitability).
-          </p>
-
-          <p class="about__p">
-            <a class="btn-cta" href="../index.html#contact-form">Request transport</a>
-            <a class="btn-cta btn-cta--ghost" href="tel:07724528966">Call now</a>
-          </p>
-
-          <p class="about__p"><a href="../index.html">← Back to home</a></p>
+          <p class="about__p"><a href="../index.html" style="color:#FFD700;">← Back to home</a></p>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-     <div class="footer__div">
-        <span data-speed="-300">c</span>
-        <span data-speed="120">o</span>
-        <span data-speed="260">n</span>
-        <span data-speed="-220">t</span>
-        <span data-speed="340">a</span>
-        <span data-speed="-180">c</span>
-        <span data-speed="210">t</span>
-        <span data-speed="-260"> </span>
-        <span data-speed="180">u</span>
-        <span data-speed="-140">s</span>
+    <!-- Areas We Cover footer -->
+    <section class="areas-footer">
+      <h3>🗺️ Vehicle Transport Coverage Across Greater Manchester</h3>
+      <div class="areas-grid">
+        <a href="#quote-form">Oldham Transport</a> <a href="#quote-form">Manchester Transport</a> <a href="#quote-form">Rochdale Transport</a> <a href="#quote-form">Ashton-under-Lyne Transport</a>
+        <a href="#quote-form">Tameside Transport</a> <a href="#quote-form">Stockport Transport</a> <a href="#quote-form">Bolton Transport</a> <a href="#quote-form">Bury Transport</a>
+        <a href="#quote-form">Salford Transport</a> <a href="#quote-form">Trafford Transport</a> <a href="#quote-form">Wigan Transport</a> <a href="#quote-form">Warrington Transport</a>
+        <a href="#quote-form">Leigh Transport</a> <a href="#quote-form">Middleton Transport</a> <a href="#quote-form">Heywood Transport</a> <a href="#quote-form">Radcliffe Transport</a>
+        <a href="#quote-form">Prestwich Transport</a> <a href="#quote-form">Eccles Transport</a> <a href="#quote-form">Swinton Transport</a> <a href="#quote-form">Urmston Transport</a>
+        <a href="#quote-form">Sale Transport</a> <a href="#quote-form">Altrincham Transport</a> <a href="#quote-form">Stretford Transport</a> <a href="#quote-form">Cheadle Transport</a>
+        <a href="#quote-form">Denton Transport</a> <a href="#quote-form">Hyde Transport</a> <a href="#quote-form">Stalybridge Transport</a> <a href="#quote-form">Droylsden Transport</a>
+        <a href="#quote-form">Failsworth Transport</a> <a href="#quote-form">Chadderton Transport</a> <a href="#quote-form">Royton Transport</a> <a href="#quote-form">Shaw Transport</a>
+        <a href="#quote-form">Mossley Transport</a> <a href="#quote-form">Uppermill Transport</a> <a href="#quote-form">Delph Transport</a> <a href="#quote-form">Saddleworth Transport</a>
       </div>
+      <p style="text-align:center; margin-top:28px; color:#aaa; font-size:14px;">Covering all M-postcode areas + OL, BL, WA, SK postcodes across Greater Manchester and the North West</p>
+    </section>
 
+    <footer class="footer">
       <div class="footer__meta">
-        <p>© <script>document.write(new Date().getFullYear())</script> FAST FR8 Logistics Ltd. All rights reserved.</p>
-        <p>24/7 Recovery: <a href="tel:07724528966">07724 528966</a> Email: <a href="mailto:info@fastfr8.co.uk">info@fastfr8.co.uk</a></p>
-        <p class="footer__links">
-          <a href="../legal/privacy.html">Privacy</a> ·
-          <a href="../legal/cookies.html">Cookies</a> ·
-          <a href="../legal/terms.html">Terms</a>
-        </p>
+        <p>© 2025 FAST FR8 Logistics Ltd. All rights reserved.</p>
+        <p>24/7 Recovery & Transport: <a href="tel:07724528966">07724 528966</a> | WhatsApp: <a href="https://wa.me/447724528966">07724 528966</a> | Email: <a href="mailto:info@fastfr8.co.uk">info@fastfr8.co.uk</a></p>
+        <p class="footer__links"><a href="../legal/privacy.html">Privacy</a> · <a href="../legal/cookies.html">Cookies</a> · <a href="../legal/terms.html">Terms</a></p>
       </div>
     </footer>
   </div>
