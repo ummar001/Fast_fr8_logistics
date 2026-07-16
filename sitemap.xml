@@ -4,7 +4,7 @@
   <!-- Home -->
   <url>
     <loc>https://fastfr8.co.uk/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,66 +12,37 @@
   <!-- Service Pages -->
   <url>
     <loc>https://fastfr8.co.uk/services/breakdown-recovery</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://fastfr8.co.uk/services/breakdown-recovery-24-7.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://fastfr8.co.uk/services/breakdown-recovery-oldham.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://fastfr8.co.uk/services/our-fleet.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://fastfr8.co.uk/services/vehicle-transport</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://fastfr8.co.uk/services/integrated-logistics</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Legal (crawlable but noindex — included for completeness) -->
   <url>
-    <loc>https://fastfr8.co.uk/legal/privacy.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
+    <loc>https://fastfr8.co.uk/services/courier-services</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://fastfr8.co.uk/legal/cookies.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
-  </url>
-
-  <url>
-    <loc>https://fastfr8.co.uk/legal/terms.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
+    <loc>https://fastfr8.co.uk/services/our-fleet</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
