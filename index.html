@@ -2,74 +2,65 @@
 <html lang="en">
 
 <head>
-
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="trustpilot-one-time-domain-verification-id" content="968f5d1b-315e-42c4-a2c0-2f7e11689217" />
 
-  <!-- Google tag (gtag.js) - Fast FR8 GA4 + Conversion Tracking -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5VG2E6DVD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-H5VG2E6DVD');
-
-    // Track phone number clicks
-    document.addEventListener('DOMContentLoaded', function () {
-      document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
-        el.addEventListener('click', function () {
-          gtag('event', 'phone_click', {
-            event_category: 'Contact',
-            event_label: 'Call Button'
-          });
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('a[href^="tel:"]').forEach(function(el){
+        el.addEventListener('click', function(){
+          gtag('event','phone_click',{event_category:'Contact',event_label:'Call Button'});
         });
       });
-
-      // Track WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"]').forEach(function (el) {
-        el.addEventListener('click', function () {
-          gtag('event', 'whatsapp_click', {
-            event_category: 'Contact',
-            event_label: 'WhatsApp Button'
-          });
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function(el){
+        el.addEventListener('click', function(){
+          gtag('event','whatsapp_click',{event_category:'Contact',event_label:'WhatsApp Button'});
         });
       });
-
-      // Track form submissions
-      document.querySelectorAll('form').forEach(function (form) {
-        form.addEventListener('submit', function () {
-          gtag('event', 'form_submit', {
-            event_category: 'Contact',
-            event_label: 'Contact Form'
-          });
+      document.querySelectorAll('form').forEach(function(form){
+        form.addEventListener('submit', function(){
+          gtag('event','form_submit',{event_category:'Contact',event_label:'Contact Form'});
         });
       });
     });
   </script>
+
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
-    (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "w00dnl8ekd");
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,"clarity","script","w00dnl8ekd");
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>FAST FR8 Logistics | 24/7 Breakdown Recovery & Vehicle Transport UK</title>
-  <meta name="description"
-    content="FAST FR8 Logistics provides fast 24/7 breakdown recovery, vehicle transport, courier services and integrated logistics across the UK. Urgent roadside assistance and nationwide coverage. Call 07564 029283.">
+  <title>Fast FR8 Logistics | 24/7 Breakdown Recovery Oldham & UK</title>
+  <meta name="description" content="Fast FR8 Logistics (FastFR8) provides 24/7 breakdown recovery, vehicle transport and auction collection from Oldham across Greater Manchester and the UK. Call 07564 029283.">
+  <meta name="keywords" content="Fast FR8, FastFR8, Fast Fr8 Logistics, breakdown recovery Oldham, vehicle transport Manchester, 24/7 recovery, Copart transport, BCA collection, breakdown recovery Greater Manchester">
 
-  <!-- Open Graph tags go here -->
-  <meta property="og:title" content="FAST FR8 Logistics | 24/7 Breakdown Recovery & Vehicle Transport UK">
-  <meta property="og:description"
-    content="Fast 24/7 roadside assistance, vehicle recovery, transport, courier & logistics across the UK. Call now: 07564 029283.">
+  <meta property="og:title" content="Fast FR8 Logistics | 24/7 Breakdown Recovery Oldham & UK">
+  <meta property="og:description" content="Fast FR8 (FastFR8) — 24/7 breakdown recovery and vehicle transport based in Oldham, covering Manchester and nationwide.">
   <meta property="og:image" content="https://fastfr8.co.uk/img/Hero3.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://fastfr8.co.uk/">
+  <meta property="og:type" content="business.business">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fast FR8 Logistics | 24/7 Breakdown Recovery Oldham">
+  <meta name="twitter:description" content="Fast FR8 (FastFR8) — 24/7 breakdown recovery and vehicle transport across Greater Manchester and the UK.">
+  <meta name="twitter:image" content="https://fastfr8.co.uk/img/Hero3.jpg">
 
   <link rel="icon" href="img/icon.jpg" type="image/jpeg" />
+  <link rel="canonical" href="https://fastfr8.co.uk/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet" />
@@ -77,56 +68,260 @@
   <link rel="stylesheet" href="style/normalize.css" />
   <link rel="stylesheet" href="style/style.css" />
   <link rel="preload" as="image" href="img/Hero3.jpg">
-  <link rel="canonical" href="https://fastfr8.co.uk/">
 
-  <!--  schema script here (already good) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "TowingService"],
-    "name": "FAST FR8 Logistics Ltd.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "10 Sunnybrow Close",
-      "addressLocality": "Oldham",
-      "postalCode": "OL8 2SZ",
-      "addressCountry": "GB"
-    },
-    "url": "https://www.fastfr8.co.uk/",
-    "telephone": "+447564029283",
-    "email": "info@fastfr8.co.uk",
-    "description": "24/7 breakdown recovery, vehicle transport, courier services, and integrated logistics solutions across the UK. Rapid response for urgent vehicle recovery and nationwide transport.",
-    "image": "https://www.fastfr8.co.uk/img/Hero3.jpg",
-    "logo": "https://www.fastfr8.co.uk/img/icon.jpg",
-    "openingHours": "Mo-Su 00:00-23:59",
-    "priceRange": "$$",
-    "areaServed": [
+    "@graph": [
       {
-        "@type": "Country",
-        "name": "United Kingdom"
+        "@type": ["LocalBusiness", "TowingService"],
+        "@id": "https://www.fastfr8.co.uk/#business",
+        "name": "Fast FR8 Logistics Ltd.",
+        "alternateName": ["FastFR8 Logistics", "Fast Fr8 Logistics", "Fast FR8", "FastFR8"],
+        "url": "https://www.fastfr8.co.uk/",
+        "logo": "https://www.fastfr8.co.uk/img/icon.jpg",
+        "image": "https://www.fastfr8.co.uk/img/Hero3.jpg",
+        "description": "Fast FR8 Logistics (FastFR8) provides 24/7 breakdown recovery, vehicle transport, courier services, and integrated logistics from Oldham across Greater Manchester and the UK.",
+        "telephone": "+447564029283",
+        "email": "info@fastfr8.co.uk",
+        "priceRange": "££",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10 Sunnybrow Close",
+          "addressLocality": "Oldham",
+          "addressRegion": "Greater Manchester",
+          "postalCode": "OL8 2SZ",
+          "addressCountry": "GB"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "53.5235",
+          "longitude": "-2.1109"
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Oldham"},
+          {"@type": "City", "name": "Manchester"},
+          {"@type": "City", "name": "Rochdale"},
+          {"@type": "City", "name": "Bury"},
+          {"@type": "City", "name": "Stockport"},
+          {"@type": "City", "name": "Bolton"},
+          {"@type": "City", "name": "Salford"},
+          {"@type": "City", "name": "Ashton-under-Lyne"},
+          {"@type": "City", "name": "Tameside"},
+          {"@type": "City", "name": "Prestwich"},
+          {"@type": "City", "name": "Denton"},
+          {"@type": "City", "name": "Hyde"},
+          {"@type": "City", "name": "Didsbury"},
+          {"@type": "City", "name": "Chorlton"},
+          {"@type": "City", "name": "Altrincham"},
+          {"@type": "City", "name": "Sale"},
+          {"@type": "City", "name": "Trafford"},
+          {"@type": "Country", "name": "United Kingdom"}
+        ],
+        "openingHours": "Mo-Su 00:00-23:59",
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61586131982045",
+          "https://www.linkedin.com/company/fast-fr8-logistics",
+          "https://www.instagram.com/fastfr8logisticsltd/",
+          "https://www.facebook.com/fastfr8"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Fast FR8 Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "24/7 Breakdown Recovery",
+                "description": "Emergency breakdown recovery across Oldham, Greater Manchester and nationwide. Fast FR8 is available 24 hours a day."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Vehicle Transport",
+                "description": "Single vehicle and fleet transport including auction collection from Copart, BCA, Synetiq and salvage yards."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Courier Services",
+                "description": "Same-day and urgent courier services for documents and parcels across the North West and UK."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Integrated Logistics",
+                "description": "End-to-end logistics, route planning and fleet management for motor trade businesses."
+              }
+            }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "12"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.fastfr8.co.uk/#website",
+        "url": "https://www.fastfr8.co.uk/",
+        "name": "Fast FR8 Logistics",
+        "publisher": {"@id": "https://www.fastfr8.co.uk/#business"}
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.fastfr8.co.uk/#webpage",
+        "url": "https://www.fastfr8.co.uk/",
+        "name": "Fast FR8 Logistics | 24/7 Breakdown Recovery Oldham & UK",
+        "isPartOf": {"@id": "https://www.fastfr8.co.uk/#website"},
+        "about": {"@id": "https://www.fastfr8.co.uk/#business"},
+        "primaryImageOfPage": {"@type": "ImageObject", "contentUrl": "https://www.fastfr8.co.uk/img/Hero3.jpg"}
       }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/profile.php?id=61586131982045"
     ]
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Fast FR8 the same as FastFR8?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Fast FR8 Logistics is often searched as FastFR8 or Fast Fr8 Logistics. We are the same 24/7 breakdown recovery and vehicle transport company based in Oldham, Greater Manchester."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas does Fast FR8 cover for breakdown recovery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide 24/7 breakdown recovery across Oldham, Manchester, Rochdale, Bury, Stockport, Bolton, Salford, Ashton-under-Lyne, Tameside and all surrounding areas. We also offer nationwide vehicle transport."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Fast FR8 collect from Copart, BCA and Synetiq?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Fast FR8 specialises in auction vehicle transport and recovery collection from Copart, BCA, Synetiq and salvage yards across the UK. We offer trade rates for garages and motor trade businesses."
+        }
+      }
+    ]
+  }
+  </script>
 
+  <style>
+    .about-v2 { padding: 100px 0; }
+    .about-v2__wrapp {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+      align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 30px;
+    }
+    .about-v2__img { position: relative; border-radius: 8px; overflow: hidden; border: 1px solid #1a1a1a; }
+    .about-v2__img img { width: 100%; display: block; object-fit: cover; aspect-ratio: 4/3; }
+    .about-v2__lead { font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; color: #bfbfbf; margin-bottom: 16px; }
+    .about-v2__lead strong { color: #fff; }
+    .about-v2__body { font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.7; color: #888; margin-bottom: 28px; }
+    .about-v2__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .about-v2__stat { background: #111; border: 1px solid #1a1a1a; border-radius: 8px; padding: 20px 14px; text-align: center; }
+    .about-v2__stat-num { display: block; font-family: 'Syne', sans-serif; font-size: 26px; font-weight: 800; color: #ffd54a; line-height: 1; margin-bottom: 6px; }
+    .about-v2__stat-label { font-family: 'Inter', sans-serif; font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+
+    .benefits-v2 { padding: 100px 0; background: #0a0a0a; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; }
+    .benefits-v2__header { max-width: 1200px; margin: 0 auto 40px; padding: 0 30px; }
+    .benefits-v2__intro { font-family: 'Inter', sans-serif; font-size: 15px; color: #888; line-height: 1.7; max-width: 600px; margin-top: 12px; }
+    .benefits-v2__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+    .benefits-v2__card { background: #111; border: 1px solid #1a1a1a; border-radius: 8px; padding: 28px 24px; transition: transform 0.3s ease, border-color 0.3s ease; }
+    .benefits-v2__card:hover { transform: translateY(-4px); border-color: rgba(255,213,74,0.25); }
+    .benefits-v2__icon { width: 40px; height: 40px; background: rgba(255,213,74,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .benefits-v2__card h3 { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 10px 0; }
+    .benefits-v2__card p { font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.65; color: #666; margin: 0; }
+
+    .portfolio-v2 { padding: 100px 0; }
+    .portfolio-v2__header { max-width: 1200px; margin: 0 auto 40px; padding: 0 30px; }
+    .portfolio-v2__intro { font-family: 'Inter', sans-serif; font-size: 15px; color: #888; line-height: 1.7; max-width: 600px; margin-top: 12px; }
+    .portfolio-v2__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+    .portfolio-v2__item { position: relative; border-radius: 8px; overflow: hidden; border: 1px solid #1a1a1a; background: #111; aspect-ratio: 4/3; }
+    .portfolio-v2__item.wide { grid-column: span 2; aspect-ratio: 16/9; }
+    .portfolio-v2__item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .portfolio-v2__item:hover img { transform: scale(1.05); }
+    .portfolio-v2__caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 50%, transparent 100%); padding: 36px 16px 14px; transform: translateY(8px); opacity: 0; transition: all 0.35s ease; }
+    .portfolio-v2__item:hover .portfolio-v2__caption { transform: translateY(0); opacity: 1; }
+    .portfolio-v2__num { font-family: 'Syne', sans-serif; font-size: 11px; color: #ffd54a; letter-spacing: 1px; text-transform: uppercase; }
+    .portfolio-v2__caption h3 { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; color: #fff; text-transform: uppercase; margin: 4px 0 4px 0; }
+    .portfolio-v2__caption p { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; margin: 0; line-height: 1.5; }
+    .portfolio-v2__badge { position: absolute; top: 10px; left: 10px; background: #ffd54a; color: #000; border-radius: 4px; padding: 4px 8px; font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; z-index: 2; }
+
+    .faq-v2 { padding: 100px 0; background: #0a0a0a; border-top: 1px solid #1a1a1a; }
+    .faq-v2__header { max-width: 800px; margin: 0 auto 40px; padding: 0 30px; }
+    .faq-v2__list { max-width: 800px; margin: 0 auto; padding: 0 30px; }
+    .faq-v2__item { background: #111; border: 1px solid #1a1a1a; border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+    .faq-v2__item summary { padding: 22px 24px; font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 800; color: #fff; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; text-transform: uppercase; letter-spacing: 0.5px; }
+    .faq-v2__item summary::after { content: '+'; font-size: 20px; color: #ffd54a; margin-left: 16px; flex-shrink: 0; }
+    .faq-v2__item[open] summary::after { content: '\2212'; }
+    .faq-v2__item p { padding: 0 24px 22px; margin: 0; font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.7; color: #888; }
+
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 9998;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      background: #0a0a0a;
+      border-top: 1px solid #1a1a1a;
+      padding: 10px 16px;
+      padding-bottom: max(10px, env(safe-area-inset-bottom));
+    }
+    .sticky-cta__btn {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 14px 10px;
+      font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      text-decoration: none; border-radius: 6px;
+      transition: transform 0.15s ease;
+    }
+    .sticky-cta__btn:active { transform: scale(0.97); }
+    .sticky-cta__btn--call { background: #ffd54a; color: #000; }
+    .sticky-cta__btn--wa { background: #111; color: #fff; border: 1px solid #1a1a1a; }
+
+    @media screen and (max-width: 768px) {
+      .about-v2__wrapp { grid-template-columns: 1fr; gap: 32px; padding: 0 20px; }
+      .about-v2__stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .about-v2__stat { padding: 16px 8px; }
+      .about-v2__stat-num { font-size: 20px; }
+      .benefits-v2__grid { grid-template-columns: 1fr; padding: 0 20px; }
+      .portfolio-v2__grid { grid-template-columns: 1fr 1fr; padding: 0 20px; gap: 8px; }
+      .portfolio-v2__item.wide { grid-column: span 2; }
+      .portfolio-v2__caption { transform: translateY(0); opacity: 1; padding: 28px 12px 10px; }
+      .faq-v2__list { padding: 0 20px; }
+      .sticky-cta { display: grid; }
+      body { padding-bottom: 70px; }
+      .whatsapp-float { display: none !important; }
+    }
+  </style>
+<base target="_blank">
 </head>
 
 <body class="page-home">
 
   <nav class="site-nav" aria-label="Primary">
-    <!-- On index.html use href="index.html".
-       On /services/*.html use href="../index.html" -->
     <a class="site-nav__brand" href="index.html">FAST FR8</a>
-
     <button class="site-nav__toggle" type="button" aria-controls="siteNavMenu" aria-expanded="false">
       <span class="site-nav__burger" aria-hidden="true"></span>
       <span class="sr-only">Menu</span>
     </button>
-
     <div class="site-nav__menu" id="siteNavMenu">
       <a href="#about">About</a>
       <a href="#benefits">Benefits</a>
@@ -136,215 +331,213 @@
     </div>
   </nav>
 
-
-
-  <!-- div .wrapp -->
   <div id="luxy" class="wrapp">
 
-    <!-- div .header -->
     <header class="header">
       <h1 class="title" data-splitting>
         <span class="title_paralax">FAST FR8 </span><span class="stroke"> LOGISTICS</span>
       </h1>
-
       <div class="header__img">
         <img src="img/Hero3.jpg" alt="Fast Fr8 Logistics hero vehicle" />
       </div>
-
       <div class="header__cta">
         <a class="btn-cta" href="tel:07564029283">CALL</a>
         <a class="btn-cta btn-cta--ghost" href="https://wa.me/447564029283" target="_blank" rel="noopener">WHATSAPP</a>
       </div>
-
-      <!-- Trust badges -->
       <div class="trust-badges">
         <div class="trust-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10" />
-            <polyline points="12 6 12 12 16 14" />
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           <span>24/7 Available</span>
         </div>
         <div class="trust-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffd54a" viewBox="0 0 24 24">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffd54a" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <span>5 Star Reviews</span>
         </div>
-
         <div class="trust-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-            <path d="M12 2l7 4v5c0 5-3.5 8.5-7 10C8.5 19.5 5 16 5 11V6l7-4z" />
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2l7 4v5c0 5-3.5 8.5-7 10C8.5 19.5 5 16 5 11V6l7-4z"/></svg>
           <span>Fully Insured</span>
         </div>
         <div class="trust-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           <span>Fast Response</span>
         </div>
         <div class="trust-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-            <polyline points="20 6 9 17 4 12" />
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
           <span>No Hidden Fees</span>
         </div>
         <div class="trust-badge">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-            <circle cx="12" cy="10" r="3" />
-            <path d="M12 2C8.13 2 5 5.13 5 10c0 5.25 7 12 7 12s7-6.75 7-12c0-4.87-3.13-7-7-8z" />
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#ffd54a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2C8.13 2 5 5.13 5 10c0 5.25 7 12 7 12s7-6.75 7-12c0-4.87-3.13-7-7-8z"/></svg>
           <span>Nationwide Cover</span>
         </div>
       </div>
-
       <div class="header__marq">
         <div class="header__marq-wrapp">
-          <span class="header__marq-txt">vehicle transport • 24/7 recovery • nationwide coverage
-            <span class="header__marq-star"><img src="img/star.svg" alt="" /></span>
-          </span>
-          <span class="header__marq-txt">fast fr8 logistics • courier services • integrated logistics
-            <span class="header__marq-star"><img src="img/star.svg" alt="" /></span>
-          </span>
-          <span class="header__marq-txt">fast fr8 logistics • nationwide coverage • trusted partners
-            <span class="header__marq-star"><img src="img/star.svg" alt="" /></span>
-          </span>
-          <span class="header__marq-txt">fast fr8 logistics • discuss your next move
-            <span class="header__marq-star"><img src="img/star.svg" alt="" /></span>
-          </span>
+          <span class="header__marq-txt">vehicle transport &bull; 24/7 recovery &bull; nationwide coverage<span class="header__marq-star"><img src="img/star.svg" alt="" /></span></span>
+          <span class="header__marq-txt">fast fr8 logistics &bull; courier services &bull; integrated logistics<span class="header__marq-star"><img src="img/star.svg" alt="" /></span></span>
+          <span class="header__marq-txt">fast fr8 logistics &bull; nationwide coverage &bull; trusted partners<span class="header__marq-star"><img src="img/star.svg" alt="" /></span></span>
+          <span class="header__marq-txt">fast fr8 logistics &bull; discuss your next move<span class="header__marq-star"><img src="img/star.svg" alt="" /></span></span>
         </div>
       </div>
     </header>
 
-
     <main class="main">
 
-      <!-- div .about -->
-      <section class="about" id="about">
-        <div class="about__wrapp">
-          <div class="about__img">
-            <img src="img/Picture2_2.jpg" alt="Fast Fr8 Logistics vehicle" />
+      <section class="about-v2" id="about">
+        <div class="about-v2__wrapp">
+          <div class="about-v2__img">
+            <img src="img/Picture2_2.jpg" alt="Fast FR8 Logistics recovery truck operating in Oldham, Greater Manchester" />
           </div>
-
-          <div class="about__txt">
-            <h2 class="section-title">abo<span class="stroke">ut</span>
-              <span class="section-title__square"></span>
-            </h2>
-
-            <p class="about__p">
-              Fast Fr8 Logistics specialises in end-to-end transport and logistics solutions. From single vehicles to
-              full fleets,
-              we move assets safely and efficiently across regional and national routes.
-              When something goes wrong, our rapid breakdown recovery keeps you moving,
-              while our courier services handle urgent documents and time-critical parcels.
-              Behind the scenes, advanced diagnostics and route planning help us maximise uptime, control costs, and
-              deliver on time, every time.
-            </p>
-
-            <br /><br /><br /><br />
-          </div>
-        </div>
-      </section>
-
-      <!-- div .benefits -->
-      <section class="benefits" id="benefits">
-        <div class="content">
-          <h2 class="section-title">benef<span class="stroke">its</span>
-            <span class="section-title__square"></span>
-          </h2>
-
-          <ul class="benefits__list">
-            <li class="benefits__item">
-              <span class="benefits__num" data-speed="-200">/01</span>
-              <p class="benefits__p">Prompt, professional roadside assistance and recovery that minimises downtime and
-                keeps your fleet on the road.</p>
-            </li>
-
-            <li class="benefits__item">
-              <span class="benefits__num" data-speed="-150">/02</span>
-              <p class="benefits__p">Safe, reliable transport for single vehicles or full fleets across local, regional
-                and national destinations.</p>
-            </li>
-
-            <li class="benefits__item">
-              <span class="benefits__num" data-speed="-150">/03</span>
-              <p class="benefits__p">End-to-end logistics support that streamlines your supply chain and reduces
-                operational stress.</p>
-            </li>
-
-            <li class="benefits__item">
-              <span class="benefits__num" data-speed="-150">/04</span>
-              <p class="benefits__p">Experienced handling of both standard and specialist freight, ensuring every load
-                arrives safely and on time.</p>
-            </li>
-
-            <li class="benefits__item">
-              <span class="benefits__num" data-speed="-110">/05</span>
-              <p class="benefits__p">Fast, door-to-door courier options for urgent documents and smaller consignments,
-                with clear communication throughout.</p>
-            </li>
-
-            <li class="benefits__item">
-              <span class="benefits__num" data-speed="-200">/06</span>
-              <p class="benefits__p">Data-driven route planning and diagnostics that optimise performance, control fuel
-                usage and improve safety.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- div .work -->
-      <section class="work" id="portfolio">
-        <div class="content">
-          <h2 class="section-title">portfo<span class="stroke">lio</span>
-            <span class="section-title__square"></span>
-          </h2>
-        </div>
-
-        <div class="work__wrapp">
-          <div class="work__item" data-speed="-300">
-            <span class="work__item-num" data-speed="-1000">/001</span>
-            <div class="work__item-img">
-              <img src="img/Picture4.jpg" alt="Mixed fleet of vehicles" />
-            </div>
-          </div>
-
-          <div class="work__item" data-speed="-600">
-            <span class="work__item-num" data-speed="-500">/002</span>
-            <div class="work__item-img">
-              <img src="img/Picture2_3.jpg" alt="Urban logistics scene" />
-            </div>
-          </div>
-
-          <div class="work__item" data-speed="-700">
-            <span class="work__item-num" data-speed="-700">/003</span>
-            <div class="work__item-img">
-              <img src="img/picture7.jpg" alt="Night-time truck and van" />
-            </div>
-          </div>
-
-          <div class="work__item" data-speed="-400">
-            <span class="work__item-num" data-speed="-200">/004</span>
-            <div class="work__item-img">
-              <img src="img/Picture6.jpg" alt="Vehicle detail close-up" />
+          <div class="about-v2__txt">
+            <h2 class="section-title">abo<span class="stroke">ut</span><span class="section-title__square"></span></h2>
+            <p class="about-v2__lead"><strong>Fast FR8 Logistics</strong> is your local 24/7 breakdown recovery and vehicle transport specialist based in <strong>Oldham, Greater Manchester</strong>. Whether you search for us as <strong>FastFR8</strong>, <strong>Fast FR8</strong>, or <strong>Fast Fr8 Logistics</strong>, you get the same rapid, professional service across the North West and nationwide.</p>
+            <p class="about-v2__body">From emergency roadside assistance to auction collection from Copart, BCA and Synetiq, we keep garages, dealers and fleet operators moving. Our integrated logistics and courier services handle urgent, time-critical deliveries with full insurance and real-time communication.</p>
+            <div class="about-v2__stats">
+              <div class="about-v2__stat">
+                <span class="about-v2__stat-num">24/7</span>
+                <span class="about-v2__stat-label">Emergency Response</span>
+              </div>
+              <div class="about-v2__stat">
+                <span class="about-v2__stat-num">UK</span>
+                <span class="about-v2__stat-label">Nationwide Coverage</span>
+              </div>
+              <div class="about-v2__stat">
+                <span class="about-v2__stat-num">5&#9733;</span>
+                <span class="about-v2__stat-label">Rated Service</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- div .serv -->
-      <!-- div .serv -->
+      <section class="benefits-v2" id="benefits">
+        <div class="benefits-v2__header">
+          <h2 class="section-title">why cho<span class="stroke">ose us</span><span class="section-title__square"></span></h2>
+          <p class="benefits-v2__intro">Garages, breakers, dealers and auction houses across <strong>Oldham, Manchester and the North West</strong> choose <strong>Fast FR8 Logistics</strong> because we deliver speed, safety and transparency on every job.</p>
+        </div>
+        <div class="benefits-v2__grid">
+          <div class="benefits-v2__card">
+            <div class="benefits-v2__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#ffd54a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>24/7 UK-Wide Recovery</h3>
+            <p>Rapid response anywhere in the UK. Day or night, <strong>Fast FR8</strong> gets your vehicle recovered and your fleet back on the road.</p>
+          </div>
+          <div class="benefits-v2__card">
+            <div class="benefits-v2__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#ffd54a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3>Auction Transport</h3>
+            <p>Trusted collection and delivery from <strong>Copart, BCA, Synetiq</strong> and salvage yards. Trade rates available for regular partners.</p>
+          </div>
+          <div class="benefits-v2__card">
+            <div class="benefits-v2__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#ffd54a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h3>Integrated Logistics</h3>
+            <p>End-to-end vehicle movement, route planning and supply chain support tailored for motor trade businesses in Greater Manchester.</p>
+          </div>
+          <div class="benefits-v2__card">
+            <div class="benefits-v2__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#ffd54a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2l7 4v5c0 5-3.5 8.5-7 10C8.5 19.5 5 16 5 11V6l7-4z"/></svg>
+            </div>
+            <h3>Fully Insured & Trusted</h3>
+            <p>Every load is fully insured. Experienced operators, clear communication and no hidden fees on any Fast FR8 recovery or transport job.</p>
+          </div>
+          <div class="benefits-v2__card">
+            <div class="benefits-v2__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#ffd54a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3>Fast Response Times</h3>
+            <p>Local drivers based in <strong>Oldham</strong> mean we reach Manchester, Rochdale, Bury and Tameside faster than national competitors.</p>
+          </div>
+          <div class="benefits-v2__card">
+            <div class="benefits-v2__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#ffd54a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>Trade Rates & Accounts</h3>
+            <p>Competitive trade pricing for garages, dealers, breakers and fleet operators. Set up a Fast FR8 account for priority booking.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio-v2" id="portfolio">
+        <div class="portfolio-v2__header">
+          <h2 class="section-title">our wo<span class="stroke">rk</span><span class="section-title__square"></span></h2>
+          <p class="portfolio-v2__intro">See how <strong>Fast FR8 Logistics</strong> handles breakdown recovery, vehicle transport and auction collection across <strong>Oldham, Manchester and the UK</strong>.</p>
+        </div>
+        <div class="portfolio-v2__grid">
+          <div class="portfolio-v2__item wide">
+            <img src="img/Picture4.jpg" alt="Fast FR8 Logistics mixed fleet ready for breakdown recovery in Greater Manchester" loading="lazy" />
+            <div class="portfolio-v2__badge">Fleet</div>
+            <div class="portfolio-v2__caption">
+              <span class="portfolio-v2__num">/001</span>
+              <h3>Mixed Fleet Operations</h3>
+              <p>Breakdown recovery and transport vehicles covering Oldham, Bury, Rochdale &amp; Manchester 24/7.</p>
+            </div>
+          </div>
+          <div class="portfolio-v2__item">
+            <img src="img/Picture2_3.jpg" alt="Fast FR8 urban logistics and vehicle recovery in Manchester city centre" loading="lazy" />
+            <div class="portfolio-v2__caption">
+              <span class="portfolio-v2__num">/002</span>
+              <h3>Urban &amp; Motorway Recovery</h3>
+              <p>Rapid roadside assistance on the M60, M62, M6 and all major A-roads across the North West.</p>
+            </div>
+          </div>
+          <div class="portfolio-v2__item">
+            <img src="img/picture7.jpg" alt="Fast FR8 night time recovery and vehicle transport operation" loading="lazy" />
+            <div class="portfolio-v2__caption">
+              <span class="portfolio-v2__num">/003</span>
+              <h3>Night-Time Operations</h3>
+              <p>Emergency recovery and auction transport does not stop at sunset. Fast FR8 operates around the clock.</p>
+            </div>
+          </div>
+          <div class="portfolio-v2__item">
+            <img src="img/Picture6.jpg" alt="Fast FR8 vehicle detail and professional transport equipment" loading="lazy" />
+            <div class="portfolio-v2__caption">
+              <span class="portfolio-v2__num">/004</span>
+              <h3>Specialist Equipment</h3>
+              <p>Safe handling for standard cars, vans, 4x4s and light commercial vehicles — fully insured every time.</p>
+            </div>
+          </div>
+          <div class="portfolio-v2__item">
+            <img src="img/Picture2_2.jpg" alt="Fast FR8 auction collection and trade vehicle transport from Copart and BCA" loading="lazy" />
+            <div class="portfolio-v2__badge">Auction</div>
+            <div class="portfolio-v2__caption">
+              <span class="portfolio-v2__num">/005</span>
+              <h3>Auction &amp; Trade Collections</h3>
+              <p>Regular collections from Copart, BCA, Synetiq and salvage yards for garages and motor trade partners.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-v2" id="faq">
+        <div class="faq-v2__header">
+          <h2 class="section-title">freq<span class="stroke">uent</span> questions<span class="section-title__square"></span></h2>
+        </div>
+        <div class="faq-v2__list">
+          <details class="faq-v2__item">
+            <summary>Is Fast FR8 the same as FastFR8?</summary>
+            <p>Yes. <strong>Fast FR8 Logistics</strong> is often searched as <strong>FastFR8</strong> or <strong>Fast Fr8 Logistics</strong>. We are the same 24/7 breakdown recovery and vehicle transport company based in <strong>Oldham, Greater Manchester</strong>.</p>
+          </details>
+          <details class="faq-v2__item">
+            <summary>What areas do you cover for breakdown recovery?</summary>
+            <p>We provide 24/7 breakdown recovery across <strong>Oldham, Manchester, Rochdale, Bury, Stockport, Bolton, Salford, Ashton-under-Lyne, Tameside, Prestwich, Denton, Hyde, Didsbury, Chorlton, Altrincham, Sale</strong> and all surrounding areas. We also offer <strong>nationwide vehicle transport</strong>.</p>
+          </details>
+          <details class="faq-v2__item">
+            <summary>Do you collect from Copart, BCA and Synetiq?</summary>
+            <p>Absolutely. <strong>Fast FR8</strong> specialises in auction vehicle transport and recovery collection from <strong>Copart, BCA, Synetiq</strong> and salvage yards across the UK. We offer <strong>trade rates</strong> for garages and motor trade businesses.</p>
+          </details>
+          <details class="faq-v2__item">
+            <summary>Are you available for emergency call-outs at night?</summary>
+            <p>Yes — we are a true <strong>24/7 breakdown recovery</strong> service. Whether it is 2 PM or 2 AM in Oldham or on the M60, Fast FR8 is ready to respond.</p>
+          </details>
+        </div>
+      </section>
+
       <section class="serv" id="services">
         <div class="content">
-          <h2 class="section-title">servic<span class="stroke">es</span>
-            <span class="section-title__square"></span>
-          </h2>
+          <h2 class="section-title">servic<span class="stroke">es</span><span class="section-title__square"></span></h2>
           <div class="serv__list">
             <a class="serv__link" href="services/breakdown-recovery.html">
               <div class="serv__item">
@@ -354,7 +547,6 @@
                 </div>
               </div>
             </a>
-
             <a class="serv__link" href="services/vehicle-transport.html">
               <div class="serv__item">
                 <span class="serv__item-arrow" data-speed="400"><img src="img/arrow.svg" alt="" /></span>
@@ -363,7 +555,6 @@
                 </div>
               </div>
             </a>
-
             <a class="serv__link" href="services/courier-services.html">
               <div class="serv__item">
                 <span class="serv__item-arrow" data-speed="800"><img src="img/arrow.svg" alt="" /></span>
@@ -372,7 +563,6 @@
                 </div>
               </div>
             </a>
-
             <a class="serv__link" href="services/integrated-logistics.html">
               <div class="serv__item">
                 <span class="serv__item-arrow" data-speed="600"><img src="img/arrow.svg" alt="" /></span>
@@ -382,50 +572,18 @@
               </div>
             </a>
           </div>
-
         </div>
       </section>
 
-
-      <!-- div .contact -->
       <section class="contact" id="contact">
         <div class="content">
-          <h2 class="section-title">conta<span class="stroke">ct</span>
-            <span class="section-title__square"></span>
-          </h2>
-
-          <!-- Anchor target: Contact button jumps here -->
+          <h2 class="section-title">conta<span class="stroke">ct</span><span class="section-title__square"></span></h2>
           <div id="contact-form"></div>
-
-          <!-- animated CONTACT US above the form
-          <div class="contact__letters footer__div">
-            <span data-speed="-300">c</span>
-            <span data-speed="120">o</span>
-            <span data-speed="260">n</span>
-            <span data-speed="-220">t</span>
-            <span data-speed="340">a</span>
-            <span data-speed="-180">c</span>
-            <span data-speed="210">t</span>
-            <span data-speed="-260">&nbsp;</span>
-            <span data-speed="180">u</span>
-            <span data-speed="-140">s</span>
-          </div> -->
-
-          <p class="contact__intro">
-            Send us a request and we’ll get back to you with options, pricing and next steps.
-          </p>
-
+          <p class="contact__intro">Send us a request and we will get back to you with options, pricing and next steps.</p>
           <form action="https://formsubmit.co/info@fastfr8.co.uk" method="POST">
-            <!-- Redirect to your own thank you page -->
             <input type="hidden" name="_next" value="https://www.fastfr8.co.uk/thanks">
-
-            <!-- Email subject so you know it's from the homepage -->
             <input type="hidden" name="_subject" value="New enquiry from Fast FR8 homepage">
             <input type="hidden" name="_template" value="table">
-            ...
-
-
-
             <div class="contact__row">
               <div class="contact__field">
                 <label for="name">Name*</label>
@@ -436,7 +594,6 @@
                 <input type="email" id="email" name="email" required />
               </div>
             </div>
-
             <div class="contact__row">
               <div class="contact__field">
                 <label for="phone">Phone</label>
@@ -453,143 +610,111 @@
                 </select>
               </div>
             </div>
-
             <div class="contact__field contact__field--full">
               <label for="message">Request / Message*</label>
               <textarea id="message" name="message" rows="4" required></textarea>
             </div>
-
             <button type="submit" class="contact__btn">Send Request</button>
           </form>
-
-
         </div>
       </section>
 
     </main>
 
-
-    <!-- div .footer -->
     <footer class="footer">
-      <!-- Marquee banner in footer -->
       <div class="footer__marq">
         <div class="footer__marq-wrapp">
-          <span class="footer__marq-txt">vehicle transport • 24/7 recovery • nationwide coverage
-            <span class="footer__marq-star"><img src="img/star.svg" alt="" /></span>
-          </span>
-          <span class="footer__marq-txt">fast fr8 logistics • courier services • integrated logistics
-            <span class="footer__marq-star"><img src="img/star.svg" alt="" /></span>
-          </span>
-          <span class="footer__marq-txt">fast fr8 logistics • nationwide coverage • trusted partners
-            <span class="footer__marq-star"><img src="img/star.svg" alt="" /></span>
-          </span>
-          <span class="footer__marq-txt">fast fr8 logistics • discuss your next move
-            <span class="footer__marq-star"><img src="img/star.svg" alt="" /></span>
-          </span>
+          <span class="footer__marq-txt">vehicle transport &bull; 24/7 recovery &bull; nationwide coverage<span class="footer__marq-star"><img src="img/star.svg" alt="" /></span></span>
+          <span class="footer__marq-txt">fast fr8 logistics &bull; courier services &bull; integrated logistics<span class="footer__marq-star"><img src="img/star.svg" alt="" /></span></span>
+          <span class="footer__marq-txt">fast fr8 logistics &bull; nationwide coverage &bull; trusted partners<span class="footer__marq-star"><img src="img/star.svg" alt="" /></span></span>
+          <span class="footer__marq-txt">fast fr8 logistics &bull; discuss your next move<span class="footer__marq-star"><img src="img/star.svg" alt="" /></span></span>
         </div>
       </div>
-
-
-      <!-- Areas We Cover -->
       <div class="footer__areas">
-        <h3 class="footer__areas-title">Areas We Cover – 24/7 Breakdown Recovery</h3>
-
+        <h3 class="footer__areas-title">Areas We Cover &ndash; 24/7 Breakdown Recovery</h3>
         <div class="footer__areas-grid">
-          <!-- Column 1 -->
           <ul class="footer__areas-list">
-            <li>✓ Breakdown Recovery Prestwich</li>
-            <li>✓ Breakdown Recovery Old Trafford</li>
-            <li>✓ Breakdown Recovery Whalley Range</li>
-            <li>✓ Breakdown Recovery Pendlebury</li>
-            <li>✓ Breakdown Recovery Swinton</li>
-            <li>✓ Breakdown Recovery Kearsley</li>
-            <li>✓ Breakdown Recovery Chadderton</li>
-            <li>✓ Breakdown Recovery Middleton</li>
-            <li>✓ Breakdown Recovery Harpurhey</li>
-            <li>✓ Breakdown Recovery Simister</li>
-            <li>✓ Breakdown Recovery Denton</li>
-            <li>✓ Breakdown Recovery Ashton-under-Lyne</li>
-            <li>✓ Breakdown Recovery Bury</li>
-            <li>✓ Breakdown Recovery Urmston</li>
-            <li>✓ Breakdown Recovery Cheadle</li>
+            <li>&#10003; Breakdown Recovery Prestwich</li>
+            <li>&#10003; Breakdown Recovery Old Trafford</li>
+            <li>&#10003; Breakdown Recovery Whalley Range</li>
+            <li>&#10003; Breakdown Recovery Pendlebury</li>
+            <li>&#10003; Breakdown Recovery Swinton</li>
+            <li>&#10003; Breakdown Recovery Kearsley</li>
+            <li>&#10003; Breakdown Recovery Chadderton</li>
+            <li>&#10003; Breakdown Recovery Middleton</li>
+            <li>&#10003; Breakdown Recovery Harpurhey</li>
+            <li>&#10003; Breakdown Recovery Simister</li>
+            <li>&#10003; Breakdown Recovery Denton</li>
+            <li>&#10003; Breakdown Recovery Ashton-under-Lyne</li>
+            <li>&#10003; Breakdown Recovery Bury</li>
+            <li>&#10003; Breakdown Recovery Urmston</li>
+            <li>&#10003; Breakdown Recovery Cheadle</li>
           </ul>
-          <!-- Column 2 -->
           <ul class="footer__areas-list">
-            <li>✓ Breakdown Recovery Stockport</li>
-            <li>✓ Breakdown Recovery Sale</li>
-            <li>✓ Breakdown Recovery Northenden</li>
-            <li>✓ Breakdown Recovery Wythenshawe</li>
-            <li>✓ Breakdown Recovery Gatley</li>
-            <li>✓ Breakdown Recovery Longsight</li>
-            <li>✓ Breakdown Recovery Openshaw</li>
-            <li>✓ Breakdown Recovery Droylsden</li>
-            <li>✓ Breakdown Recovery Failsworth</li>
-            <li>✓ Breakdown Recovery Whitefield</li>
-            <li>✓ Breakdown Recovery Marple</li>
-            <li>✓ Breakdown Recovery Bramhall</li>
-            <li>✓ Breakdown Recovery Stalybridge</li>
-            <li>✓ Breakdown Recovery Tyldesley</li>
-            <li>✓ Breakdown Recovery Radcliffe</li>
+            <li>&#10003; Breakdown Recovery Stockport</li>
+            <li>&#10003; Breakdown Recovery Sale</li>
+            <li>&#10003; Breakdown Recovery Northenden</li>
+            <li>&#10003; Breakdown Recovery Wythenshawe</li>
+            <li>&#10003; Breakdown Recovery Gatley</li>
+            <li>&#10003; Breakdown Recovery Longsight</li>
+            <li>&#10003; Breakdown Recovery Openshaw</li>
+            <li>&#10003; Breakdown Recovery Droylsden</li>
+            <li>&#10003; Breakdown Recovery Failsworth</li>
+            <li>&#10003; Breakdown Recovery Whitefield</li>
+            <li>&#10003; Breakdown Recovery Marple</li>
+            <li>&#10003; Breakdown Recovery Bramhall</li>
+            <li>&#10003; Breakdown Recovery Stalybridge</li>
+            <li>&#10003; Breakdown Recovery Tyldesley</li>
+            <li>&#10003; Breakdown Recovery Radcliffe</li>
           </ul>
-          <!-- Column 3 -->
           <ul class="footer__areas-list">
-            <li>✓ Breakdown Recovery Bolton</li>
-            <li>✓ Breakdown Recovery Blackley</li>
-            <li>✓ Breakdown Recovery Clayton</li>
-            <li>✓ Breakdown Recovery Belle Vue</li>
-            <li>✓ Breakdown Recovery Rochdale</li>
-            <li>✓ Breakdown Recovery Eccles</li>
-            <li>✓ Breakdown Recovery Stretford</li>
-            <li>✓ Breakdown Recovery Hyde</li>
-            <li>✓ Breakdown Recovery Didsbury</li>
-            <li>✓ Breakdown Recovery Ancoats</li>
-            <li>✓ Breakdown Recovery Salford</li>
-            <li>✓ Breakdown Recovery Audenshaw</li>
-            <li>✓ Breakdown Recovery Burnage</li>
-            <li>✓ Breakdown Recovery Heald Green</li>
-            <li>✓ Breakdown Recovery Manchester Airport</li>
+            <li>&#10003; Breakdown Recovery Bolton</li>
+            <li>&#10003; Breakdown Recovery Blackley</li>
+            <li>&#10003; Breakdown Recovery Clayton</li>
+            <li>&#10003; Breakdown Recovery Belle Vue</li>
+            <li>&#10003; Breakdown Recovery Rochdale</li>
+            <li>&#10003; Breakdown Recovery Eccles</li>
+            <li>&#10003; Breakdown Recovery Stretford</li>
+            <li>&#10003; Breakdown Recovery Hyde</li>
+            <li>&#10003; Breakdown Recovery Didsbury</li>
+            <li>&#10003; Breakdown Recovery Ancoats</li>
+            <li>&#10003; Breakdown Recovery Salford</li>
+            <li>&#10003; Breakdown Recovery Audenshaw</li>
+            <li>&#10003; Breakdown Recovery Burnage</li>
+            <li>&#10003; Breakdown Recovery Heald Green</li>
+            <li>&#10003; Breakdown Recovery Manchester Airport</li>
           </ul>
-          <!-- Column 4 -->
           <ul class="footer__areas-list">
-            <li>✓ Breakdown Recovery Altrincham</li>
-            <li>✓ Breakdown Recovery Timperley</li>
-            <li>✓ Breakdown Recovery Leigh</li>
-            <li>✓ Breakdown Recovery Worsley</li>
-            <li>✓ Breakdown Recovery Clifton</li>
-            <li>✓ Breakdown Recovery Parrs Wood</li>
-            <li>✓ Breakdown Recovery Unsworth</li>
-            <li>✓ Breakdown Recovery Irlam</li>
-            <li>✓ Breakdown Recovery Gorton</li>
-            <li>✓ Breakdown Recovery Chorlton</li>
-            <li>✓ Breakdown Recovery Pendleton</li>
-            <li>✓ Breakdown Recovery Smedley</li>
-            <li>✓ Breakdown Recovery Littlemoss</li>
-            <li>✓ Breakdown Recovery Worsley</li>
-            <li>✓ Breakdown Recovery Bredbury</li>
+            <li>&#10003; Breakdown Recovery Altrincham</li>
+            <li>&#10003; Breakdown Recovery Timperley</li>
+            <li>&#10003; Breakdown Recovery Leigh</li>
+            <li>&#10003; Breakdown Recovery Worsley</li>
+            <li>&#10003; Breakdown Recovery Clifton</li>
+            <li>&#10003; Breakdown Recovery Parrs Wood</li>
+            <li>&#10003; Breakdown Recovery Unsworth</li>
+            <li>&#10003; Breakdown Recovery Irlam</li>
+            <li>&#10003; Breakdown Recovery Gorton</li>
+            <li>&#10003; Breakdown Recovery Chorlton</li>
+            <li>&#10003; Breakdown Recovery Pendleton</li>
+            <li>&#10003; Breakdown Recovery Smedley</li>
+            <li>&#10003; Breakdown Recovery Littlemoss</li>
+            <li>&#10003; Breakdown Recovery Worsley</li>
+            <li>&#10003; Breakdown Recovery Bredbury</li>
           </ul>
         </div>
-
         <hr class="footer__areas-divider">
-
-
         <hr class="footer__areas-divider">
-
         <div class="footer__areas-bottom">
           <p class="footer__areas-motorways">
-            ✓ M60 &nbsp;✓ M61 &nbsp;✓ M6 &nbsp;✓ M56 &nbsp;✓ M62 &nbsp;✓ M67 ✓ and all major A-roads in Greater
-            Manchester and surrounding areas.
+            &#10003; M60 &nbsp;&#10003; M61 &nbsp;&#10003; M6 &nbsp;&#10003; M56 &nbsp;&#10003; M62 &nbsp;&#10003; M67 &#10003; and all major A-roads in Greater Manchester and surrounding areas.
           </p>
-          <p class="footer__areas-cta-text">Stranded nearby? We're already patrolling these areas!</p>
+          <p class="footer__areas-cta-text">Stranded nearby? We are already patrolling these areas!</p>
           <div class="footer__areas-btns">
-            <a class="footer__btn" href="tel:07564029283">📞 Call 24/7</a>
-            <a class="footer__btn footer__btn--ghost"
-              href="https://wa.me/447564029283?text=Hi%20Fast%20Fr8%2C%20I%20need%20help%20with%20a%20recovery%2Ftransport%20job"
-              target="_blank" rel="noopener">💬 WhatsApp Us</a>
+            <a class="footer__btn" href="tel:07564029283">&#9990; Call 24/7</a>
+            <a class="footer__btn footer__btn--ghost" href="https://wa.me/447564029283?text=Hi%20Fast%20Fr8%2C%20I%20need%20help%20with%20a%20recovery%2Ftransport%20job" target="_blank" rel="noopener">&#9990; WhatsApp Us</a>
           </div>
         </div>
-
       </div>
-      <!-- Animated CONTACT US -->
       <div class="footer__div">
         <span data-speed="-300">c</span>
         <span data-speed="120">o</span>
@@ -602,29 +727,23 @@
         <span data-speed="180">u</span>
         <span data-speed="-140">s</span>
       </div>
-
-      <!-- Footer Meta -->
       <div class="footer__meta">
-        <p>©
-          <script>document.write(new Date().getFullYear())</script> FAST FR8 Logistics Ltd. All rights reserved.
-        </p>
-        <p>
-          24/7 Recovery: <a href="tel:07564029283">07564029283</a>
-          Email: <a href="mailto:info@fastfr8.co.uk">info@fastfr8.co.uk</a>
-        </p>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> FAST FR8 Logistics Ltd. All rights reserved.</p>
+        <p>24/7 Recovery: <a href="tel:07564029283">07564029283</a> Email: <a href="mailto:info@fastfr8.co.uk">info@fastfr8.co.uk</a></p>
         <p class="footer__links">
-          <a href="legal/privacy.html">Privacy</a> ·
-          <a href="legal/cookies.html">Cookies</a> ·
+          <a href="legal/privacy.html">Privacy</a> &middot;
+          <a href="legal/cookies.html">Cookies</a> &middot;
           <a href="legal/terms.html">Terms</a>
         </p>
       </div>
-
     </footer>
 
-
-
   </div>
-  <!-- /div .wrapp END -->
+
+  <div class="sticky-cta">
+    <a class="sticky-cta__btn sticky-cta__btn--call" href="tel:07564029283">&#9990; Call Now</a>
+    <a class="sticky-cta__btn sticky-cta__btn--wa" href="https://wa.me/447564029283?text=Hi%20Fast%20FR8%2C%20I%20need%20help%20with%20a%20recovery%2Ftransport%20job" target="_blank" rel="noopener">&#9990; WhatsApp</a>
+  </div>
 
   <script src="js/splitting.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
@@ -632,44 +751,19 @@
   <script src="js/luxy.js"></script>
   <script src="js/js.js"></script>
 
-  <!-- Floating WhatsApp Button -->
-  <a class="whatsapp-float"
-    href="https://wa.me/447564029283?text=Hi%20Fast%20Fr8%2C%20I%20need%20help%20with%20a%20recovery%2Ftransport%20job"
-    target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a class="whatsapp-float" href="https://wa.me/447564029283?text=Hi%20Fast%20Fr8%2C%20I%20need%20help%20with%20a%20recovery%2Ftransport%20job" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-      <path
-        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z" />
+      <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/>
     </svg>
   </a>
-  <!-- Cookie Notice -->
-  <div id="cookie-banner" style="
-  position:fixed;bottom:0;left:0;right:0;
-  background:#000;color:#fff;
-  padding:14px 20px 14px 20px;
-  font-family:Arial,sans-serif;font-size:13px;
-  z-index:99999;
-  box-shadow:0 -2px 10px rgba(0,0,0,0.5);">
+
+  <div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#000;color:#fff;padding:14px 20px 14px 20px;font-family:Arial,sans-serif;font-size:13px;z-index:99999;box-shadow:0 -2px 10px rgba(0,0,0,0.5);">
     <div style="max-width:700px;margin:0 auto;">
-      <p style="margin:0 0 10px 0;line-height:1.5;">
-        We use cookies to analyse site traffic and improve your experience.
-        See our <a href="/legal/cookies.html" style="color:#FFD54A;text-decoration:underline;">Cookie Policy</a>.
-      </p>
-      <button onclick="
-      document.getElementById('cookie-banner').style.display='none';
-      localStorage.setItem('cookieAccepted','true');" style="background:#FFD54A;color:#000;border:none;
-      padding:10px 24px;font-weight:bold;cursor:pointer;
-      border-radius:4px;font-size:13px;width:100%;">
-        Got it — Accept Cookies
-      </button>
+      <p style="margin:0 0 10px 0;line-height:1.5;">We use cookies to analyse site traffic and improve your experience. See our <a href="/legal/cookies.html" style="color:#FFD54A;text-decoration:underline;">Cookie Policy</a>.</p>
+      <button onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookieAccepted','true');" style="background:#FFD54A;color:#000;border:none;padding:10px 24px;font-weight:bold;cursor:pointer;border-radius:4px;font-size:13px;width:100%;">Got it &mdash; Accept Cookies</button>
     </div>
   </div>
-  <script>
-    if (localStorage.getItem('cookieAccepted')) {
-      document.getElementById('cookie-banner').style.display = 'none';
-    }
-  </script>
-
+  <script>if(localStorage.getItem('cookieAccepted')){document.getElementById('cookie-banner').style.display='none';}</script>
 
 </body>
-
 </html>
