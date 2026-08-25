@@ -1603,3 +1603,37 @@ html { scroll-behavior: smooth; } /* makes anchor jumps smooth */  /* [web:188] 
     display: none;
   }
 }
+/* ─── SOCIAL STRIP ─── */
+.social-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  background: #0a0a0a;
+  border-top: 1px solid #1a1a1a;
+}
+.social-strip__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #111;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  color: #888;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.social-strip__link:hover {
+  background: #ffd54a;
+  color: #000;
+  border-color: #ffd54a;
+  transform: translateY(-2px);
+}
+.social-strip__link svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
