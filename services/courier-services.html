@@ -1,63 +1,60 @@
-<!-- /services/courier-services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) - Fast FR8 GA4 + Conversion Tracking -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H5VG2E6DVD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-H5VG2E6DVD');
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5VG2E6DVD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H5VG2E6DVD');
 
-  // Track phone number clicks
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
-      el.addEventListener('click', function() {
-        gtag('event', 'phone_click', {
-          event_category: 'Contact',
-          event_label: 'Call Button'
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          gtag('event', 'phone_click', { event_category: 'Contact', event_label: 'Call Button' });
+        });
+      });
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          gtag('event', 'whatsapp_click', { event_category: 'Contact', event_label: 'WhatsApp Button' });
+        });
+      });
+      document.querySelectorAll('form').forEach(function(form) {
+        form.addEventListener('submit', function() {
+          gtag('event', 'form_submit', { event_category: 'Contact', event_label: 'Contact Form' });
         });
       });
     });
+  </script>
 
-    // Track WhatsApp clicks
-    document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
-      el.addEventListener('click', function() {
-        gtag('event', 'whatsapp_click', {
-          event_category: 'Contact',
-          event_label: 'WhatsApp Button'
-        });
-      });
-    });
-
-    // Track form submissions
-    document.querySelectorAll('form').forEach(function(form) {
-      form.addEventListener('submit', function() {
-        gtag('event', 'form_submit', {
-          event_category: 'Contact',
-          event_label: 'Contact Form'
-        });
-      });
-    });
-  });
-</script>
-
-<!-- Microsoft Clarity -->
+  <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "w00dnl8ekd");
   </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Courier Services | FAST FR8 LOGISTICS</title>
-  <meta name="description" content="Courier services for urgent documents and time-critical parcels with clear communication and reliable delivery." />
+  <title>Courier Services Oldham & Manchester | Fast FR8 Logistics</title>
+  <meta name="description" content="Fast FR8 provides reliable same-day and urgent courier services across Oldham, Manchester and Greater Manchester. Documents, keys, parts and time-critical parcels. Call 07564 029283.">
+  
+  <meta property="og:title" content="Courier Services Oldham & Manchester | Fast FR8 Logistics">
+  <meta property="og:description" content="Same-day and urgent courier services from Oldham across Greater Manchester. Fast, reliable and fully tracked.">
+  <meta property="og:image" content="https://www.fastfr8.co.uk/img/picture7.jpg">
+  <meta property="og:url" content="https://www.fastfr8.co.uk/services/courier-services.html">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Courier Services Oldham & Manchester | Fast FR8">
+  <meta name="twitter:description" content="Urgent courier services for documents, keys and parts across Greater Manchester.">
+  <meta name="twitter:image" content="https://www.fastfr8.co.uk/img/picture7.jpg">
 
   <link rel="icon" href="../img/icon.jpg" type="image/jpeg" />
+  <link rel="canonical" href="https://www.fastfr8.co.uk/services/courier-services.html" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -66,19 +63,37 @@
 
   <link rel="stylesheet" href="../style/normalize.css" />
   <link rel="stylesheet" href="../style/style.css" />
-  <link rel="canonical" href="https://fastfr8.co.uk/services/courier-services">
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Courier Services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Fast FR8 Logistics Ltd.",
+      "telephone": "+447564029283",
+      "url": "https://www.fastfr8.co.uk/"
+    },
+    "areaServed": ["Oldham", "Manchester", "Greater Manchester", "North West England"],
+    "description": "Same-day and urgent courier services for documents, keys, parts and time-critical parcels across Oldham, Manchester and Greater Manchester.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
 </head>
 
 <body class="page-service">
 
   <nav class="site-nav" aria-label="Primary">
     <a class="site-nav__brand" href="../index.html">FAST FR8</a>
-
     <button class="site-nav__toggle" type="button" aria-controls="siteNavMenu" aria-expanded="false">
       <span class="site-nav__burger" aria-hidden="true"></span>
       <span class="sr-only">Menu</span>
     </button>
-
     <div class="site-nav__menu" id="siteNavMenu">
       <a href="../index.html#about">About</a>
       <a href="../index.html#benefits">Benefits</a>
@@ -89,37 +104,39 @@
   </nav>
 
   <div id="luxy" class="wrapp">
+
     <header class="header" style="height:auto; min-height:60vh;">
       <h1 class="title" data-splitting>
         Courier <span class="stroke">Services</span>
       </h1>
-
       <div class="header__cta">
-        <a class="btn-cta" href="https://wa.me/447564029283)" target="_blank" rel="noopener">
-          WHATSAPP
-        </a>
-        <a class="btn-cta btn-cta--ghost" href="tel:07564029283">Call</a>
+        <a class="btn-cta" href="https://wa.me/447564029283?text=Hi%20Fast%20FR8%2C%20I%20need%20a%20courier" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn-cta btn-cta--ghost" href="tel:07564029283">Call 07564 029283</a>
       </div>
-
       <div class="header__img" style="right:0; width:100%; height:60vh; position:absolute; top:0;">
-        <img src="../img/picture7.jpg" alt="Courier delivery vehicle" />
+        <img src="../img/picture7.jpg" alt="Fast FR8 courier and urgent delivery vehicle" />
       </div>
     </header>
 
     <main class="main">
       <section class="about">
         <div class="content">
-          <h2 class="section-title">Courier <span class="stroke">Services</span>
+
+          <h2 class="section-title">Urgent Courier <span class="stroke">Services</span>
             <span class="section-title__square"></span>
           </h2>
 
           <p class="about__p">
-            Time-critical deliveries for documents and parcels where speed and communication matter.
-            We confirm pickup/drop-off details, agree timings, and keep you updated.
+            Fast FR8 provides reliable same-day and urgent courier services across <strong>Oldham, Manchester and Greater Manchester</strong>. 
+            We specialise in time-critical deliveries where speed, communication and proof of delivery matter.
           </p>
 
-          <div class="work__item-img" style="height:60vh;">
-            <img src="../img/Picture2_2.jpg" alt="Courier parcel and paperwork handling" />
+          <p class="about__p">
+            Whether you need documents, keys, vehicle parts or small parcels moved quickly, we confirm collection and delivery details, agree timings, and keep you updated throughout.
+          </p>
+
+          <div class="work__item-img" style="height:50vh; margin: 40px 0;">
+            <img src="../img/Picture2_2.jpg" alt="Fast FR8 courier handling documents and parcels" loading="lazy" />
           </div>
 
           <h2 class="section-title">What we <span class="stroke">deliver</span>
@@ -127,8 +144,11 @@
           </h2>
 
           <p class="about__p">
-            • Documents, keys, small consignments, urgent parts, time-critical parcels.<br>
-            • One-off and repeat runs (tell us your schedule).
+            • Documents, contracts and legal papers<br>
+            • Vehicle keys and number plates<br>
+            • Urgent vehicle parts and components<br>
+            • Small to medium parcels<br>
+            • One-off or regular scheduled runs
           </p>
 
           <h2 class="section-title">How it <span class="stroke">works</span>
@@ -136,23 +156,34 @@
           </h2>
 
           <p class="about__p">
-            1) Share collection + delivery postcodes and item details.<br>
-            2) We confirm the run and timing.<br>
-            3) Pickup, transit, and proof of delivery confirmation.
+            1. Tell us the collection and delivery postcodes + item details<br>
+            2. We confirm the run, timing and price<br>
+            3. We collect, deliver and provide confirmation
           </p>
+
+          <h2 class="section-title">Areas we <span class="stroke">cover</span>
+            <span class="section-title__square"></span>
+          </h2>
 
           <p class="about__p">
-            <a class="btn-cta" href="../index.html#contact-form">Request a courier</a>
-            <a class="btn-cta btn-cta--ghost" href="tel:07564029283">Call now</a>
+            Oldham • Manchester • Rochdale • Bury • Stockport • Bolton • Salford • Ashton-under-Lyne • Tameside and surrounding areas.
+            Nationwide courier options available on request.
           </p>
 
+          <div style="margin: 50px 0; display: flex; gap: 16px; flex-wrap: wrap;">
+            <a class="btn-cta" href="https://wa.me/447564029283?text=Hi%20Fast%20FR8%2C%20I%20need%20a%20courier" target="_blank" rel="noopener">WhatsApp Us</a>
+            <a class="btn-cta btn-cta--ghost" href="tel:07564029283">Call 07564 029283</a>
+            <a class="btn-cta btn-cta--ghost" href="../index.html#contact-form">Request a Quote</a>
+          </div>
+
           <p class="about__p"><a href="../index.html">← Back to home</a></p>
+
         </div>
       </section>
     </main>
 
     <footer class="footer">
-     <div class="footer__div">
+      <div class="footer__div">
         <span data-speed="-300">c</span>
         <span data-speed="120">o</span>
         <span data-speed="260">n</span>
@@ -167,7 +198,7 @@
 
       <div class="footer__meta">
         <p>© <script>document.write(new Date().getFullYear())</script> FAST FR8 Logistics Ltd. All rights reserved.</p>
-        <p>24/7 Recovery: <a href="tel:07564029283">07564 029283</a> Email: <a href="mailto:info@fastfr8.co.uk">info@fastfr8.co.uk</a></p>
+        <p>24/7 Recovery: <a href="tel:07564029283">07564 029283</a> · Email: <a href="mailto:info@fastfr8.co.uk">info@fastfr8.co.uk</a></p>
         <p class="footer__links">
           <a href="../legal/privacy.html">Privacy</a> ·
           <a href="../legal/cookies.html">Cookies</a> ·
