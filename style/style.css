@@ -1637,3 +1637,54 @@ html { scroll-behavior: smooth; } /* makes anchor jumps smooth */  /* [web:188] 
   height: 20px;
   fill: currentColor;
 }
+.section-title__square {
+    display: none !important;
+}
+
+/* About section Google reviews image */
+.about-v2__reviews {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.about-v2__reviews-img {
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.about-v2__reviews-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Mobile optimisation */
+@media (max-width: 767px) {
+  .about-v2__reviews {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .about-v2__reviews-img {
+    margin-top: 15px;
+  }
+
+  .about-v2__reviews-img img {
+    width: 100%;
+    height: auto;
+  }
+}
+.about-v2__reviews {
+  color: #e0e0e0;          /* light gray */
+}
+
+.about-v2__reviews strong {
+  color: #ffd54a;          /* your yellow */
+}
