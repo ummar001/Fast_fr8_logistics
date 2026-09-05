@@ -238,7 +238,7 @@
       align-items: center;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 30px;
+      padding: 0 15px;
     }
 
     .about-v2__img {
@@ -601,11 +601,25 @@
     }
 
     @media screen and (max-width: 768px) {
+
+      /* 1. Reduce the massive section padding */
+      .about-v2,
+      .benefits-v2,
+      .portfolio-v2,
+      .faq-v2 {
+        padding: 40px 0 !important;
+      }
+
       .about-v2__wrapp {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 20px !important;
+        /* Reduced from 60px */
+        align-items: start !important;
+        /* Prevents vertical centering gaps */
         padding: 0 20px;
       }
+
+      /* ... keep the rest of your mobile styles below this ... */
 
       .about-v2__stats {
         grid-template-columns: repeat(3, 1fr);
@@ -794,15 +808,33 @@
                 <span class="about-v2__stat-label">Rated Service</span>
               </div>
             </div>
+            <br>
+            <br>
+
 
             <p class="about-v2__reviews">
               <strong>Check out our Google reviews</strong> and see what our customers say about Fast FR8 Logistics.
             </p>
 
+
             <div class="about-v2__reviews-img">
               <img src="img/breakdown-recovery-24-7_hero.jpeg" alt="Fast FR8 Logistics 24/7 breakdown recovery service"
                 loading="lazy" />
             </div>
+          </div>
+          <div class="about-v2__emergency-cta"
+            style="text-align:center; margin-top: 32px; padding: 24px; background: #111; border: 2px solid #ffd54a; border-radius: 8px;">
+            <p
+              style="font-family: 'Syne', sans-serif; font-size: 16px; color: #fff; margin: 0 0 16px 0; font-weight: 800;">
+              🚨 Stranded Right Now?
+            </p>
+            <a href="tel:07564029283" class="btn-cta"
+              style="display: inline-block; background: #ffd54a; color: #000; padding: 14px 32px; border-radius: 6px; font-family: 'Syne', sans-serif; font-weight: 800; text-decoration: none; text-transform: uppercase;">
+              Call 24/7 Recovery
+            </a>
+            <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: #888; margin: 12px 0 0 0;">
+              Average response time: 25 minutes
+            </p>
           </div>
 
         </div>
@@ -1036,6 +1068,24 @@
           </details>
         </div>
       </section>
+      <div class="about-v2__trust-row"
+        style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; text-align: center;">
+        <div style="padding: 16px; background: #111; border-radius: 6px;">
+          <div style="font-size: 24px; margin-bottom: 8px;">⚡</div>
+          <div style="font-family: 'Inter', sans-serif; font-size: 11px; color: #888; text-transform: uppercase;">Fast
+            Response</div>
+        </div>
+        <div style="padding: 16px; background: #111; border-radius: 6px;">
+          <div style="font-size: 24px; margin-bottom: 8px;">🛡️</div>
+          <div style="font-family: 'Inter', sans-serif; font-size: 11px; color: #888; text-transform: uppercase;">Fully
+            Insured</div>
+        </div>
+        <div style="padding: 16px; background: #111; border-radius: 6px;">
+          <div style="font-size: 24px; margin-bottom: 8px;">⭐</div>
+          <div style="font-family: 'Inter', sans-serif; font-size: 11px; color: #888; text-transform: uppercase;">5-Star
+            Rated</div>
+        </div>
+      </div>
 
       <section class="serv" id="services">
         <div class="content">
